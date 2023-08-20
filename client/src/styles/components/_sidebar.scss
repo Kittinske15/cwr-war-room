@@ -1,0 +1,135 @@
+body {
+    margin: unset;
+  }
+  
+  .item {
+    display: flex;
+    padding: 6px 10px 6px 10px;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 10px;
+  }
+  
+  .icon {
+    margin-right: 0.5rem;
+    margin-top: 6px;
+  }
+  
+  .App {
+    display: flex;
+    font-family: "IBM Plex Sana Thai Looped", sans-serif;
+    background: linear-gradient(
+      112.1deg,
+      rgb(22, 19, 43) 11.4%,
+      rgb(34, 56, 78) 70.2%
+    );
+    // text-shadow: 1px 0px 2px #8dc4f0;
+  }
+  
+  .body_container {
+    flex: 1;
+  }
+  
+  .sidebar_container {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .header_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 40px;
+    padding: 30px 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(https://cpse.cpgroup.cn/base-service/default/20220429/43f5e8d90b5249c1aac7b5b26622407e.png?v=33902804);
+  }
+  
+  .body_container {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(https://cpse.cpgroup.cn/base-service/default/20220429/43f5e8d90b5249c1aac7b5b26622407e.png?v=33902804);
+  }
+  
+  .body-grid {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 282px);
+    margin: 25px 10px 25px 0;
+  }
+  
+  .body-grid-close {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 25px 10px 25px 0;
+  }
+  
+  .sidebar {
+    display: flex;
+    width: 14rem;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    padding: 15px;
+    margin: 25px 10px;
+    border-radius: 10px;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(https://cpse.cpgroup.cn/base-service/default/20220429/43f5e8d90b5249c1aac7b5b26622407e.png?v=33902804);
+  }
+  
+  .lines_icon {
+    display: flex;
+    align-self: flex-end;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .profile > img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  
+  .groups {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  h3 {
+    font-size: 1rem;
+    margin: 10px 0px 10px 0px;
+  }
+  
+  .nav-item {
+    text-decoration: none;
+    color: white;
+  }
+  

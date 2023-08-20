@@ -1,0 +1,140 @@
+.true-logo {
+    width: 220px;
+  }
+  
+  .body-title {
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    border-radius: 5px;
+    background: rgba(173, 216, 230, 0.2);
+    height: 120px;
+    color: white;
+    padding: 20px 15px;
+  }
+  
+  .gauge {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background: rgba(173, 216, 230, 0.2);
+    padding: 20px 15px;
+    width: calc(100% - 30px);
+    margin-bottom: 20px;
+  }
+  
+  .gauge-subtitle-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .gauge-subtitle {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .gauge-subtitle-flex {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .project_by_project {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background: rgba(173, 216, 230, 0.2);
+    padding: 20px 15px;
+    width: calc(100% - 30px);
+    margin-bottom: 20px;
+  }
+  
+  .project_by_project-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1589ff;
+  }
+  
+  .project_by_project-grid {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .gauge-title {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #1589ff;
+  }
+  
+  .gauge-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .gauge-card {
+    width: 400px !important;
+  }
+  
+  .gauge-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-title {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #1589ff;
+  }
+  
+  .card-subtitle {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .card-img-flex {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .card-img {
+    width: 35px;
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .card-subtitle {
+      font-size: 16px;
+    }
+  }
+  
+  @media only screen and (min-width: 900) {
+    .card-subtitle {
+      font-size: 18px;
+    }
+  }
+  
+  @media only screen and (min-width: 1200) {
+    .card-subtitle {
+      font-size: 20px;
+    }
+  }
+  

@@ -1,0 +1,1280 @@
+[
+    {
+        "Country/Territory": "United States",
+        "Estimate": "1.8",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "China",
+        "Estimate": "5.2",
+        "UN region": "Asia",
+        "Year": "[n 1]2023"
+    },
+    {
+        "Country/Territory": "Japan",
+        "Estimate": "1.3",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Germany",
+        "Estimate": "-0.1",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "India",
+        "Estimate": "5.9",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "United Kingdom",
+        "Estimate": "-0.3",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "France",
+        "Estimate": "0.7",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Italy",
+        "Estimate": "0.7",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Canada",
+        "Estimate": "1.5",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Brazil",
+        "Estimate": "0.9",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Russia",
+        "Estimate": "0.7",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "South Korea",
+        "Estimate": "no data",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Australia",
+        "Estimate": "1.5",
+        "UN region": "Oceania",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Mexico",
+        "Estimate": "1.8",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Spain",
+        "Estimate": "1.5",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Indonesia",
+        "Estimate": "5",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Netherlands",
+        "Estimate": "1",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Saudi Arabia",
+        "Estimate": "3.1",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Turkey",
+        "Estimate": "no data",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Switzerland",
+        "Estimate": "0.8",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Taiwan",
+        "Estimate": "2.1",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Poland",
+        "Estimate": "0.3",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Argentina",
+        "Estimate": "0.2",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Belgium",
+        "Estimate": "0.7",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Sweden",
+        "Estimate": "-0.5",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Ireland",
+        "Estimate": "5.6",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Thailand",
+        "Estimate": "3.4",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Norway",
+        "Estimate": "2.1",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Israel",
+        "Estimate": "2.9",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Singapore",
+        "Estimate": "1.5",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Austria",
+        "Estimate": "0.4",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Nigeria",
+        "Estimate": "3.2",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "United Arab Emirates",
+        "Estimate": "3.5",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Vietnam",
+        "Estimate": "5.8",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Malaysia",
+        "Estimate": "4.5",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Philippines",
+        "Estimate": "6",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Bangladesh",
+        "Estimate": "5.5",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Denmark",
+        "Estimate": "0",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "South Africa",
+        "Estimate": "0.1",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Hong Kong",
+        "Estimate": "3.5",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Egypt",
+        "Estimate": "3.7",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Pakistan",
+        "Estimate": "0.5",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Iran",
+        "Estimate": "2",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Chile",
+        "Estimate": "-1",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Romania",
+        "Estimate": "2.4",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Colombia",
+        "Estimate": "1",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Czech Republic",
+        "Estimate": "-0.5",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Finland",
+        "Estimate": "0",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Peru",
+        "Estimate": "2.4",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Iraq",
+        "Estimate": "3.7",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Portugal",
+        "Estimate": "1",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "New Zealand",
+        "Estimate": "1.5",
+        "UN region": "Oceania",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Kazakhstan",
+        "Estimate": "4.3",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Greece",
+        "Estimate": "2.6",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Qatar",
+        "Estimate": "2.4",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Algeria",
+        "Estimate": "2.6",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Hungary",
+        "Estimate": "0.5",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Kuwait",
+        "Estimate": "0.9",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Ethiopia",
+        "Estimate": "6.1",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Ukraine",
+        "Estimate": "-3",
+        "UN region": "Europe",
+        "Year": "[n 6]2023"
+    },
+    {
+        "Country/Territory": "Morocco",
+        "Estimate": "3",
+        "UN region": "Africa",
+        "Year": "[n 7]2023"
+    },
+    {
+        "Country/Territory": "Slovakia",
+        "Estimate": "no data",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Ecuador",
+        "Estimate": "2.9",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Dominican Republic",
+        "Estimate": "4.2",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Puerto Rico",
+        "Estimate": "0.4",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Kenya",
+        "Estimate": "5.3",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Angola",
+        "Estimate": "3.5",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Cuba",
+        "Estimate": "no data",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Oman",
+        "Estimate": "1.7",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Guatemala",
+        "Estimate": "3.4",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Bulgaria",
+        "Estimate": "1.4",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Venezuela",
+        "Estimate": "5",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Uzbekistan",
+        "Estimate": "5.3",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Luxembourg",
+        "Estimate": "1.1",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Tanzania",
+        "Estimate": "5.2",
+        "UN region": "Africa",
+        "Year": "[n 8]2023"
+    },
+    {
+        "Country/Territory": "Turkmenistan",
+        "Estimate": "2.3",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Croatia",
+        "Estimate": "1.7",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Lithuania",
+        "Estimate": "-0.3",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Costa Rica",
+        "Estimate": "2.7",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Uruguay",
+        "Estimate": "2",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Panama",
+        "Estimate": "5",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Ivory Coast",
+        "Estimate": "no data",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Sri Lanka",
+        "Estimate": "-3",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Serbia",
+        "Estimate": "2",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Belarus",
+        "Estimate": "0.7",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Azerbaijan",
+        "Estimate": "3",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "DR Congo",
+        "Estimate": "no data",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Slovenia",
+        "Estimate": "1.6",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Ghana",
+        "Estimate": "1.6",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Myanmar",
+        "Estimate": "2.6",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Jordan",
+        "Estimate": "2.7",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Tunisia",
+        "Estimate": "1.3",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Uganda",
+        "Estimate": "5.7",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Cameroon",
+        "Estimate": "4.3",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Latvia",
+        "Estimate": "0.4",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Sudan",
+        "Estimate": "5.6",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Libya",
+        "Estimate": "17.5",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Bolivia",
+        "Estimate": "1.8",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Bahrain",
+        "Estimate": "3",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Paraguay",
+        "Estimate": "4.5",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Nepal",
+        "Estimate": "4.4",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Estonia",
+        "Estimate": "-1.2",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Macau",
+        "Estimate": "no data",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "El Salvador",
+        "Estimate": "2.4",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Honduras",
+        "Estimate": "3.7",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Papua New Guinea",
+        "Estimate": "3.7",
+        "UN region": "Oceania",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Senegal",
+        "Estimate": "8.3",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Cyprus",
+        "Estimate": "2.5",
+        "UN region": "Asia",
+        "Year": "[n 10]2023"
+    },
+    {
+        "Country/Territory": "Cambodia",
+        "Estimate": "5.8",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Zimbabwe",
+        "Estimate": "2.5",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Zambia",
+        "Estimate": "4",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Iceland",
+        "Estimate": "2.3",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Bosnia and Herzegovina",
+        "Estimate": "2",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Trinidad and Tobago",
+        "Estimate": "3.2",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Georgia",
+        "Estimate": "4",
+        "UN region": "Europe",
+        "Year": "[n 11]2023"
+    },
+    {
+        "Country/Territory": "Haiti",
+        "Estimate": "0.3",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Lebanon",
+        "Estimate": "no data",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Armenia",
+        "Estimate": "5.5",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Guinea",
+        "Estimate": "-1.8",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Burkina Faso",
+        "Estimate": "4.9",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Mali",
+        "Estimate": "5",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Gabon",
+        "Estimate": "3",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Albania",
+        "Estimate": "2.2",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Afghanistan",
+        "Estimate": "no data",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Mozambique",
+        "Estimate": "5",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Palestine",
+        "Estimate": "no data",
+        "UN region": "Asia",
+        "Year": "[n 13]2023"
+    },
+    {
+        "Country/Territory": "Botswana",
+        "Estimate": "3.7",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Yemen",
+        "Estimate": "-0.5",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Malta",
+        "Estimate": "3.5",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Benin",
+        "Estimate": "6",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Nicaragua",
+        "Estimate": "3",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Jamaica",
+        "Estimate": "2.2",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Mongolia",
+        "Estimate": "4.5",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Niger",
+        "Estimate": "6.1",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Guyana",
+        "Estimate": "37.2",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Brunei",
+        "Estimate": "3.3",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Madagascar",
+        "Estimate": "4.2",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "North Korea",
+        "Estimate": "no data",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Moldova",
+        "Estimate": "2",
+        "UN region": "Europe",
+        "Year": "[n 14]2023"
+    },
+    {
+        "Country/Territory": "Syria",
+        "Estimate": "no data",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "North Macedonia",
+        "Estimate": "1.4",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Equatorial Guinea",
+        "Estimate": "-1.8",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Mauritius",
+        "Estimate": "4.6",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Bahamas",
+        "Estimate": "4.3",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Laos",
+        "Estimate": "no data",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Namibia",
+        "Estimate": "2.8",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Rwanda",
+        "Estimate": "6.2",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Congo",
+        "Estimate": " 6.3",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Tajikistan",
+        "Estimate": "5",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Kyrgyzstan",
+        "Estimate": "no data",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Chad",
+        "Estimate": "3.5",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Malawi",
+        "Estimate": "2.4",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Mauritania",
+        "Estimate": "4.4",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "New Caledonia",
+        "Estimate": "no data",
+        "UN region": "Oceania",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Kosovo",
+        "Estimate": "3.5",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Togo",
+        "Estimate": "5.5",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Somalia",
+        "Estimate": "2.8",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Monaco",
+        "Estimate": "no data",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Bermuda",
+        "Estimate": "no data",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Montenegro",
+        "Estimate": "3.2",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "South Sudan",
+        "Estimate": "5.6",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Maldives",
+        "Estimate": "7.2",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Liechtenstein",
+        "Estimate": "no data",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Barbados",
+        "Estimate": "4.9",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "French Polynesia",
+        "Estimate": "no data",
+        "UN region": "Oceania",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Cayman Islands",
+        "Estimate": "no data",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Fiji",
+        "Estimate": "7",
+        "UN region": "Oceania",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Eswatini",
+        "Estimate": "2.8",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Liberia",
+        "Estimate": "4.3",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Djibouti",
+        "Estimate": "4",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Andorra",
+        "Estimate": "1.3",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Aruba",
+        "Estimate": "1.6",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Sierra Leone",
+        "Estimate": "3.1",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Suriname",
+        "Estimate": "2.3",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Burundi",
+        "Estimate": "3.3",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Belize",
+        "Estimate": "3",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Greenland",
+        "Estimate": "no data",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Central African Republic",
+        "Estimate": "2.5",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Cura\u00e7ao",
+        "Estimate": "no data",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Bhutan",
+        "Estimate": "4.7",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Eritrea",
+        "Estimate": "2.8",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Lesotho",
+        "Estimate": "2.2",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Cape Verde",
+        "Estimate": "no data",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Gambia",
+        "Estimate": "5.6",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Saint Lucia",
+        "Estimate": "3",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "East Timor",
+        "Estimate": "no data",
+        "UN region": "Asia",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Seychelles",
+        "Estimate": "3.9",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Guinea-Bissau",
+        "Estimate": "4.5",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Antigua and Barbuda",
+        "Estimate": "5.5",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "San Marino",
+        "Estimate": "1.2",
+        "UN region": "Europe",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Zanzibar",
+        "Estimate": "no data",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Solomon Islands",
+        "Estimate": "2.5",
+        "UN region": "Oceania",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "British Virgin Islands",
+        "Estimate": "no data",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Comoros",
+        "Estimate": "3",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Grenada",
+        "Estimate": "3.7",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Vanuatu",
+        "Estimate": "3.5",
+        "UN region": "Oceania",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Saint Kitts and Nevis",
+        "Estimate": "4.5",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Saint Vincent and the Grenadines",
+        "Estimate": "6",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Turks and Caicos Islands",
+        "Estimate": "no data",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Samoa",
+        "Estimate": "5",
+        "UN region": "Oceania",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Sint Maarten",
+        "Estimate": "no data",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Dominica",
+        "Estimate": "4.9",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+        "Estimate": "no data",
+        "UN region": "Africa",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Tonga",
+        "Estimate": "2.5",
+        "UN region": "Oceania",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Micronesia",
+        "Estimate": "2.8",
+        "UN region": "Oceania",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Marshall Islands",
+        "Estimate": "3",
+        "UN region": "Oceania",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Cook Islands",
+        "Estimate": "no data",
+        "UN region": "Oceania",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Palau",
+        "Estimate": "8.7",
+        "UN region": "Oceania",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Anguilla",
+        "Estimate": "no data",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Kiribati",
+        "Estimate": "2.5",
+        "UN region": "Oceania",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Nauru",
+        "Estimate": "1",
+        "UN region": "Oceania",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Montserrat",
+        "Estimate": "no data",
+        "UN region": "Americas",
+        "Year": "2023"
+    },
+    {
+        "Country/Territory": "Tuvalu",
+        "Estimate": "4.3",
+        "UN region": "Oceania",
+        "Year": "2023"
+    }
+]

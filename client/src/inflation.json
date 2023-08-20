@@ -1,0 +1,86 @@
+[
+    {
+        "Country": "United States",
+        "Last": 5.25,
+        "Previous": 5.25,
+        "Reference": "Jun/23",
+        "Unit": "%"
+    },
+    {
+        "Country": "China",
+        "Last": 3.55,
+        "Previous": 3.55,
+        "Reference": "Jun/23",
+        "Unit": "%"
+    },
+    {
+        "Country": "India",
+        "Last": 6.5,
+        "Previous": 6.5,
+        "Reference": "Jun/23",
+        "Unit": "%"
+    },
+    {
+        "Country": "Canada",
+        "Last": 4.75,
+        "Previous": 4.5,
+        "Reference": "Jun/23",
+        "Unit": "%"
+    },
+    {
+        "Country": "Russia",
+        "Last": 7.5,
+        "Previous": 7.5,
+        "Reference": "Jun/23",
+        "Unit": "%"
+    },
+    {
+        "Country": "Thailand",
+        "Last": 2.0,
+        "Previous": 2.0,
+        "Reference": "Jun/23",
+        "Unit": "%"
+    },
+    {
+        "Country": "Singapore",
+        "Last": 3.78,
+        "Previous": 3.79,
+        "Reference": "Jun/23",
+        "Unit": "%"
+    },
+    {
+        "Country": "South Africa",
+        "Last": 8.25,
+        "Previous": 8.25,
+        "Reference": "Jun/23",
+        "Unit": "%"
+    },
+    {
+        "Country": "Uzbekistan",
+        "Last": 14.0,
+        "Previous": 14.0,
+        "Reference": "Jun/23",
+        "Unit": "%"
+    },
+    {
+        "Country": "Tanzania",
+        "Last": 5.0,
+        "Previous": 5.0,
+        "Reference": "Apr/23",
+        "Unit": "%"
+    },
+    {
+        "Country": "Cambodia",
+        "Last": 0.89,
+        "Previous": 0.88,
+        "Reference": "Mar/23",
+        "Unit": "%"
+    },
+    {
+        "Country": "Brunei",
+        "Last": 5.5,
+        "Previous": 5.5,
+        "Reference": "Mar/23",
+        "Unit": "%"
+    }
+]

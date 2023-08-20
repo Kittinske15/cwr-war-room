@@ -1,0 +1,247 @@
+.project_detail-body {
+    padding: 30px 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(https://cpse.cpgroup.cn/base-service/default/20220429/43f5e8d90b5249c1aac7b5b26622407e.png?v=33902804);
+}
+
+.project-detail-title {
+    color: white;
+    font-weight: bold;
+}
+
+.download-model {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.project-detail-title-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.subtract-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.download-model-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #FF1E39;
+    border-radius: 15px;
+    padding: 12px 15px;
+    cursor: pointer;
+}
+
+.ball-detial-processing {
+    width: 30px;
+    height: 30px;
+    border-radius: 150px;
+    background-color: yellow;
+    background-image: radial-gradient(circle 40px at 0 0, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, .8)), radial-gradient(circle 180px at 90px 80px, rgba(255, 255, 255, .7), rgba(0, 0, 0, 0));
+    background-repeat: no-repeat, no-repeat;
+
+    position: relative;
+}
+
+.ball-detial-processing:after {
+    content: "";
+    z-index: -1;
+    top: 220px;
+    left: 150px;
+    position: absolute;
+    background-color: black;
+    border-radius: 280px 60px;
+    width: 150px;
+    height: 80px;
+    box-shadow: 1px 0 1px black;
+    opacity: .8;
+}
+
+.project-owner-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.project-owner-box,
+.project-description-box {
+    padding: 30px 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(https://cpse.cpgroup.cn/base-service/default/20220429/43f5e8d90b5249c1aac7b5b26622407e.png?v=33902804);
+}
+
+.project-owner-img {
+    width: 150px;
+}
+
+.project-owner-title,
+.project-owner-name {
+    font-weight: bold;
+    color: white;
+}
+
+.project-owner-detail-box {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+
+    background: #F3F1FF;
+    border: 3px solid #000E6D;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.project-description,
+.project-objective {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 8px 16px;
+    width: fit-content;
+    font-weight: bold;
+    font-size: 16px;
+    color: #5533FF;
+    margin-bottom: 10px;
+}
+
+.project-description-detail,
+.project-objective-detail {
+    font-weight: 600;
+    font-size: 12px;
+    color: #464F60;
+}
+
+.project-update-time,
+.project-create-time {
+    font-weight: 600;
+    font-size: 8px;
+    color: white;
+}
+
+.project-owner-box-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.project-create-time {
+    margin-bottom: 6px;
+}
+
+.project-description-menu {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.project-description-menuitem {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: #dee1fa;
+    color: black;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    border: 3px solid #000E6D;
+    cursor: pointer;
+}
+
+.project-description-detail-box {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    height: 86.3%;
+
+    background: #F3F1FF;
+    border: 3px solid #000E6D;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.roi-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.roi-menu-flex {
+    display: flex;
+    align-items: center;
+}
+
+.project-roi-detail {
+    background: #e1e3e1;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #464F60;
+    width: 80%;
+}
+
+.project-roi-title {
+    text-align: center;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 8px 16px;
+    width: 100px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #5533FF;
+}
+
+.project-attachment-title {
+    text-align: center;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 12px 16px;
+    width: 100px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #5533FF;
+}
+
+.roi-menu-flex {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 10px;
+}
+
+.insert-note-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.insert-note {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    color: black;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    background: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.insert-img {
+    width: 16px;
+    height: 16px;
+}

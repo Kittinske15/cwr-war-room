@@ -1,0 +1,176 @@
+.project {
+    padding: 25px 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .project_container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    height: 40px;
+    padding: 30px 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: white;
+    margin-bottom: 20px;
+    //   background-image: url(https://cpse.cpgroup.cn/base-service/default/20220429/43f5e8d90b5249c1aac7b5b26622407e.png?v=33902804);
+  }
+  
+  .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .project-body {
+    padding: 30px 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(https://cpse.cpgroup.cn/base-service/default/20220429/43f5e8d90b5249c1aac7b5b26622407e.png?v=33902804);
+  }
+  
+  .project-title-flex {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .project-title {
+    font-weight: 400;
+    color: white;
+  }
+  
+  .project-title-flex>div:nth-child(1) {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #00d971;
+    margin-bottom: 20px;
+  }
+  
+  .project-chart-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .project-card {
+    border-radius: 5px;
+    background: rgba(173, 216, 230, 0.2);
+    padding: 20px 15px;
+  }
+  
+  .project-table tr {
+    background: rgba(173, 216, 230, 0.2);
+  }
+  
+  .ball-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .ball-processing {
+    width: 25px;
+    height: 25px;
+    border-radius: 150px;
+    background-color: yellow;
+    background-image: radial-gradient(circle 32px at 0 0, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, .8)), radial-gradient(circle 180px at 90px 80px, rgba(255, 255, 255, .7), rgba(0, 0, 0, 0));
+    background-repeat: no-repeat, no-repeat;
+  
+    position: relative;
+  }
+  
+  .ball-reject {
+    width: 25px;
+    height: 25px;
+    border-radius: 150px;
+    background-color: red;
+    background-image: radial-gradient(circle 32px at 0 0, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, .8)), radial-gradient(circle 180px at 90px 80px, rgba(255, 255, 255, .7), rgba(0, 0, 0, 0));
+    background-repeat: no-repeat, no-repeat;
+  
+    position: relative;
+  }
+  
+  .ball-success {
+    width: 25px;
+    height: 25px;
+    border-radius: 150px;
+    background-color: rgb(66, 223, 66);
+    background-image: radial-gradient(circle 32px at 0 0, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, .8)), radial-gradient(circle 180px at 90px 80px, rgba(255, 255, 255, .7), rgba(0, 0, 0, 0));
+    background-repeat: no-repeat, no-repeat;
+  
+    position: relative;
+  }
+  
+  .ball-processing:after {
+    content: "";
+    z-index: -1;
+    top: 220px;
+    left: 150px;
+    position: absolute;
+    background-color: black;
+    border-radius: 280px 60px;
+    width: 150px;
+    height: 80px;
+    box-shadow: 1px 0 1px black;
+    opacity: .8;
+  }
+  
+  .ball-reject:after {
+    content: "";
+    z-index: -1;
+    top: 220px;
+    left: 150px;
+    position: absolute;
+    background-color: black;
+    border-radius: 280px 60px;
+    width: 150px;
+    height: 80px;
+    box-shadow: 1px 0 1px black;
+    opacity: .8;
+  }
+  
+  .ball-success:after {
+    content: "";
+    z-index: -1;
+    top: 220px;
+    left: 150px;
+    position: absolute;
+    background-color: black;
+    border-radius: 280px 60px;
+    width: 150px;
+    height: 80px;
+    box-shadow: 1px 0 1px black;
+    opacity: .8;
+  }
+  
+  .project-view, .project-edit {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .project-view-img,
+  .project-edit-img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .project-manage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .project-view-title,
+  .project-edit-title {
+    font-size: 12px;
+  }

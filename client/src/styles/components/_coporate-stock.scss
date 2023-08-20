@@ -1,0 +1,31 @@
+.coporate-stock {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.oversea {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.oversea-grid {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.tradingview-widget-container {
+    height: 230px;
+}
+
+.tradingview-chart {
+    height: 100%;
+}
+
+.coporate-stock-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}

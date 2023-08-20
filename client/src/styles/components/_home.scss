@@ -1,0 +1,198 @@
+.home {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../../public/assets/central-war-room-bg.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.country-name {
+  margin-right: 10px;
+  color: red !important;
+}
+
+.home-body {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  position: relative;
+  height: calc(100vh - 180px);
+  top: 120px;
+  padding: 0 50px;
+}
+
+.tooltip {
+  color: #eeeeee;
+  font-size: 1rem;
+  background-color: #666;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  border-width: 100vw;
+}
+
+.svgMap {
+  height: inherit;
+  stroke: #6ebac9;
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+h1 {
+  padding: 15px;
+  color: #eeeeee;
+}
+
+.location {
+  fill: #d1dbdd;
+  cursor: pointer;
+}
+
+.location:focus,
+.location:hover {
+  fill: #dff2f8;
+  outline: 0;
+}
+
+.location[aria-checked="true"] {
+  fill: red;
+}
+
+.gdp-map {
+  stroke: none;
+  font-weight: bold;
+}
+
+.heatMapBar {
+  display: flex;
+  position: absolute;
+  top: 80px;
+  left: 40px;
+}
+
+.pin {
+  fill: #eeeeee !important;
+  color: red !important;
+}
+
+
+.sphere {
+  fill: transparent;
+}
+
+.map-header {
+  font-size: 1.3em;
+  justify-content: start;
+  margin: 20px 30px;
+  color: #7abef3;
+}
+
+.map-container {
+  margin: 0 30px;
+}
+
+.map {
+  padding-top: 2em;
+}
+
+.list {
+  width: 95%;
+}
+
+.list-header {
+  font-size: 1.3em;
+  justify-content: start;
+  margin: 20px 30px;
+  color: #7abef3;
+}
+
+.list-button {
+  color: #b2b6b7;
+}
+
+.list-container {
+  display: flex;
+  justify-content: space-between;
+  color: #eeeeee;
+  width: 90%;
+}
+
+.country-list-scroll {
+  height: 600px;
+  overflow-y: auto;
+}
+
+.list-country {
+  color: #eeeeee;
+}
+
+.list-country p {
+  margin: 10px 5px;
+}
+
+.list-country span {
+  content: "";
+  flex: 1;
+  background-color: #eeeeee;
+  height: 1px;
+  margin: 0 5px;
+}
+
+.list-country {
+  //position: relative;
+  display: flex;
+  justify-content: space-between;
+  color: #eeeeee;
+}
+
+.country {
+  // fill: #becd98;
+  stroke: white;
+  stroke-width: 0.3px;
+  padding: 10px;
+  font-size: 2rem;
+}
+
+.country:hover {
+  fill: #b2b6b7;
+}
+
+.svg-home {
+  width: 100%;
+}
+
+.province {
+  // fill: #becd98;
+  stroke: white;
+  stroke-width: 0.25px;
+  padding: 10px;
+  font-size: 2rem;
+}
+
+.province:hover {
+  fill: #b2b6b7;
+}
+
+.global-title {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  left: 60px;
+  top: 44px;
+  color: #7abef3;
+  font-size: 24px;
+}
+
+.market-stock-title {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  right: 60px;
+  top: 44px;
+}
+
+.market-stock-title a {
+  color: #7abef3;
+  font-size: 24px;
+  text-decoration: none;
+}

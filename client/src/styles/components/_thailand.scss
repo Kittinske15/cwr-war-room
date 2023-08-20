@@ -1,0 +1,401 @@
+.thailand-body {
+  height: calc(100% - 100px);
+  position: relative;
+  top: 100px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: 0 20px;
+  gap: 10px;
+}
+
+.thailand-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.thailand-map svg {
+  height: 60%;
+  width: 35%;
+}
+
+.thailand-footer {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.thailand-box {
+  max-height: calc(100vh - 160px);
+  overflow: auto;
+  border-radius: 5px;
+  background: rgba(173, 216, 230, 0.2);
+  color: white;
+  padding: 20px 15px;
+}
+
+.thailand-box-content {
+  display: block;
+  max-height: calc(100vh - 160px);
+  overflow: auto;
+  border-radius: 5px;
+  background: rgba(173, 216, 230, 0.2);
+  color: white;
+  padding: 20px 15px;
+}
+
+.switch {
+  display: inline-block;
+  cursor: pointer;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.switch.active {
+  background-color: #ccc;
+  color: #fff;
+}
+
+.switch-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-img {
+  width: -webkit-fill-available;
+  padding: 10px;
+  height: 120px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.search-img-content {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+body {
+  margin: unset;
+}
+
+.item {
+  display: flex;
+  padding: 6px 10px 6px 10px;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 10px;
+}
+
+.icon {
+  margin-right: 0.5rem;
+  margin-top: 6px;
+}
+
+.body_container {
+  flex: 1;
+}
+
+.sidebar_container {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.header_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 40px;
+  padding: 30px 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(https://cpse.cpgroup.cn/base-service/default/20220429/43f5e8d90b5249c1aac7b5b26622407e.png?v=33902804);
+}
+
+.body_container {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(https://cpse.cpgroup.cn/base-service/default/20220429/43f5e8d90b5249c1aac7b5b26622407e.png?v=33902804);
+}
+
+.body-grid {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 282px);
+  margin: 25px 10px 25px 0;
+}
+
+.body-grid-close {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 25px 10px 25px 0;
+}
+
+.sidebar {
+  display: flex;
+  width: 14rem;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  padding: 15px;
+  margin: 25px 10px;
+  border-radius: 10px;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(https://cpse.cpgroup.cn/base-service/default/20220429/43f5e8d90b5249c1aac7b5b26622407e.png?v=33902804);
+}
+
+.lines_icon {
+  display: flex;
+  align-self: flex-end;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.profile>img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.groups {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+h3 {
+  font-size: 1rem;
+  margin: 10px 0px 10px 0px;
+}
+
+.true-logo {
+  border-radius: 10px;
+  width: 220px;
+}
+
+.body-title {
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: white;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.card {
+  border-radius: 5px;
+  background: rgba(173, 216, 230, 0.2);
+  height: 120px;
+  color: white;
+  padding: 20px 15px;
+}
+
+.gauge {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background: rgba(173, 216, 230, 0.2);
+  padding: 20px 15px;
+  width: calc(100% - 30px);
+  margin-bottom: 20px;
+}
+
+.gauge-subtitle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.gauge-subtitle {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.gauge-subtitle-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.project_by_project {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background: rgba(173, 216, 230, 0.2);
+  padding: 20px 15px;
+  width: calc(100% - 30px);
+  margin-bottom: 20px;
+}
+
+.project_by_project-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1589ff;
+}
+
+.project_by_project-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.overall-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.gauge-title {
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #1589ff;
+}
+
+.gauge-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.gauge-card {
+  width: 400px !important;
+}
+
+.gauge-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #1589ff;
+}
+
+.card-subtitle {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.card-img-flex {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-img {
+  width: 35px;
+}
+
+.menu-link {
+  color: white;
+  text-decoration: none;
+}
+
+.thailand-body .trading-view-box {
+  display: block;
+  max-height: calc(100vh - 160px);
+  overflow: auto;
+  border-radius: 5px;
+  background: rgba(173, 216, 230, 0.2);
+  color: white;
+  padding: 20px 15px;
+}
+
+.img-stock-container {
+  width: 100%;
+  height: 10em;
+  overflow: hidden;
+}
+
+.img-stock-container img {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.thailand-interest-rate {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px 0px 10px 0px;
+}
+
+.left-arrow {
+  height: 40px;
+  width: 40px;
+}
+
+@media only screen and (min-width: 600px) {
+  .card-subtitle {
+    font-size: 16px;
+  }
+
+  .thailand-body {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 900) {
+  .card-subtitle {
+    font-size: 18px;
+  }
+
+  .thailand-body {
+    grid-template-columns: 5fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1200) {
+  .card-subtitle {
+    font-size: 20px;
+  }
+
+  .thailand-body .thailand-box-content {
+    display: none;
+  }
+}
