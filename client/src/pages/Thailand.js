@@ -3,8 +3,6 @@ import * as d3 from "d3";
 import { colorLegend } from "../components/colorLegend";
 import { colorData, colorScale, numberScale } from "../components/color";
 import data from "../gdp.json";
-import { Box, TextField, Button } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
 import { geoNaturalEarth1, geoPath } from "d3-geo";
 import dayjs from 'dayjs';
 import axios from 'axios';
@@ -132,22 +130,6 @@ export default function Thailand() {
       colorLegendY: 470,
     });
   }, [provinces_data, estimateGDP]);
-
-  const useStyles = makeStyles((theme) => ({
-    container: {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      height: '100%',
-      overflow: 'auto',
-      padding: '10px 0'
-    },
-    searchBox: {
-      width: '100%',
-      background: '#fff',
-      marginBottom: theme.spacing(2),
-    },
-  }));
 
   const InflationChart = () => {
     const [chartData, setChartData] = useState(null);
@@ -339,143 +321,6 @@ export default function Thailand() {
       <TouristArrivalChart />
     </div>
   )
-
-
-  const ContentSwitcher = () => {
-    const [isBSC, setIsBSC] = useState(true);
-
-    const handleSwitch = () => {
-      setIsBSC(!isBSC);
-    };
-
-    const ContentBSC = () => {
-      const classes = useStyles();
-
-      return (
-        <Box className={classes.container}>
-          <TextField
-            className={classes.searchBox}
-            label="Search"
-            variant="outlined"
-            InputProps={{
-              style: { color: '#000' },
-            }}
-          />
-          <a className="search-img" href='https://app.powerbi.com/view?r=eyJrIjoiYzM1Mzg1YmYtZTI3ZC00ODJjLWE2YWMtM2FlNTE1MTM1ZDc1IiwidCI6IjI3MWQ1ZTdiLTEzNTAtNGI5Ni1hYjg0LTUyZGJkYTRjZjQwYyIsImMiOjEwfQ%3D%3D' target="_blank">
-            <img className="search-img-content" src="assets/True_vision.webp" alt="Content" />
-          </a>
-          <a className="search-img" href='https://cpf-insight.vercel.app/' target="_blank">
-            <img className="search-img-content" src="assets/cpf-logo.jpg" alt="Content" />
-          </a>
-          <Box className={classes.scrollableContent}>
-            {/* Your scrollable content goes here */}
-          </Box>
-        </Box>
-      );
-    };
-
-    const ContentPMS = () => {
-      const classes = useStyles();
-
-      return (
-        <Box className={classes.container}>
-          <TextField
-            className={classes.searchBox}
-            label="Search"
-            variant="outlined"
-            InputProps={{
-              style: { color: '#000' },
-            }}
-          />
-          {/* <div className='search-img-box'>
-            <img className="search-img" src="assets/True_vision.webp" alt="Content" />
-          </div> */}
-          <a className="search-img" href='/true-vision' target="_blank">
-            <img className="search-img-content" src="assets/True_vision.webp" alt="Content" />
-          </a>
-          <a className="search-img" href='/https://bsdo.gpbsapps.com/' target="_blank">
-            <img className="search-img-content" src="assets/BSDOstandard.png" alt="Content" />
-          </a>
-          <a className="search-img" href='/cpl-war-room' target="_blank">
-            <img className="search-img-content" src="assets/cpland-logo.png" alt="Content" />
-          </a>
-          <Box className={classes.scrollableContent}>
-            {/* Your scrollable content goes here */}
-          </Box>
-        </Box>
-      );
-    };
-
-    const ContentOther = () => {
-      const classes = useStyles();
-
-      return (
-        <Box className={classes.container}>
-          <TextField
-            className={classes.searchBox}
-            label="Search"
-            variant="outlined"
-            InputProps={{
-              style: { color: '#000' },
-            }}
-          />
-          {/* <div className='search-img-box'>
-            <img className="search-img" src="assets/True_vision.webp" alt="Content" />
-          </div> */}
-          <a className="search-img" href='https://cp-sustainability.vercel.app/' target="_blank">
-            <img className="search-img-content" src="assets/CP-Group-logo.png" alt="Content" />
-          </a>
-          <a className="search-img" href='https://cpl-survey.vercel.app/' target="_blank">
-            <img className="search-img-content" src="assets/cpland-logo.png" alt="Content" />
-          </a>
-          <Box className={classes.scrollableContent}>
-            {/* Your scrollable content goes here */}
-          </Box>
-        </Box>
-      );
-    };
-
-    return (
-      <div>
-        <div className='switch-container'>
-          <button
-            onClick={() => handleButtonClick("Button 1")}
-            className={`switch ${selectedButton == "Button 1" ? "active" : ''}`}
-          >
-            BSC
-          </button>
-          <button
-            onClick={() => handleButtonClick("Button 2")}
-            className={`switch ${selectedButton == "Button 2" ? "active" : ''}`}
-          >
-            PMS
-          </button>
-          <button
-            onClick={() => handleButtonClick("Button 3")}
-            className={`switch ${selectedButton == "Button 3" ? "active" : ''}`}
-          >
-            Other
-          </button>
-
-        </div>
-        {
-          selectedButton === "Button 1" && (
-            <ContentBSC />
-          )
-        }
-        {
-          selectedButton === "Button 2" && (
-            <ContentPMS />
-          )
-        }
-        {
-          selectedButton === "Button 3" && (
-            <ContentOther />
-          )
-        }
-      </div >
-    );
-  };
 
   return (
     <div className="home">

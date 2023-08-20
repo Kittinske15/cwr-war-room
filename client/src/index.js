@@ -9,7 +9,6 @@ import China from './pages/China';
 import Thailand from './pages/Thailand';
 import India from './pages/India';
 import TrueVision from './pages/TrueVision';
-import CPLWarroom from './pages/CPLWarroom';
 import CoporateStock from './pages/CoporateStock';
 import './styles/main.scss'
 
@@ -19,7 +18,6 @@ root.render(
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/true-vision" element={<TrueVision />} />
-      <Route path="/cpl-war-room" element={<CPLWarroom />} />
       <Route path="/test" element={<Test />} />
       <Route path="/China" element={<China />} />
       <Route path="/Thailand" element={<Thailand />} />
