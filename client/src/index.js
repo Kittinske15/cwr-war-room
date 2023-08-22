@@ -8,16 +8,14 @@ import Test from './test';
 import China from './pages/China';
 import Thailand from './pages/Thailand';
 import India from './pages/India';
-import TrueVision from './pages/TrueVision';
 import CoporateStock from './pages/CoporateStock';
 import './styles/main.scss'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/">
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/true-vision" element={<TrueVision />} />
       <Route path="/test" element={<Test />} />
       <Route path="/China" element={<China />} />
       <Route path="/Thailand" element={<Thailand />} />

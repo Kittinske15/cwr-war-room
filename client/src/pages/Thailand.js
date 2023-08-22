@@ -8,6 +8,7 @@ import dayjs from 'dayjs';
 import axios from 'axios';
 import Chart from 'react-apexcharts';
 import LabelSVGMap from '../label-svg-map';
+import ReactApexChart from 'react-apexcharts';
 
 export default function Thailand() {
   const provinces_data = data.map((item) => item["Country/Territory"]);
@@ -208,7 +209,7 @@ export default function Thailand() {
     }, []);
 
     return (
-      <div style={{ marginBottom: '-20px' }}>
+      <div>
         <h3 style={{ textAlign: 'center' }}>Inflation Rate</h3>
         {chartData ? (
           <>
@@ -226,6 +227,53 @@ export default function Thailand() {
         ) : (
           <p>Loading chart...</p>
         )}
+      </div>
+    );
+  };
+
+  const InterestRateChart = () => {
+    const options = {
+      chart: {
+        type: 'line',
+      },
+      xaxis: {
+        categories: ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
+        labels: {
+          style: {
+            colors: '#ffffff',
+          },
+        },
+      },
+      yaxis: {
+        labels: {
+          formatter: function (value) {
+            return value.toFixed(2) + '%';
+          },
+          style: {
+            colors: '#ffffff',
+          },
+        },
+        title: {
+          text: 'Percentage',
+          style: {
+            color: '#ffffff',
+          },
+        },
+        tickAmount: 4,
+      },
+    };
+
+    const series = [
+      {
+        name: 'Series 1',
+        data: [2.50, 2.00, 1.50, 1.50, 1.50, 1.75, 1.25, 0.50, 0.50, 1.50],
+      },
+    ];
+
+    return (
+      <div>
+        <div className='thailand-interest-rate'>Interest Rate</div>
+        <ReactApexChart options={options} series={series} type="line" height={350} />
       </div>
     );
   };
@@ -308,16 +356,10 @@ export default function Thailand() {
     );
   };
 
-
-
   const ThailandProportion = (
     <div className='thailand-footer'>
       <InflationChart />
-      {/* <GDPRateChart /> */}
-      <div style={{ marginBottom: '40px' }}>
-        <div className='thailand-interest-rate'>Interest Rate</div>
-        <iframe src='https://d3fy651gv2fhd3.cloudfront.net/embed/?s=btrr1day&v=202306280348V20230410&d1=20130727&h=300&w=600' height='300' width='600' frameborder='0' scrolling='no'></iframe><br />
-      </div>
+      <InterestRateChart />
       <TouristArrivalChart />
     </div>
   )

@@ -209,7 +209,7 @@ export default function Home() {
           <hr />
           <Stack direction="row" gap={2} className="list-button">
             <ListButton variant="outline" disableRipple>
-              DTGO
+              CP
             </ListButton>
             <ListButton variant="outline" disableRipple>
               Country

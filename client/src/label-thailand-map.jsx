@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import PropTypes from 'prop-types';
 import data from "./gdp.json";
 import inflation from "./inflation.json"
-// import FmdGoodIcon from '@mui/icons-material/FmdGood';
 
 function LabelThailandMap(props) {
 	const countries = data.map((item) => item["Country/Territory"]);
