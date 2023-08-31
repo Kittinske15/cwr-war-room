@@ -4,51 +4,14 @@ import axios from 'axios';
 import Chart from 'react-apexcharts';
 import PingAnChart from '../components/PingAnChart';
 import ItochuChart from '../components/ItochuChart';
-import CitricChart from '../components/CitricChart';
 import TrueChart from '../components/TrueChart';
 import CPFChart from '../components/CPFChart';
 import CPAllChart from '../components/CPAllChart';
-import MakroChart from '../components/MakroChart';
+import CPAxtraChart from '../components/CPAxtraChart';
+import CiticChart from '../components/CiticChart';
 
 export default function CoporateStock() {
     const CPFStockChart = () => {
-        const [chartData, setChartData] = useState(null);
-
-        useEffect(() => {
-            const fetchStockData = async () => {
-                try {
-                    const response = await axios.get('https://api.example.com/stock/cpf'); // Replace with actual API endpoint
-                    // Parse and format the stock data
-                    const parsedData = response.data.map(item => ({
-                        date: item.date,
-                        price: item.close, // Assuming the API provides a 'close' price for each date
-                    }));
-
-                    const labels = parsedData.map(item => item.date);
-                    const prices = parsedData.map(item => item.price);
-
-                    const chartData = {
-                        options: {
-                            // Chart options here
-                            // ...
-                        },
-                        series: [
-                            {
-                                name: 'CPF Stock Price',
-                                data: prices,
-                            },
-                        ],
-                    };
-
-                    setChartData(chartData);
-                } catch (error) {
-                    console.error('Error fetching stock data:', error);
-                }
-            };
-
-            fetchStockData();
-        }, []);
-
         return (
             <div>
                 <div className='oversea-grid'>
@@ -61,8 +24,8 @@ export default function CoporateStock() {
                         <ItochuChart />
                     </div>
                     <div>
-                        <h3 style={{ textAlign: 'center' }}>Citric Stock Market Chart</h3>
-                        <CitricChart />
+                        <h3 style={{ textAlign: 'center' }}>Citic Stock Market Chart</h3>
+                        <CiticChart />
                     </div>
                 </div>
             </div>
@@ -72,7 +35,7 @@ export default function CoporateStock() {
     const CoporateStock = (
         <div>
             <div className='coporate-stock'>
-                Coporate Stock
+                Corporate stock
             </div>
             <div className='coporate-stock-grid'>
                 <div>
@@ -89,7 +52,7 @@ export default function CoporateStock() {
                 </div>
                 <div>
                     <h3 style={{ textAlign: 'center' }}>MAKRO Stock Market Chart</h3>
-                    <MakroChart />
+                    <CPAxtraChart />
                 </div>
             </div>
         </div>
@@ -105,10 +68,13 @@ export default function CoporateStock() {
 
     return (
         <div className="home">
-            <div className="home-header" />
+            <a className="home-nav" href='/' />
             <div className='thailand-body'>
                 <div className='thailand-box'>
                     {CoporateStock}
+                    <div className='reference'>
+                        * Reference: Yahoo Financial data API
+                    </div>
                 </div>
                 <div className='thailand-box-content'>
                     {Oversea}

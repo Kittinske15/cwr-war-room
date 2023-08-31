@@ -1,6 +1,6 @@
 // import "react-svg-map/lib/";
 // import World from "@svg-maps/world";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { geoNaturalEarth1, geoPath } from "d3-geo";
 import * as d3 from "d3";
 import { feature } from 'topojson';
@@ -12,13 +12,23 @@ import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import { useState } from "react";
-
+import { useSpring, animated } from 'react-spring';
 
 export default function Home() {
   const countries_data = data.map((item) => item["Country/Territory"]);
   const estimateGDP = data.map((item) => item["Estimate"]);
   const getColor = (num) => colorData(num);
+  const [showGlobe, setShowGlobe] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowGlobe(false);
+    }, 3000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
 
   const ListButton = styled(Button)({
     boxShadow: 'none',
@@ -80,7 +90,6 @@ export default function Home() {
 
     g.append('path')
       .attr('class', 'sphere')
-      //.attr('transform', `translate(${width / 2}, ${(height / 2)+10})`)
       .attr('d', pathGenerator({ type: 'Sphere' }));
 
     svg.call(d3.zoom()
@@ -189,8 +198,6 @@ export default function Home() {
     </div>
   ));
 
-
-
   return (
     <div className="home">
       <div className="home-header" />
@@ -201,7 +208,13 @@ export default function Home() {
         <div className="map-container">
           <p className="map-header">GDP growth </p>
           <hr />
-          <svg className="map" ref={svgRef}></svg>
+
+          <div className="container">
+            <div className="content">
+              {showGlobe ? <img src="assets/rotate-globe.gif" /> : <svg className="map" ref={svgRef}></svg>}
+            </div>
+          </div>
+          <div className="reference">* Reference: International Monetary Fund</div>
         </div>
 
         <div className="list">

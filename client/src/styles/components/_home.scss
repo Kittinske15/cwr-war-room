@@ -75,7 +75,6 @@ h1 {
   color: red !important;
 }
 
-
 .sphere {
   fill: transparent;
 }
@@ -92,7 +91,16 @@ h1 {
 }
 
 .map {
-  padding-top: 2em;
+  // padding-top: 2em;
+}
+
+.home-nav {
+  position: absolute;
+  top: 0;
+  left: 40%;
+  height: 65px;
+  width: 320px;
+  cursor: pointer;
 }
 
 .list {
@@ -104,6 +112,7 @@ h1 {
   justify-content: start;
   margin: 20px 30px;
   color: #7abef3;
+  white-space: nowrap;
 }
 
 .list-button {
@@ -118,7 +127,7 @@ h1 {
 }
 
 .country-list-scroll {
-  height: 600px;
+  height: 480px;
   overflow-y: auto;
 }
 
@@ -178,9 +187,9 @@ h1 {
   gap: 15px;
   position: absolute;
   left: 60px;
-  top: 44px;
+  top: 35px;
   color: #7abef3;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .market-stock-title {
@@ -188,11 +197,45 @@ h1 {
   gap: 15px;
   position: absolute;
   right: 60px;
-  top: 44px;
+  top: 35px;
 }
 
 .market-stock-title a {
   color: #7abef3;
-  font-size: 24px;
+  font-size: 20px;
   text-decoration: none;
+}
+
+.filters-img {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.globe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.globe {
+  width: 500px;
+  height: 500px;
+  background: url('../../../public/assets/rotate-globe.gif') no-repeat;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 1s;
 }

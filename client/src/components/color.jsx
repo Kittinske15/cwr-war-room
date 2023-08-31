@@ -39,6 +39,5 @@ export function numberScale() {
   scale = scale.concat('0% - 3%');
   scale = scale.concat('-3% - 0%');
   scale = scale.concat('less than -3%');
-  scale = scale.concat('No Data');
   return scale;
 }

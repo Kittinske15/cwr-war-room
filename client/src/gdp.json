@@ -67,7 +67,7 @@
     },
     {
         "Country/Territory": "South Korea",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Asia",
         "Year": "2023"
     },
@@ -109,7 +109,7 @@
     },
     {
         "Country/Territory": "Turkey",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Asia",
         "Year": "2023"
     },
@@ -367,7 +367,7 @@
     },
     {
         "Country/Territory": "Slovakia",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Europe",
         "Year": "2023"
     },
@@ -403,7 +403,7 @@
     },
     {
         "Country/Territory": "Cuba",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Americas",
         "Year": "2023"
     },
@@ -487,7 +487,7 @@
     },
     {
         "Country/Territory": "Ivory Coast",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Africa",
         "Year": "2023"
     },
@@ -517,7 +517,7 @@
     },
     {
         "Country/Territory": "DR Congo",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Africa",
         "Year": "2023"
     },
@@ -613,7 +613,7 @@
     },
     {
         "Country/Territory": "Macau",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Asia",
         "Year": "2023"
     },
@@ -697,7 +697,7 @@
     },
     {
         "Country/Territory": "Lebanon",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Asia",
         "Year": "2023"
     },
@@ -739,7 +739,7 @@
     },
     {
         "Country/Territory": "Afghanistan",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Asia",
         "Year": "2023"
     },
@@ -751,7 +751,7 @@
     },
     {
         "Country/Territory": "Palestine",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Asia",
         "Year": "[n 13]2023"
     },
@@ -823,7 +823,7 @@
     },
     {
         "Country/Territory": "North Korea",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Asia",
         "Year": "2023"
     },
@@ -835,7 +835,7 @@
     },
     {
         "Country/Territory": "Syria",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Asia",
         "Year": "2023"
     },
@@ -865,7 +865,7 @@
     },
     {
         "Country/Territory": "Laos",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Asia",
         "Year": "2023"
     },
@@ -895,7 +895,7 @@
     },
     {
         "Country/Territory": "Kyrgyzstan",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Asia",
         "Year": "2023"
     },
@@ -919,7 +919,7 @@
     },
     {
         "Country/Territory": "New Caledonia",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Oceania",
         "Year": "2023"
     },
@@ -943,13 +943,13 @@
     },
     {
         "Country/Territory": "Monaco",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Europe",
         "Year": "2023"
     },
     {
         "Country/Territory": "Bermuda",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Americas",
         "Year": "2023"
     },
@@ -973,7 +973,7 @@
     },
     {
         "Country/Territory": "Liechtenstein",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Europe",
         "Year": "2023"
     },
@@ -985,13 +985,13 @@
     },
     {
         "Country/Territory": "French Polynesia",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Oceania",
         "Year": "2023"
     },
     {
         "Country/Territory": "Cayman Islands",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Americas",
         "Year": "2023"
     },
@@ -1057,7 +1057,7 @@
     },
     {
         "Country/Territory": "Greenland",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Americas",
         "Year": "2023"
     },
@@ -1069,7 +1069,7 @@
     },
     {
         "Country/Territory": "Cura\u00e7ao",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Americas",
         "Year": "2023"
     },
@@ -1093,7 +1093,7 @@
     },
     {
         "Country/Territory": "Cape Verde",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Africa",
         "Year": "2023"
     },
@@ -1111,7 +1111,7 @@
     },
     {
         "Country/Territory": "East Timor",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Asia",
         "Year": "2023"
     },
@@ -1141,7 +1141,7 @@
     },
     {
         "Country/Territory": "Zanzibar",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Africa",
         "Year": "2023"
     },
@@ -1153,7 +1153,7 @@
     },
     {
         "Country/Territory": "British Virgin Islands",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Americas",
         "Year": "2023"
     },
@@ -1189,7 +1189,7 @@
     },
     {
         "Country/Territory": "Turks and Caicos Islands",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Americas",
         "Year": "2023"
     },
@@ -1201,7 +1201,7 @@
     },
     {
         "Country/Territory": "Sint Maarten",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Americas",
         "Year": "2023"
     },
@@ -1213,7 +1213,7 @@
     },
     {
         "Country/Territory": "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Africa",
         "Year": "2023"
     },
@@ -1237,7 +1237,7 @@
     },
     {
         "Country/Territory": "Cook Islands",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Oceania",
         "Year": "2023"
     },
@@ -1249,7 +1249,7 @@
     },
     {
         "Country/Territory": "Anguilla",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Americas",
         "Year": "2023"
     },
@@ -1267,7 +1267,7 @@
     },
     {
         "Country/Territory": "Montserrat",
-        "Estimate": "no data",
+        "Estimate": "-",
         "UN region": "Americas",
         "Year": "2023"
     },

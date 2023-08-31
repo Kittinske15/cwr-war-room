@@ -2,17 +2,16 @@ import React, { useState, useEffect, useRef } from 'react';
 import * as d3 from "d3";
 import { colorLegend } from "../components/colorLegend";
 import { colorData, colorScale, numberScale } from "../components/color";
-import data from "../gdp.json";
+import data from "../ThailandGDP.json";
 import { geoNaturalEarth1, geoPath } from "d3-geo";
 import dayjs from 'dayjs';
 import axios from 'axios';
 import Chart from 'react-apexcharts';
-import LabelSVGMap from '../label-svg-map';
 import ReactApexChart from 'react-apexcharts';
 
 export default function Thailand() {
-  const provinces_data = data.map((item) => item["Country/Territory"]);
-  const estimateGDP = data.map((item) => item["Estimate"]);
+  const provinces_data = data.map((item) => item["Province_ENG"]);
+  const estimateGDP = data.map((item) => item["GPP2020"]);
   const getColor = (num) => colorData(num);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -27,8 +26,8 @@ export default function Thailand() {
 
 
   useEffect(() => {
-    const width = 1190;
-    const height = 720;
+    const width = 1300;
+    const height = 620;
     const colors = colorScale();
     const range = numberScale();
     const getGDP = (country) => estimateGDP[provinces_data.findIndex((isCountry) => isCountry === country)];
@@ -74,6 +73,7 @@ export default function Thailand() {
     //create a map
     d3.json('https://raw.githubusercontent.com/apisit/thailand.json/master/simplified/thailandWithName.json')
       .then(function (jsondata) {
+        console.log('jsondata: ', jsondata.features)
         console.table("1: " + jsondata.features.length);
         console.table("2: " + jsondata.features[0].properties.CHA_NE);
 
@@ -85,26 +85,6 @@ export default function Thailand() {
           .attr('fill', (d) => getColor(
             getGDP(d.properties.CHA_NE)
           ))
-          .on("click", (event, d) => {
-            console.log(d.properties.CHA_NE)
-          })
-          .on('mouseover', function (e, d) {
-            tooltip
-              .html(
-                `${d.properties.CHA_NE
-                }`
-              )
-              .style('visibility', 'visible');
-          })
-          .on('mousemove', function (event) {
-            tooltip
-              .style('top', event.pageY - 10 + 'px')
-              .style('left', event.pageX + 10 + 'px')
-              ;
-          })
-          .on('mouseout', function () {
-            tooltip.style('visibility', 'hidden');
-          })
 
         //text Label Name_country
         g.selectAll("text.country-name")
@@ -213,7 +193,7 @@ export default function Thailand() {
         <h3 style={{ textAlign: 'center' }}>Inflation Rate</h3>
         {chartData ? (
           <>
-            <Chart options={chartData.options} series={chartData.series} type="line" height={240} />
+            <Chart options={chartData.options} series={chartData.series} type="line" height={200} />
             <style>{`
               .apexcharts-tooltip {
                 color: #000000 !important;
@@ -273,7 +253,7 @@ export default function Thailand() {
     return (
       <div>
         <div className='thailand-interest-rate'>Interest Rate</div>
-        <ReactApexChart options={options} series={series} type="line" height={350} />
+        <ReactApexChart options={options} series={series} type="line" height={200} />
       </div>
     );
   };
@@ -342,7 +322,7 @@ export default function Thailand() {
     return (
       <div>
         <h3 style={{ textAlign: 'center' }}>Tourist Arrival</h3>
-        <Chart options={chartData.options} series={chartData.series} type="bar" height={240} />
+        <Chart options={chartData.options} series={chartData.series} type="bar" height={200} />
         <style>{`
           .apexcharts-tooltip {
             color: #000000 !important;
@@ -366,10 +346,10 @@ export default function Thailand() {
 
   return (
     <div className="home">
-      <div className="home-header" />
+      <a className="home-nav" href='/' />
       <div className="global-title">
         <a href='/'>
-          <img className="left-arrow" src="/assets/left-arrow.png" />
+          <img className="left-arrow" src="/assets/left-arrow-blue.png" />
         </a>
         Thailand Macro Econ
       </div>
@@ -381,6 +361,7 @@ export default function Thailand() {
       <div className='thailand-body'>
         <div className='thailand-box'>
           <svg className="map" ref={svgRef}></svg>
+          <div className="reference">* Reference: สำนักงานคณะกรรมการพัฒนาการเศรษฐกิจและสังคมแห่งชาติ สำนักนายกรัฐมนตรี</div>
         </div>
         {isMobile ? (
           <div className='trading-view-box'>

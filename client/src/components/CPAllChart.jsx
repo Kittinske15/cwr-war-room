@@ -1,53 +1,59 @@
-import React, { useEffect, useRef } from 'react';
-
-let tvScriptLoadingPromise;
+import React, { useEffect } from 'react';
+import { createChart } from 'lightweight-charts';
+import io from 'socket.io-client';
+import { format, fromUnixTime } from 'date-fns';
+import { utcToZonedTime } from 'date-fns-tz';
 
 export default function CPAllChart() {
-  const onLoadScriptRef = useRef();
+  useEffect(() => {
+    const chartContainer = document.getElementById('tvchart');
+    const containerWidth = chartContainer.clientWidth;
+    const containerHeight = 300;
 
-  useEffect(
-    () => {
-      onLoadScriptRef.current = createWidget;
+    const chartProperties = {
+      width: containerWidth,
+      height: containerHeight,
+      timeScale: {
+        timeVisible: true,
+        secondsVisible: false,
+      },
+    };
+    const log = console.log;
 
-      if (!tvScriptLoadingPromise) {
-        tvScriptLoadingPromise = new Promise((resolve) => {
-          const script = document.createElement('script');
-          script.id = 'tradingview-widget-loading-script';
-          script.src = 'https://s3.tradingview.com/tv.js';
-          script.type = 'text/javascript';
-          script.onload = resolve;
+    const chart = createChart(document.getElementById('cpall-chart'), chartProperties);
+    const candleSeries = chart.addCandlestickSeries();
 
-          document.head.appendChild(script);
-        });
-      }
+    function fetchDataAndGenerateChart() {
+      fetch('https://www.ibsdo.com/api/CPALL.BK')
+        .then((res) => res.json())
+        .then((data) => {
+          const cdata = data.map((d) => ({
+            time: d[0] / 1000,
+            open: parseFloat(d[1]),
+            high: parseFloat(d[2]),
+            low: parseFloat(d[3]),
+            close: parseFloat(d[4]),
+          }));
+          candleSeries.setData(cdata);
+        })
+        .catch((err) => log(err));
+    }
 
-      tvScriptLoadingPromise.then(() => onLoadScriptRef.current && onLoadScriptRef.current());
+    fetchDataAndGenerateChart();
+    const fetchInterval = setInterval(fetchDataAndGenerateChart, 1000);
 
-      return () => onLoadScriptRef.current = null;
+    const socket = io.connect('http://127.0.0.1:4000/');
+    socket.on('KLINE', (pl) => {
+      candleSeries.update(pl);
+    });
 
-      function createWidget() {
-        if (document.getElementById('tradingview_979a6') && 'TradingView' in window) {
-          new window.TradingView.widget({
-            autosize: true,
-            symbol: "COINBASE:BTCUSD",
-            interval: "D",
-            timezone: "Etc/UTC",
-            theme: "dark",
-            style: "1",
-            locale: "en",
-            enable_publishing: false,
-            allow_symbol_change: true,
-            container_id: "tradingview_979a6"
-          });
-        }
-      }
-    },
-    []
-  );
+    return () => {
+      clearInterval(fetchInterval);
+      socket.disconnect();
+    };
+  }, []); // Empty dependency array ensures this runs once on component mount
 
   return (
-    <div className='tradingview-widget-container' style={{ height: '300px' }}>
-      <div className='tradingview-chart' id='tradingview_979a6' />
-    </div>
+    <div id="cpall-chart" style={{ width: '100%', height: '100%' }}></div>
   );
 }

@@ -28,11 +28,30 @@
 
 .thailand-box {
   max-height: calc(100vh - 160px);
-  overflow: auto;
   border-radius: 5px;
   background: rgba(173, 216, 230, 0.2);
   color: white;
   padding: 20px 15px;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; /* You can change this to a color if needed */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent; /* You can change this to a color if needed */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3); /* You can change this to a color if needed */
 }
 
 .thailand-box-content {
@@ -181,7 +200,7 @@ body {
   margin-bottom: 1rem;
 }
 
-.profile>img {
+.profile > img {
   width: 100%;
   border-radius: 50%;
 }
@@ -366,8 +385,12 @@ h3 {
 }
 
 .left-arrow {
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
+}
+
+.apexcharts-gridline {
+  stroke-opacity: 0.2;
 }
 
 @media only screen and (min-width: 600px) {
