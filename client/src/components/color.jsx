@@ -16,8 +16,15 @@ export function colorData(num) {
       return '#B13434';
 
     default:
-      return '#eee';
+      return '#e0e09f';
 
+  }
+}
+
+export function colorThailand(num) {
+  switch (true) {
+    case num < 0 || num > 0:
+      return '#D3D3D3';
   }
 }
 

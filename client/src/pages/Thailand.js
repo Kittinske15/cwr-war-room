@@ -1,22 +1,22 @@
 import React, { useState, useEffect, useRef } from 'react';
-import * as d3 from "d3";
-import { colorLegend } from "../components/colorLegend";
-import { colorData, colorScale, numberScale } from "../components/color";
-import data from "../ThailandGDP.json";
-import { geoNaturalEarth1, geoPath } from "d3-geo";
+import * as d3 from 'd3';
+import { colorLegend } from '../components/colorLegend';
+import { colorThailand, colorScale, numberScale } from '../components/color';
+import data from '../ThailandGDP.json';
+import { geoNaturalEarth1, geoPath } from 'd3-geo';
 import dayjs from 'dayjs';
 import axios from 'axios';
 import Chart from 'react-apexcharts';
 import ReactApexChart from 'react-apexcharts';
 
 export default function Thailand() {
-  const provinces_data = data.map((item) => item["Province_ENG"]);
-  const estimateGDP = data.map((item) => item["GPP2020"]);
-  const getColor = (num) => colorData(num);
+  const provinces_data = data.map((item) => item['Province_ENG']);
+  const estimateGDP = data.map((item) => item['GPP2020']);
+  const getColor = (num) => colorThailand(num);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const pinImage = require('../pin/cp-logo.png')
 
-  const [selectedButton, setSelectedButton] = useState("Button 1");
-
+  const [selectedButton, setSelectedButton] = useState('Button 1');
 
   const handleButtonClick = (button) => {
     setSelectedButton(button);
@@ -24,40 +24,38 @@ export default function Thailand() {
 
   const svgRef = useRef();
 
-
   useEffect(() => {
     const width = 1300;
     const height = 620;
     const colors = colorScale();
     const range = numberScale();
-    const getGDP = (country) => estimateGDP[provinces_data.findIndex((isCountry) => isCountry === country)];
+    const getGDP = (country) =>
+      estimateGDP[provinces_data.findIndex((isCountry) => isCountry === country)];
 
-    const scale = d3.scaleOrdinal()
+    const scale = d3
+      .scaleOrdinal()
       .domain(range)
       .range(colors);
     const svg = d3.select(svgRef.current).attr('width', width).attr('height', height);
 
     const projection = geoNaturalEarth1()
       .scale(2200)
-      .translate([-2700, 800])
-      ;
+      .translate([-2700, 800]);
     var pathGenerator = geoPath().projection(projection);
 
     const g = svg.append('g');
 
+    g.append('path').attr('class', 'sphere').attr('d', pathGenerator({ type: 'Sphere' }));
 
-    g.append('path')
-      .attr('class', 'sphere')
-      .attr('d', pathGenerator({ type: 'Sphere' }));
+    svg.call(
+      d3
+        .zoom()
+        .scaleExtent([1, 12])
+        .on('zoom', (event) => {
+          g.attr('transform', event.transform);
+        })
+    );
 
-    svg.call(d3.zoom()
-      .scaleExtent([1, 12])
-      .on('zoom', (event) => {
-        g.attr('transform', event.transform);
-      }));
-
-
-    // create a tooltip
     const tooltip = d3
       .select('body')
       .append('div')
@@ -70,48 +68,66 @@ export default function Thailand() {
       .style('border-radius', '5px')
       .style('color', 'white');
 
-    //create a map
-    d3.json('https://raw.githubusercontent.com/apisit/thailand.json/master/simplified/thailandWithName.json')
-      .then(function (jsondata) {
-        console.log('jsondata: ', jsondata.features)
-        console.table("1: " + jsondata.features.length);
-        console.table("2: " + jsondata.features[0].properties.CHA_NE);
+    d3.json('https://raw.githubusercontent.com/apisit/thailand.json/master/simplified/thailandWithName.json').then(function (jsondata) {
+      console.log('jsondata: ', jsondata.features);
+      console.table('1: ' + jsondata.features.length);
+      console.table('2: ' + jsondata.features[0].properties.CHA_NE);
 
-        g.selectAll('path')
-          .data(jsondata.features)
-          .join('path')
-          .attr('class', 'province')
-          .attr('d', pathGenerator)
-          .attr('fill', (d) => getColor(
-            getGDP(d.properties.CHA_NE)
-          ))
+      g.selectAll('path')
+        .data(jsondata.features)
+        .join('path')
+        .attr('class', 'province')
+        .attr('d', pathGenerator)
+        .attr('fill', (d) =>
+          getColor(getGDP(d.properties.CHA_NE))
+        );
 
-        //text Label Name_country
-        g.selectAll("text.country-name")
-          .data(jsondata.features)
-          .enter()
-          .append("text")
-          .attr("class", "province-name")
-          .attr("x", d => pathGenerator.centroid(d)[0])
-          .attr("y", d => pathGenerator.centroid(d)[1])
-          .attr("text-anchor", "middle")
-          .attr("font-size", "3px")
-          .style("font-weight", "light")
-          .style("fill", "black")
-          .text(d => d.properties.CHA_NE);
+      g.selectAll('text.country-name')
+        .data(jsondata.features)
+        .enter()
+        .append('text')
+        .attr('class', 'province-name')
+        .attr('x', (d) => pathGenerator.centroid(d)[0])
+        .attr('y', (d) => pathGenerator.centroid(d)[1])
+        .attr('text-anchor', 'middle')
+        .attr('font-size', '3px')
+        .style('font-weight', 'light')
+        .style('fill', 'black')
+        .text((d) => d.properties.CHA_NE);
 
+      const companyMarkers = g.append('g').attr('class', 'company-markers');
+
+      const companyLocations = [
+        { name: 'CP', coordinates: [100, 14] },
+        { name: 'CP', coordinates: [102, 13.5] },
+        { name: 'CP', coordinates: [101, 13.15] },
+        { name: 'CP', coordinates: [100.7, 13.7] },
+        { name: 'CP', coordinates: [100.55, 14.8] },
+        { name: 'CP', coordinates: [102.7, 14.6] },
+      ];
+
+      companyLocations.forEach((location) => {
+        companyMarkers
+          .append('image')
+          .attr('x', projection(location.coordinates)[0] - 15)
+          .attr('y', projection(location.coordinates)[1] - 30)
+          .attr('width', 10)
+          .attr('height', 10)
+          .attr('xlink:href', pinImage)
+          .on('mouseover', () => {
+            tooltip.html(location.name).style('visibility', 'visible');
+          })
+          .on('mousemove', (event) => {
+            tooltip
+              .style('top', event.pageY - 10 + 'px')
+              .style('left', event.pageX + 10 + 'px');
+          })
+          .on('mouseout', () => {
+            tooltip.style('visibility', 'hidden');
+          });
       });
-
-    //colorLengend
-    svg.call(colorLegend, {
-      colorScale: scale,
-      colorLegendLabel:
-        'GDP (2023)',
-      colorLegendX: 35,
-      colorLegendY: 470,
     });
   }, [provinces_data, estimateGDP]);
-
   const InflationChart = () => {
     const [chartData, setChartData] = useState(null);
 

@@ -19,11 +19,41 @@ export default function Home() {
   const estimateGDP = data.map((item) => item["Estimate"]);
   const getColor = (num) => colorData(num);
   const [showGlobe, setShowGlobe] = useState(true);
+  const [showMap, setShowMap] = useState(true);
+  const [pinCompany, setPinCompany] = useState(false);
+  const companyLocations = [
+    {
+      name: "CP China",
+      latitude: 30.7749,
+      longitude: 100,
+    },
+    {
+      name: "CP Thailand",
+      latitude: 11.9,
+      longitude: 105,
+    },
+    {
+      name: "CP India",
+      latitude: 15,
+      longitude: 82,
+    },
+    {
+      name: "CP Russia",
+      latitude: 57,
+      longitude: 110,
+    },
+    {
+      name: "CP USA",
+      latitude: 35.7749,
+      longitude: -100.4194,
+    }
+  ]
+  const companyPinImage = require('../pin/cp-logo.png')
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowGlobe(false);
-    }, 3000);
+    }, 0);
 
     return () => {
       clearTimeout(timer);
@@ -171,9 +201,9 @@ export default function Home() {
         .attr("x", d => pathGenerator.centroid(d)[0])
         .attr("y", d => pathGenerator.centroid(d)[1])
         .attr("text-anchor", "middle")
-        .attr("font-size", "3px")
+        .attr("font-size", "6px")
         .style("font-weight", "light")
-        .style("fill", "black")
+        .style("fill", "#CCCCCC")
         .text(d => countryName[d.id]);
 
       //colorLengend
@@ -189,6 +219,38 @@ export default function Home() {
     });
 
   }, [countries_data, estimateGDP]);
+
+  useEffect(() => {
+    if (showMap) {
+      const width = 1300;
+      const height = 620;
+      const colors = colorScale();
+      const range = numberScale();
+      const getGDP = (country) => estimateGDP[countries_data.findIndex((isCountry) => isCountry === country)];
+
+      const scale = d3.scaleOrdinal()
+        .domain(range)
+        .range(colors);
+      const svg = d3.select(svgRef.current).attr('width', width).attr('height', height);
+
+      if (pinCompany) {
+        const projection = geoNaturalEarth1().translate([width / 2, height / 2]);
+
+        companyLocations.forEach((company) => {
+          const pinCoordinates = projection([company.longitude, company.latitude]);
+
+          svg
+            .append("image")
+            .attr("class", "company-pin-image")
+            .attr("x", pinCoordinates[0] - 20)
+            .attr("y", pinCoordinates[1] - 20) 
+            .attr("width", 18)
+            .attr("height", 18)
+            .attr("xlink:href", companyPinImage);
+        });
+      }
+    }
+  }, [showMap, pinCompany, companyLocations]);
 
   const displayList = (typeData1, typeData2) => typeData1.slice(1, 20).map((data, index) => (
     <div className="list-country" >
@@ -221,7 +283,7 @@ export default function Home() {
           <p className="list-header">List ( 2023 ) </p>
           <hr />
           <Stack direction="row" gap={2} className="list-button">
-            <ListButton variant="outline" disableRipple>
+            <ListButton variant="outline" disableRipple onClick={() => setPinCompany(!pinCompany)}>
               CP
             </ListButton>
             <ListButton variant="outline" disableRipple>
