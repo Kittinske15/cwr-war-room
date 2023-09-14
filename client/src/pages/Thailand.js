@@ -14,7 +14,7 @@ export default function Thailand() {
   const estimateGDP = data.map((item) => item['GPP2020']);
   const getColor = (num) => colorThailand(num);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-  const pinImage = require('../pin/cp-logo.png')
+  const pinImage = require('../pin/cp-logo2.png')
 
   const [selectedButton, setSelectedButton] = useState('Button 1');
 

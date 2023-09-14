@@ -21,6 +21,23 @@ export default function Home() {
   const [showGlobe, setShowGlobe] = useState(true);
   const [showMap, setShowMap] = useState(true);
   const [pinCompany, setPinCompany] = useState(false);
+  const [sortOrder, setSortOrder] = useState("asc");
+
+  const toggleSortOrder = () => {
+    setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+  };
+
+  const sortData = (data, order) => {
+    if (order === "asc") {
+      return data.slice().sort();
+    } else {
+      return data.slice().sort().reverse();
+    }
+  };
+
+  const sortedCountriesData = sortData(countries_data, sortOrder);
+  const sortedEstimateGDP = sortData(estimateGDP, sortOrder);
+
   const companyLocations = [
     {
       name: "CP China",
@@ -243,16 +260,16 @@ export default function Home() {
             .append("image")
             .attr("class", "company-pin-image")
             .attr("x", pinCoordinates[0] - 20)
-            .attr("y", pinCoordinates[1] - 20) 
-            .attr("width", 18)
-            .attr("height", 18)
+            .attr("y", pinCoordinates[1] - 20)
+            .attr("width", 20)
+            .attr("height", 20)
             .attr("xlink:href", companyPinImage);
         });
       }
     }
   }, [showMap, pinCompany, companyLocations]);
 
-  const displayList = (typeData1, typeData2) => typeData1.slice(1, 20).map((data, index) => (
+  const displayList = (typeData1, typeData2) => typeData1.slice(1, 100).map((data, index) => (
     <div className="list-country" >
       <p>{data}</p>
       {/* <span></span> */}
@@ -291,17 +308,18 @@ export default function Home() {
             </ListButton>
           </Stack>
           <div className="list-container">
-            <Button endIcon={sortCountry ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}
-              onClick={() => { setSortCountry(!sortCountry); }}
+            <Button
+              endIcon={sortOrder === "asc" ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}
+              onClick={toggleSortOrder}
               size="large"
-              style={{ color: 'white' }}
+              style={{ color: "white" }}
             >
               Country
             </Button>
             <p> Value </p>
           </div>
           <div className="country-list-scroll">
-            {displayList(countries_data, estimateGDP)}
+            {displayList(sortedCountriesData, sortedEstimateGDP)}
           </div>
         </div>
       </div>
