@@ -192,6 +192,21 @@ h1 {
   font-size: 20px;
 }
 
+.oversea-title {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  right: 60px;
+  top: 35px;
+  color: #7abef3;
+  font-size: 20px;
+}
+
+.oversea-title a{
+  text-decoration: none;
+  color: #7abef3;
+}
+
 .market-stock-title {
   display: flex;
   gap: 15px;

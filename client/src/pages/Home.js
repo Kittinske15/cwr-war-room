@@ -43,26 +43,31 @@ export default function Home() {
       name: "CP China",
       latitude: 30.7749,
       longitude: 100,
+      gdp: 5.2
     },
     {
       name: "CP Thailand",
       latitude: 11.9,
       longitude: 105,
+      gdp: 3.4
     },
     {
       name: "CP India",
       latitude: 15,
       longitude: 82,
+      gdp: 5.9
     },
     {
       name: "CP Russia",
       latitude: 57,
       longitude: 110,
+      gdp: 0.7
     },
     {
       name: "CP USA",
       latitude: 35.7749,
       longitude: -100.4194,
+      gdp: 1.8
     }
   ]
   const companyPinImage = require('../pin/cp-logo.png')
@@ -277,11 +282,23 @@ export default function Home() {
     </div>
   ));
 
+  const displayCP = (companyLocations) => companyLocations.map((company, index) => (
+    <div className="list-country" key={index}>
+      <p>{company.name.replace(/^CP\s*/, '')}</p>
+      <p>{company.gdp} % </p>
+    </div>
+  ));
+
   return (
     <div className="home">
       <div className="home-header" />
       <div className="global-title">
         Global Macro Econ
+      </div>
+      <div className="oversea-title">
+        <a href='/oversea'>
+          Oversea Market
+        </a>
       </div>
       <div className="home-body">
         <div className="map-container">
@@ -318,9 +335,15 @@ export default function Home() {
             </Button>
             <p> Value </p>
           </div>
-          <div className="country-list-scroll">
-            {displayList(sortedCountriesData, sortedEstimateGDP)}
-          </div>
+          {pinCompany ? (
+            <div className="country-list-scroll">
+              {displayCP(companyLocations)}
+            </div>
+          ) : (
+            <div className="country-list-scroll">
+              {displayList(sortedCountriesData, sortedEstimateGDP)}
+            </div>
+          )}
         </div>
       </div>
     </div>

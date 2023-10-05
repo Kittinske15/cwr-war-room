@@ -9,6 +9,7 @@ import China from './pages/China';
 import Thailand from './pages/Thailand';
 import India from './pages/India';
 import CoporateStock from './pages/CoporateStock';
+import OverseaStock from './pages/OverseaStock';
 import './styles/main.scss'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,6 +22,7 @@ root.render(
       <Route path="/Thailand" element={<Thailand />} />
       <Route path="/India" element={<India />} />
       <Route path="/stock" element={<CoporateStock />} />
+      <Route path="/oversea" element={<OverseaStock />} />
     </Routes>
   </BrowserRouter>,
 );

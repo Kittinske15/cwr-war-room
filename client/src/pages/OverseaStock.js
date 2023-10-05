@@ -9,50 +9,34 @@ import CPFChart from '../components/CPFChart';
 import CPAllChart from '../components/CPAllChart';
 import CPAxtraChart from '../components/CPAxtraChart';
 import CiticChart from '../components/CiticChart';
+import ChaitaiChart from '../components/ChaitaiChart';
 
-export default function CoporateStock() {
-    const CPFStockChart = () => {
-        return (
-            <div>
-                <div className='oversea-grid'>
-                    <div>
-                        <h3 style={{ textAlign: 'center' }}>PingAn</h3>
-                        <PingAnChart />
-                    </div>
-                    <div>
-                        <h3 style={{ textAlign: 'center' }}>ITOCHU</h3>
-                        <ItochuChart />
-                    </div>
-                    <div>
-                        <h3 style={{ textAlign: 'center' }}>Citic</h3>
-                        <CiticChart />
-                    </div>
-                </div>
-            </div>
-        );
-    };
-
-    const CoporateStock = (
+export default function OverseaStock() {
+    const OverseaStock = (
         <div>
             <div className='coporate-stock'>
-                Corporate stock
+                Oversea stock
             </div>
-            <div className='coporate-stock-grid'>
+            <div className='oversea-stock-grid'>
                 <div>
-                    <h3 style={{ textAlign: 'center' }}>CPF</h3>
+                    <h3 style={{ textAlign: 'center' }}>CP Lotus</h3>
                     <CPFChart />
                 </div>
                 <div>
-                    <h3 style={{ textAlign: 'center' }}>TRUE</h3>
+                    <h3 style={{ textAlign: 'center' }}>CPP</h3>
                     <TrueChart />
                 </div>
                 <div>
-                    <h3 style={{ textAlign: 'center' }}>CPALL</h3>
+                    <h3 style={{ textAlign: 'center' }}>CTEI</h3>
                     <CPAllChart />
                 </div>
                 <div>
-                    <h3 style={{ textAlign: 'center' }}>MAKRO</h3>
+                    <h3 style={{ textAlign: 'center' }}>CP Taiwan (CPT)</h3>
                     <CPAxtraChart />
+                </div>
+                <div>
+                    <h3 style={{ textAlign: 'center' }}>CHAITAI Investment</h3>
+                    <ChaitaiChart />
                 </div>
             </div>
         </div>
@@ -69,16 +53,12 @@ export default function CoporateStock() {
     return (
         <div className="home">
             <a className="home-nav" href='/' />
-            <div className='thailand-body'>
-                <div className='thailand-box'>
-                    {CoporateStock}
+            <div className='oversea-body'>
+                <div className='oversea-box'>
+                    {OverseaStock}
                     <div className='reference'>
                         * Reference: Yahoo Financial data API
                     </div>
-                </div>
-                <div className='thailand-box-content'>
-                    {Oversea}
-                    <CPFStockChart />
                 </div>
             </div>
         </div>
