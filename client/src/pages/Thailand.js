@@ -337,7 +337,7 @@ export default function Thailand() {
 
     return (
       <div>
-        <h3 style={{ textAlign: 'center' }}>Tourist Arrival</h3>
+        <h3 style={{ textAlign: 'center' }}>Employment Rate</h3>
         <Chart options={chartData.options} series={chartData.series} type="bar" height={200} />
         <style>{`
           .apexcharts-tooltip {
@@ -371,14 +371,14 @@ export default function Thailand() {
       </div>
       <div className="market-stock-title">
         <a href='/stock'>
-          Market Stock
+          Capital Market
         </a>
       </div>
       <div className='thailand-body'>
-        <div className='thailand-box'>
+        {/* <div className='thailand-box'>
           <svg className="map" ref={svgRef}></svg>
           <div className="reference">* Reference: สำนักงานคณะกรรมการพัฒนาการเศรษฐกิจและสังคมแห่งชาติ สำนักนายกรัฐมนตรี</div>
-        </div>
+        </div> */}
         {isMobile ? (
           <div className='trading-view-box'>
           </div>

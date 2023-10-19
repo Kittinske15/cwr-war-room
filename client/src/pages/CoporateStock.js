@@ -13,20 +13,18 @@ import CiticChart from '../components/CiticChart';
 export default function CoporateStock() {
     const CPFStockChart = () => {
         return (
-            <div>
-                <div className='oversea-grid'>
-                    <div>
-                        <h3 style={{ textAlign: 'center' }}>PingAn</h3>
-                        <PingAnChart />
-                    </div>
-                    <div>
-                        <h3 style={{ textAlign: 'center' }}>ITOCHU</h3>
-                        <ItochuChart />
-                    </div>
-                    <div>
-                        <h3 style={{ textAlign: 'center' }}>Citic</h3>
-                        <CiticChart />
-                    </div>
+            <div className='oversea-grid'>
+                <div>
+                    <h3 style={{ textAlign: 'center' }}>PingAn</h3>
+                    <PingAnChart />
+                </div>
+                <div>
+                    <h3 style={{ textAlign: 'center' }}>ITOCHU</h3>
+                    <ItochuChart />
+                </div>
+                <div>
+                    <h3 style={{ textAlign: 'center' }}>Citic</h3>
+                    <CiticChart />
                 </div>
             </div>
         );
@@ -69,7 +67,7 @@ export default function CoporateStock() {
     return (
         <div className="home">
             <a className="home-nav" href='/' />
-            <div className='thailand-body'>
+            <div className='coporate-body'>
                 <div className='thailand-box'>
                     {CoporateStock}
                     <div className='reference'>

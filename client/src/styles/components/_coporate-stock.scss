@@ -24,6 +24,16 @@
     height: 100%;
 }
 
+.coporate-body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    // height: calc(100% - 100px);
+    position: relative;
+    top: 100px;
+    padding: 0 20px;
+    gap: 10px;
+}
+
 .coporate-stock-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;

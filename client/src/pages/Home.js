@@ -22,6 +22,11 @@ export default function Home() {
   const [showMap, setShowMap] = useState(true);
   const [pinCompany, setPinCompany] = useState(false);
   const [sortOrder, setSortOrder] = useState("asc");
+  const [highlightCP, setHighlightCP] = useState(false);
+
+  const toggleCPHighlight = () => {
+    setHighlightCP(!highlightCP);
+  };
 
   const toggleSortOrder = () => {
     setSortOrder(sortOrder === "asc" ? "desc" : "asc");
@@ -38,37 +43,125 @@ export default function Home() {
   const sortedCountriesData = sortData(countries_data, sortOrder);
   const sortedEstimateGDP = sortData(estimateGDP, sortOrder);
 
+  console.log("sortedCountriesData: ", sortedCountriesData)
+  console.log("estimateGDP: ", estimateGDP)
+  console.log("sortedEstimateGDP: ", sortedEstimateGDP)
+
   const companyLocations = [
     {
-      name: "CP China",
+      name: "China",
       latitude: 30.7749,
       longitude: 100,
       gdp: 5.2
     },
     {
-      name: "CP Thailand",
+      name: "Thailand",
       latitude: 11.9,
       longitude: 105,
       gdp: 3.4
     },
     {
-      name: "CP India",
+      name: "India",
       latitude: 15,
       longitude: 82,
       gdp: 5.9
     },
     {
-      name: "CP Russia",
+      name: "Russia",
       latitude: 57,
       longitude: 110,
       gdp: 0.7
     },
     {
-      name: "CP USA",
+      name: "USA",
       latitude: 35.7749,
       longitude: -100.4194,
       gdp: 1.8
-    }
+    },
+    {
+      name: "Belgium",
+      latitude: 50.5039,
+      longitude: 4.4699,
+      gdp: 0.7
+    },
+    {
+      name: "Poland",
+      latitude: 51.9194,
+      longitude: 19.1451,
+      gdp: 0.3
+    },
+    {
+      name: "Turkey",
+      latitude: 38.9637,
+      longitude: 35.2433,
+      gdp: 1.2
+    },
+    {
+      name: "Malaysia",
+      latitude: 4.2105,
+      longitude: 101.9758,
+      gdp: 4.5
+    },
+    {
+      name: "United Kingdom",
+      latitude: 55.3781,
+      longitude: 3.4360,
+      gdp: -0.3
+    },
+    {
+      name: "Pakistan",
+      latitude: 30.3753,
+      longitude: 69.3451,
+      gdp: 0.5
+    },
+    {
+      name: "Vietnam",
+      latitude: 14.0583,
+      longitude: 108.2772,
+      gdp: 5.8
+    },
+    {
+      name: "Laos",
+      latitude: 19.8563,
+      longitude: 102.4955,
+      gdp: 2.7
+    },
+    {
+      name: "Myanmar",
+      latitude: 21.9162,
+      longitude: 95.9560,
+      gdp: 2.6
+    },
+    {
+      name: "Singapore",
+      latitude: 1.3521,
+      longitude: 103.8198,
+      gdp: 1.5
+    },
+    {
+      name: "Cambodia",
+      latitude: 12.5657,
+      longitude: 104.9910,
+      gdp: 5.8
+    },
+    {
+      name: "Sri Lanka",
+      latitude: 7.8731,
+      longitude: 80.7718,
+      gdp: -3
+    },
+    {
+      name: "Bangladesh",
+      latitude: 23.6850,
+      longitude: 90.3563,
+      gdp: 5.5
+    },
+    {
+      name: "Indonesia",
+      latitude: 0.7893,
+      longitude: 113.9213,
+      gdp: 5
+    },
   ]
   const companyPinImage = require('../pin/cp-logo.png')
 
@@ -185,6 +278,7 @@ export default function Home() {
         .on("click", (event, d) => {
           //console.log(countryName[d.id] )
           window.location.href = `/${countryName[d.id]}`;
+          // window.location.href = `/stock`;
         })
         .on('mouseover', function (e, d) {
           let GDP = getGDP(countryName[d.id])
@@ -228,6 +322,21 @@ export default function Home() {
         .style("fill", "#CCCCCC")
         .text(d => countryName[d.id]);
 
+      g.selectAll('path')
+        .attr('fill', (d) => {
+          if (highlightCP) {
+            const countryGDP = getGDP(countryName[d.id]);
+            if (["Indonesia", "Bangladesh", "Vietnam", "Laos", "Myanmar", "Singapore", "Cambodia", "Sri Lanka", "Thailand", "Russia", "China", "India", "United States", "Belgium", "Poland", "Turkey", "Malaysia", "United Kingdom", "Pakistan"].includes(countryName[d.id])) {
+              return getColor(countryGDP);
+            } else {
+              g.select(`text.country-name-${d.id}`).style('visibility', 'hidden');
+              return 'grey';
+            }
+          } else {
+            g.select(`text.country-name-${d.id}`).style('visibility', 'visible');
+            return getColor(getGDP(countryName[d.id]));
+          }
+        });
       //colorLengend
       svg.call(colorLegend, {
         colorScale: scale,
@@ -317,7 +426,15 @@ export default function Home() {
           <p className="list-header">List ( 2023 ) </p>
           <hr />
           <Stack direction="row" gap={2} className="list-button">
-            <ListButton variant="outline" disableRipple onClick={() => setPinCompany(!pinCompany)}>
+            <ListButton
+              variant="outline"
+              disableRipple
+              onClick={() => {
+                setPinCompany(!pinCompany);
+                toggleCPHighlight();
+              }}
+              style={{ backgroundColor: highlightCP ? 'green' : 'transparent' }}
+            >
               CP
             </ListButton>
             <ListButton variant="outline" disableRipple>
