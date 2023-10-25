@@ -401,9 +401,9 @@ export default function Home() {
   return (
     <div className="home">
       <div className="home-header" />
-      <div className="global-title">
+      {/* <div className="global-title">
         Global Macro Econ
-      </div>
+      </div> */}
       <div className="oversea-title">
         <a href='/oversea'>
           Oversea Market

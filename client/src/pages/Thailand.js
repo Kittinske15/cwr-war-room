@@ -354,11 +354,401 @@ export default function Thailand() {
 
   const ThailandProportion = (
     <div className='thailand-footer'>
-      <InflationChart />
+      {/* <InflationChart />
       <InterestRateChart />
-      <TouristArrivalChart />
+      <TouristArrivalChart /> */}
     </div>
   )
+
+  const GDPChart = () => {
+    const options = {
+      chart: {
+        id: "line-chart",
+        toolbar: {
+          show: false,
+        },
+      },
+      xaxis: {
+        categories: [
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025",
+          "2026",
+        ],
+        labels: {
+          style: {
+            colors: "#fff",
+          },
+        },
+      },
+      stroke: {
+        curve: "smooth",
+        width: [4, 2, 2],
+        dashArray: [0, 5, 0],
+      },
+      markers: {
+        size: 4,
+      },
+      dataLabels: {
+        enabled: true,
+        style: {
+          colors: ["#000000", "#000000"],
+        },
+        formatter: function (val) {
+          return val;
+        },
+      },
+      tooltip: {
+        enabled: true,
+        style: {
+          fontSize: "14px",
+          fontFamily: "Arial",
+          color: "#000000",
+        },
+      },
+    };
+
+    const series = [
+      {
+        name: "Line",
+        data: [11.1, 12.5, 12.9, 13.4],
+      },
+      {
+        name: "Values",
+        data: [11.1, 12.5, 12.9, 13.4, 14.0, 14.6, 15.2],
+      },
+    ];
+
+    return (
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Chart options={options} series={series} type="line" width="500" height="210" />
+      </div>
+    );
+  };
+
+  const PopulationChart = () => {
+    const options = {
+      chart: {
+        id: "line-chart",
+        toolbar: {
+          show: false,
+        },
+      },
+      xaxis: {
+        categories: [
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025",
+          "2026",
+        ],
+        labels: {
+          style: {
+            colors: "#fff",
+          },
+        },
+      },
+      stroke: {
+        curve: "smooth",
+        width: [4, 2, 2],
+        dashArray: [0, 5, 0],
+      },
+      markers: {
+        size: 4,
+      },
+      dataLabels: {
+        enabled: true,
+        style: {
+          colors: ["#000000", "#000000"],
+        },
+        formatter: function (val) {
+          return val;
+        },
+      },
+      tooltip: {
+        enabled: true,
+        style: {
+          fontSize: "14px",
+          fontFamily: "Arial",
+          color: "#000000",
+        },
+      },
+    };
+
+    const series = [
+      {
+        name: "Line",
+        data: [7.68, 7.72, 7.78, 7.85],
+      },
+      {
+        name: "Values",
+        data: [7.68, 7.72, 7.78, 7.85, 7.93, 8, 8.08],
+      },
+    ];
+
+    return (
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Chart options={options} series={series} type="line" width="500" height="210" />
+      </div>
+    );
+  };
+
+  const InflationRataChart = () => {
+    const options = {
+      chart: {
+        id: "line-chart",
+        toolbar: {
+          show: false,
+        },
+      },
+      xaxis: {
+        categories: [
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025",
+          "2026",
+        ],
+        labels: {
+          style: {
+            colors: "#fff",
+          },
+        },
+      },
+      stroke: {
+        curve: "smooth",
+        width: [4, 2, 2],
+        dashArray: [0, 5, 0],
+      },
+      markers: {
+        size: 4,
+      },
+      dataLabels: {
+        enabled: true,
+        style: {
+          colors: ["#000000", "#000000"],
+        },
+        formatter: function (val) {
+          return val;
+        },
+      },
+      tooltip: {
+        enabled: true,
+        style: {
+          fontSize: "14px",
+          fontFamily: "Arial",
+          color: "#000000",
+        },
+      },
+    };
+
+    const series = [
+      {
+        name: "Line",
+        data: [3.2, 4.7, 8.7, 7],
+      },
+      {
+        name: "Values",
+        data: [3.2, 4.7, 8.7, 7, 4.9, 3.9, 3.6],
+      },
+    ];
+
+    return (
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Chart options={options} series={series} type="line" width="500" height="210" />
+      </div>
+    );
+  };
+
+  const ImportChart = () => {
+    const options = {
+      chart: {
+        id: "import-chart",
+        toolbar: {
+          show: false,
+        },
+      },
+      xaxis: {
+        categories: [
+          "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"
+        ],
+        labels: {
+          style: {
+            colors: "#fff",
+          },
+        },
+      },
+      dataLabels: {
+        enabled: true,
+        style: {
+          colors: ["#000000", "#000000"],
+        },
+        formatter: function (val) {
+          return val;
+        },
+      },
+    };
+
+    const series = [
+      {
+        name: "Import of Goods & Services",
+        data: [
+          63, 58, 55, 53.5, 55, 52.5, 47.5, 52.8, 64
+        ],
+      },
+    ];
+
+    return (
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Chart options={options} series={series} type="line" width="500" height="210" />
+      </div>
+    );
+  };
+
+  const ExchangeRataChinaChart = () => {
+    const options = {
+      chart: {
+        id: "line-chart",
+        toolbar: {
+          show: false,
+        },
+      },
+      xaxis: {
+        categories: [
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025",
+          "2026",
+        ],
+        labels: {
+          style: {
+            colors: "#fff",
+          },
+        },
+      },
+      stroke: {
+        curve: "smooth",
+        width: [4, 2, 2],
+        dashArray: [0, 5, 0],
+      },
+      markers: {
+        size: 4,
+      },
+      dataLabels: {
+        enabled: true,
+        style: {
+          colors: ["#000000", "#000000"],
+        },
+        formatter: function (val) {
+          return val;
+        },
+      },
+      tooltip: {
+        enabled: true,
+        style: {
+          fontSize: "14px",
+          fontFamily: "Arial",
+          color: "#000000",
+        },
+      },
+    };
+
+    const series = [
+      {
+        name: "Line",
+        data: [4.32, 4.62, 5.22, 4.94],
+      },
+      {
+        name: "Values",
+        data: [4.32, 4.62, 5.22, 4.94, 4.55, 4.42, 4.75],
+      },
+    ];
+
+    return (
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Chart options={options} series={series} type="line" width="250" height="200" />
+      </div>
+    );
+  };
+
+  const ExchangeRataUSAChart = () => {
+    const options = {
+      chart: {
+        id: "line-chart",
+        toolbar: {
+          show: false,
+        },
+      },
+      xaxis: {
+        categories: [
+          "2020",
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025",
+          "2026",
+        ],
+        labels: {
+          style: {
+            colors: "#fff",
+          },
+        },
+      },
+      stroke: {
+        curve: "smooth",
+        width: [4, 2, 2],
+        dashArray: [0, 5, 0],
+      },
+      markers: {
+        size: 4,
+      },
+      dataLabels: {
+        enabled: true,
+        style: {
+          colors: ["#000000", "#000000"],
+        },
+        formatter: function (val) {
+          return val;
+        },
+      },
+      tooltip: {
+        enabled: true,
+        style: {
+          fontSize: "14px",
+          fontFamily: "Arial",
+          color: "#000000",
+        },
+      },
+    };
+
+    const series = [
+      {
+        name: "Line",
+        data: [30.08, 30.19, 33.18, 34.59],
+      },
+      {
+        name: "Values",
+        data: [30.08, 30.19, 33.18, 34.59, 35.12, 33.58, 33.85],
+      },
+    ];
+
+    return (
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Chart options={options} series={series} type="line" width="250" height="200" />
+      </div>
+    );
+  };
 
   return (
     <div className="home">
@@ -367,7 +757,7 @@ export default function Thailand() {
         <a href='/'>
           <img className="left-arrow" src="/assets/left-arrow-blue.png" />
         </a>
-        Thailand Macro Econ
+        Global Economy
       </div>
       <div className="market-stock-title">
         <a href='/stock'>
@@ -397,10 +787,82 @@ export default function Thailand() {
           //   </div>
           // </div>
         ) : (
-          <div className='thailand-box-content'>
-            {ThailandProportion}
-            {/* <ContentSwitcher /> */}
+          <div className='thailand-graph-grid'>
+            <a href="/gdp-capita" className='thailand-graph-box'>
+              <div className='thailand-graph-box-title'>
+                GDP per Capita, current prices <br />
+                US Dollars per Capita
+              </div>
+              <div className='thailand-graph-box-subtitle1'>
+                13.44
+              </div>
+              <div className='thailand-graph-box-subtitle2'>Thousand</div>
+              {GDPChart()}
+            </a>
+            <div className='thailand-graph-box'>
+              <div className='thailand-graph-box-title'>
+                Population
+                (Million of People)
+              </div>
+              <div className='thailand-graph-box-subtitle1'>
+                7.85
+              </div>
+              <div className='thailand-graph-box-subtitle2'>Thousand</div>
+              {PopulationChart()}
+            </div>
+            <div className='thailand-graph-box'>
+              <div className='thailand-graph-box-title'>
+                Import of Goods & Services <br />
+                Year 2022
+              </div>
+              <div className='thailand-graph-box-subtitle1'>
+                5.6
+              </div>
+              {ImportChart()}
+            </div>
+            <div className='thailand-graph-box'>
+              <div className='thailand-graph-box-title'>
+                Inflation rate <br />
+                Annual percent change
+              </div>
+              <div className='thailand-graph-box-subtitle1'>
+                7.85
+              </div>
+              <div className='thailand-graph-box-subtitle2'>Thousand</div>
+              {InflationRataChart()}
+            </div>
+            <div className='thailand-graph-box'>
+              <div className='thailand-graph-box-title'>
+                Unemployment Rate <br />
+                April 2023
+              </div>
+              <div className='thailand-graph-box-subtitle1' style={{ marginBottom: '60px' }}>
+                4.1
+              </div>
+              <div className='thailand-graph-box-subtitle2'>The People Republic of China
+              </div>
+            </div>
+            <div className='thailand-graph-box'>
+              <div className='thailand-graph-box-title'>
+                Exchange Rate <br />
+                Year 2022 (BTH)
+              </div>
+              <div className='exchange-rate-grid'>
+                <div className='exchange-rate-img-grid'>
+                  <img src="assets/usa-flag.png" className='exchange-rate-flag' />
+                  {ExchangeRataUSAChart()}
+                </div>
+                <div className='exchange-rate-img-grid'>
+                  <img src="assets/china-flag.png" className='exchange-rate-flag' />
+                  {ExchangeRataChinaChart()}
+                </div>
+              </div>
+            </div>
           </div>
+          // <div className='thailand-box-content'>
+          //   {ThailandProportion}
+          //   <ContentSwitcher />
+          // </div>
         )}
       </div>
     </div>
