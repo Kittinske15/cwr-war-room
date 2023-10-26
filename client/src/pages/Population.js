@@ -3,7 +3,7 @@ import { colorThailand, colorScale, numberScale } from '../components/color';
 import data from '../ThailandGDP.json';
 import Chart from 'react-apexcharts';
 
-export default function GDPCapita() {
+export default function Population() {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
     const CapitaChart = () => {
@@ -15,20 +15,13 @@ export default function GDPCapita() {
                 },
             },
             xaxis: {
-                categories: ["Africa (Region)", "Southeast Asia", "Europe", "Middle East (Region)", "North America", "South America", "World"],
+                categories: ["Africa (Region)", "Asia and Pacific", "Europe", "Middle East (Region)", "North America", "South America", "World"],
                 labels: {
                     style: {
                         colors: "#fff",
                     },
                 },
             },
-            yaxis: {
-                labels: {
-                    style: {
-                        colors: "#fff",
-                    },
-                },
-            }
         };
 
         const series = [
@@ -54,26 +47,19 @@ export default function GDPCapita() {
                 },
             },
             xaxis: {
-                categories: ["Africa", "Southeast Asia", "Europe", "Middle East", "North America", "South America", "World"],
+                categories: ["Africa", "Asia and Pacific", "Europe", "Middle East", "North America", "South America", "World"],
                 labels: {
                     style: {
                         colors: "#fff",
                     },
                 },
             },
-            yaxis: {
-                labels: {
-                    style: {
-                        colors: "#fff",
-                    },
-                },
-            }
         };
 
         const series = [
             {
                 name: "Data Series 1",
-                data: [6.9, 5, 8.4, 14, 7.9, 14, 8.7],
+                data: [42, 78, 60, 91, 55, 72, 89],
             },
         ];
 
@@ -93,20 +79,13 @@ export default function GDPCapita() {
                 },
             },
             xaxis: {
-                categories: ["Africa (Region)", "Southeast Asia", "Europe", "Middle East (Region)", "North America", "South America", "World"],
+                categories: ["Africa (Region)", "Asia and Pacific", "Europe", "Middle East (Region)", "North America", "South America", "World"],
                 labels: {
                     style: {
                         colors: "#fff",
                     },
                 },
             },
-            yaxis: {
-                labels: {
-                    style: {
-                        colors: "#fff",
-                    },
-                },
-            }
         };
 
         const series = [
@@ -132,20 +111,13 @@ export default function GDPCapita() {
                 },
             },
             xaxis: {
-                categories: ["Africa (Region)", "Southeast Asia", "Europe", "Middle East (Region)", "North America", "South America", "World"],
+                categories: ["Africa (Region)", "Asia and Pacific", "Europe", "Middle East (Region)", "North America", "South America", "World"],
                 labels: {
                     style: {
                         colors: "#fff",
                     },
                 },
             },
-            yaxis: {
-                labels: {
-                    style: {
-                        colors: "#fff",
-                    },
-                },
-            }
         };
 
         const series = [
@@ -183,34 +155,34 @@ export default function GDPCapita() {
                     </div>
                 ) : (
                     <div className='gdp-capita-grid '>
-                        <a href="/gdp-capita-detail" className='thailand-graph-box'>
+                        <a href="/your-other-page-url" className='thailand-graph-box'>
                             <div className='thailand-graph-box-title'>
                                 GDP per Capital Year 2022 <br />
                                 (US Dollar per Capita)
                             </div>
                             {CapitaChart()}
                         </a>
-                        <a href="/inflation-rate-detail" className='thailand-graph-box'>
+                        <div className='thailand-graph-box'>
                             <div className='thailand-graph-box-title'>
                                 Inflation Year 2022 <br />
                                 (Annual % Change)
                             </div>
                             {InflationYearChart()}
-                        </a>
-                        <a href="/import-good-detail" className='thailand-graph-box'>
+                        </div>
+                        <div className='thailand-graph-box'>
                             <div className='thailand-graph-box-title'>
                                 Import of Goods & Services <br />
                                 Year 2022
                             </div>
                             {ImportChart()}
-                        </a>
-                        <a href="/unemployment-rate-detail" className='thailand-graph-box'>
+                        </div>
+                        <div className='thailand-graph-box'>
                             <div className='thailand-graph-box-title'>
                                 Unemployment Rate <br />
                                 (Annual % Change)
                             </div>
                             {UnemploymentChart()}
-                        </a>
+                        </div>
                     </div>
                 )}
             </div>

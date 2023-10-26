@@ -13,6 +13,8 @@ import { styled } from '@mui/material/styles';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { useSpring, animated } from 'react-spring';
+import { Link } from 'react-router-dom';
+
 
 export default function Home() {
   const countries_data = data.map((item) => item["Country/Territory"]);
@@ -426,17 +428,19 @@ export default function Home() {
           <p className="list-header">List ( 2023 ) </p>
           <hr />
           <Stack direction="row" gap={2} className="list-button">
-            <ListButton
-              variant="outline"
-              disableRipple
-              onClick={() => {
-                setPinCompany(!pinCompany);
-                toggleCPHighlight();
-              }}
-              style={{ backgroundColor: highlightCP ? 'green' : 'transparent' }}
-            >
-              CP
-            </ListButton>
+            <Link to="/cp-map">
+              <ListButton
+                variant="outline"
+                disableRipple
+                // onClick={() => {
+                //   setPinCompany(!pinCompany);
+                //   toggleCPHighlight();
+                // }}
+                style={{ backgroundColor: highlightCP ? 'green' : 'transparent' }}
+              >
+                CP
+              </ListButton>
+            </Link>
             <ListButton variant="outline" disableRipple>
               Country
             </ListButton>

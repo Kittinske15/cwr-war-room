@@ -128,229 +128,6 @@ export default function Thailand() {
       });
     });
   }, [provinces_data, estimateGDP]);
-  const InflationChart = () => {
-    const [chartData, setChartData] = useState(null);
-
-    useEffect(() => {
-      const fetchData = async () => {
-        try {
-          const response = await axios.get(
-            'https://api.worldbank.org/v2/country/THA/indicator/FP.CPI.TOTL.ZG?format=json&per_page=120'
-          );
-
-          const data = response.data[1].sort((a, b) => a.date - b.date);
-
-          const filteredData = data.filter(
-            item => dayjs(item.date).format('YYYY') >= '2012' && dayjs(item.date).format('YYYY') <= '2022'
-          );
-
-          const labels = filteredData.map(item => dayjs(item.date).format('YYYY'));
-          const values = filteredData.map(item => item.value);
-
-          const chartData = {
-            options: {
-              xaxis: {
-                type: 'category',
-                categories: labels,
-                labels: {
-                  rotate: -45,
-                  formatter: function (value) {
-                    return value;
-                  },
-                  style: {
-                    colors: '#fff',
-                  },
-                },
-                tickPlacement: 'on',
-                scrollbar: {
-                  enabled: true,
-                  offsetY: -5,
-                },
-              },
-              yaxis: {
-                title: {
-                  text: 'Inflation Rate (%)',
-                  style: {
-                    color: '#fff',
-                  },
-                },
-                min: -2,
-                max: 6,
-                forceNiceScale: true,
-                labels: {
-                  formatter: function (value) {
-                    return value.toFixed(2);
-                  },
-                  style: {
-                    colors: '#fff',
-                  },
-                },
-              },
-            },
-            series: [
-              {
-                name: 'Inflation Rate',
-                data: values.map(value => value.toFixed(2)),
-              },
-            ],
-          };
-
-          setChartData(chartData);
-        } catch (error) {
-          console.error('Error fetching data:', error);
-        }
-      };
-
-      fetchData();
-    }, []);
-
-    return (
-      <div>
-        <h3 style={{ textAlign: 'center' }}>Inflation Rate</h3>
-        {chartData ? (
-          <>
-            <Chart options={chartData.options} series={chartData.series} type="line" height={200} />
-            <style>{`
-              .apexcharts-tooltip {
-                color: #000000 !important;
-              }
-  
-              text {
-                color: '#fff !important';
-              }
-            `}</style>
-          </>
-        ) : (
-          <p>Loading chart...</p>
-        )}
-      </div>
-    );
-  };
-
-  const InterestRateChart = () => {
-    const options = {
-      chart: {
-        type: 'line',
-      },
-      xaxis: {
-        categories: ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
-        labels: {
-          style: {
-            colors: '#ffffff',
-          },
-        },
-      },
-      yaxis: {
-        labels: {
-          formatter: function (value) {
-            return value.toFixed(2) + '%';
-          },
-          style: {
-            colors: '#ffffff',
-          },
-        },
-        title: {
-          text: 'Percentage',
-          style: {
-            color: '#ffffff',
-          },
-        },
-        tickAmount: 4,
-      },
-    };
-
-    const series = [
-      {
-        name: 'Series 1',
-        data: [2.50, 2.00, 1.50, 1.50, 1.50, 1.75, 1.25, 0.50, 0.50, 1.50],
-      },
-    ];
-
-    return (
-      <div>
-        <div className='thailand-interest-rate'>Interest Rate</div>
-        <ReactApexChart options={options} series={series} type="line" height={200} />
-      </div>
-    );
-  };
-
-  const TouristArrivalChart = () => {
-    const chartData = {
-      options: {
-        chart: {
-          id: 'bar-chart',
-          toolbar: {
-            show: false,
-          },
-        },
-        xaxis: {
-          categories: ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
-          labels: {
-            rotate: -45,
-            rotateAlways: true,
-            style: {
-              colors: '#fff',
-            },
-          },
-        },
-        yaxis: {
-          title: {
-            text: 'No. of Tourist Arrival (millions)',
-            style: {
-              color: '#fff',
-            },
-          },
-          min: 0,
-          max: 50,
-          tickAmount: 5,
-          labels: {
-            style: {
-              colors: '#fff',
-            },
-          },
-        },
-        plotOptions: {
-          bar: {
-            columnWidth: '50%',
-          },
-        },
-        dataLabels: {
-          enabled: false,
-        },
-        tooltip: {
-          style: {
-            colors: '#000000',
-          },
-        },
-        fill: {
-          colors: ['#48acf0'],
-          opacity: 1,
-        },
-      },
-      series: [
-        {
-          name: 'Inflation Rate',
-          data: [29.9, 32.5, 35.59, 38.18, 39.8, 6.7, 0.43, 11.15],
-        },
-      ],
-    };
-
-    return (
-      <div>
-        <h3 style={{ textAlign: 'center' }}>Employment Rate</h3>
-        <Chart options={chartData.options} series={chartData.series} type="bar" height={200} />
-        <style>{`
-          .apexcharts-tooltip {
-            color: #000000 !important;
-          }
-  
-          text {
-            color: '#fff !important';
-          }
-        `}</style>
-      </div>
-    );
-  };
 
   const ThailandProportion = (
     <div className='thailand-footer'>
@@ -406,18 +183,22 @@ export default function Thailand() {
         style: {
           fontSize: "14px",
           fontFamily: "Arial",
-          color: "#000000",
+        },
+      },
+      legend: {
+        labels: {
+          colors: "#fff",
         },
       },
     };
 
     const series = [
       {
-        name: "Line",
+        name: "Value",
         data: [11.1, 12.5, 12.9, 13.4],
       },
       {
-        name: "Values",
+        name: "Forecast",
         data: [11.1, 12.5, 12.9, 13.4, 14.0, 14.6, 15.2],
       },
     ];
@@ -425,6 +206,13 @@ export default function Thailand() {
     return (
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <Chart options={options} series={series} type="line" width="500" height="210" />
+        <style>
+          {`
+          .apexcharts-tooltip {
+            color: #000 !important;
+          }
+        `}
+        </style>
       </div>
     );
   };
@@ -478,15 +266,20 @@ export default function Thailand() {
           color: "#000000",
         },
       },
+      legend: {
+        labels: {
+          colors: "#fff",
+        },
+      },
     };
 
     const series = [
       {
-        name: "Line",
+        name: "Value",
         data: [7.68, 7.72, 7.78, 7.85],
       },
       {
-        name: "Values",
+        name: "Forecast",
         data: [7.68, 7.72, 7.78, 7.85, 7.93, 8, 8.08],
       },
     ];
@@ -498,7 +291,7 @@ export default function Thailand() {
     );
   };
 
-  const InflationRataChart = () => {
+  const InflationRateChart = () => {
     const options = {
       chart: {
         id: "line-chart",
@@ -547,16 +340,22 @@ export default function Thailand() {
           color: "#000000",
         },
       },
+      legend: {
+        labels: {
+          colors: "#fff",
+        },
+      },
     };
 
     const series = [
       {
-        name: "Line",
-        data: [3.2, 4.7, 8.7, 7],
+        name: "Value",
+        data: [-0.8, 1.2, 6.1, 1.5],
       },
       {
-        name: "Values",
-        data: [3.2, 4.7, 8.7, 7, 4.9, 3.9, 3.6],
+        name: "Forecast",
+        data: [-0.8, 1.2, 6.1, 1.5, 1.6, 1.9, 1.9
+        ],
       },
     ];
 
@@ -661,15 +460,20 @@ export default function Thailand() {
           color: "#000000",
         },
       },
+      legend: {
+        labels: {
+          colors: "#fff",
+        },
+      },
     };
 
     const series = [
       {
-        name: "Line",
+        name: "Value",
         data: [4.32, 4.62, 5.22, 4.94],
       },
       {
-        name: "Values",
+        name: "Forecast",
         data: [4.32, 4.62, 5.22, 4.94, 4.55, 4.42, 4.75],
       },
     ];
@@ -730,15 +534,20 @@ export default function Thailand() {
           color: "#000000",
         },
       },
+      legend: {
+        labels: {
+          colors: "#fff",
+        },
+      },
     };
 
     const series = [
       {
-        name: "Line",
+        name: "Value",
         data: [30.08, 30.19, 33.18, 34.59],
       },
       {
-        name: "Values",
+        name: "Forecast",
         data: [30.08, 30.19, 33.18, 34.59, 35.12, 33.58, 33.85],
       },
     ];
@@ -799,7 +608,7 @@ export default function Thailand() {
               <div className='thailand-graph-box-subtitle2'>Thousand</div>
               {GDPChart()}
             </a>
-            <div className='thailand-graph-box'>
+            <a href="/population" className='thailand-graph-box'>
               <div className='thailand-graph-box-title'>
                 Population
                 (Million of People)
@@ -809,8 +618,8 @@ export default function Thailand() {
               </div>
               <div className='thailand-graph-box-subtitle2'>Thousand</div>
               {PopulationChart()}
-            </div>
-            <div className='thailand-graph-box'>
+            </a>
+            <a href='import-good' className='thailand-graph-box'>
               <div className='thailand-graph-box-title'>
                 Import of Goods & Services <br />
                 Year 2022
@@ -819,29 +628,28 @@ export default function Thailand() {
                 5.6
               </div>
               {ImportChart()}
-            </div>
-            <div className='thailand-graph-box'>
+            </a>
+            <a href='inflation-rate' className='thailand-graph-box'>
               <div className='thailand-graph-box-title'>
                 Inflation rate <br />
                 Annual percent change
               </div>
               <div className='thailand-graph-box-subtitle1'>
-                7.85
+                1.5 %
               </div>
-              <div className='thailand-graph-box-subtitle2'>Thousand</div>
-              {InflationRataChart()}
-            </div>
-            <div className='thailand-graph-box'>
+              {InflationRateChart()}
+            </a>
+            <a href='unemployment-rate' className='thailand-graph-box'>
               <div className='thailand-graph-box-title'>
                 Unemployment Rate <br />
                 April 2023
               </div>
               <div className='thailand-graph-box-subtitle1' style={{ marginBottom: '60px' }}>
-                4.1
+                1.2
               </div>
-              <div className='thailand-graph-box-subtitle2'>The People Republic of China
+              <div className='thailand-graph-box-subtitle2'>The People in Thailand
               </div>
-            </div>
+            </a>
             <div className='thailand-graph-box'>
               <div className='thailand-graph-box-title'>
                 Exchange Rate <br />

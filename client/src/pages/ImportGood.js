@@ -3,7 +3,7 @@ import { colorThailand, colorScale, numberScale } from '../components/color';
 import data from '../ThailandGDP.json';
 import Chart from 'react-apexcharts';
 
-export default function GDPCapita() {
+export default function ImportGood() {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
     const CapitaChart = () => {
@@ -15,7 +15,7 @@ export default function GDPCapita() {
                 },
             },
             xaxis: {
-                categories: ["Africa (Region)", "Southeast Asia", "Europe", "Middle East (Region)", "North America", "South America", "World"],
+                categories: ["Africa (Region)", "Asia and Pacific", "Europe", "Middle East (Region)", "North America", "South America", "World"],
                 labels: {
                     style: {
                         colors: "#fff",
@@ -54,7 +54,7 @@ export default function GDPCapita() {
                 },
             },
             xaxis: {
-                categories: ["Africa", "Southeast Asia", "Europe", "Middle East", "North America", "South America", "World"],
+                categories: ["Africa", "Asia and Pacific", "Europe", "Middle East", "North America", "South America", "World"],
                 labels: {
                     style: {
                         colors: "#fff",
@@ -73,7 +73,7 @@ export default function GDPCapita() {
         const series = [
             {
                 name: "Data Series 1",
-                data: [6.9, 5, 8.4, 14, 7.9, 14, 8.7],
+                data: [42, 78, 60, 91, 55, 72, 89],
             },
         ];
 
@@ -93,7 +93,7 @@ export default function GDPCapita() {
                 },
             },
             xaxis: {
-                categories: ["Africa (Region)", "Southeast Asia", "Europe", "Middle East (Region)", "North America", "South America", "World"],
+                categories: ["Africa (Region)", "Asia and Pacific", "Europe", "Middle East (Region)", "North America", "South America", "World"],
                 labels: {
                     style: {
                         colors: "#fff",
@@ -132,7 +132,7 @@ export default function GDPCapita() {
                 },
             },
             xaxis: {
-                categories: ["Africa (Region)", "Southeast Asia", "Europe", "Middle East (Region)", "North America", "South America", "World"],
+                categories: ["Africa (Region)", "Asia and Pacific", "Europe", "Middle East (Region)", "North America", "South America", "World"],
                 labels: {
                     style: {
                         colors: "#fff",
