@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { colorThailand, colorScale, numberScale } from "./color";
+import { colorThailand, colorScale, numberScale } from "../components/color";
 import data from "../ThailandGDP.json";
 import Chart from "react-apexcharts";
 
@@ -9,7 +9,7 @@ export default function UnemploymentRateDetail() {
   const CapitaChart = () => {
     const categories = [
       "Africa (Region)",
-      "Asia and Pacific",
+      "Southeast Asia",
       "Europe",
       "Middle East (Region)",
       "North America",
@@ -17,16 +17,46 @@ export default function UnemploymentRateDetail() {
       "World",
     ];
 
-    const data = categories.map((category) => ({
-      name: category,
-      data: Array.from({ length: 19 }, (_, i) => 2010 + i), // Years from 2010 to 2028
+    const realData = [
+      [
+        24.9, 24.8, 24.9, 24.7, 25.1, 25.4, 26.7, 27.5, 27.1, 28.7, 29.2, 34.3, 33.5, 32.8, 32.8, 32.9, 33.2, 33.5, 33.8
+      ],
+      [
+        null
+      ],
+      [
+        10.3, 10.3, 11.5, 12.1, 11.7, 11, 10.1, 9.2, 8.2, 7.6, 8, 7.7, 6.7, 6.6, 6.5, 6.4, 6.3, 6.3, 6.3,
+      ],
+      [
+        null
+      ],
+      [
+        null
+      ],
+      [
+        null
+      ],
+      [
+        null
+      ],
+    ];
+
+    const customYValues = [5, 10, 20, 25, 30, 35];
+
+    const data = realData.map((dataPoints, index) => ({
+      name: categories[index],
+      data: dataPoints,
     }));
 
-    data.forEach((categoryData) => {
-      categoryData.data = categoryData.data.map((year) =>
-        Math.floor(Math.random() * 1000)
-      );
-    });
+    const lineColors = [
+      "#FF5733",
+      "#008000",
+      "#0000FF",
+      "#FFA500",
+      "#800080",
+      "#FFFF00",
+      "#00FFFF",
+    ];
 
     const options = {
       chart: {
@@ -36,29 +66,49 @@ export default function UnemploymentRateDetail() {
         },
       },
       xaxis: {
-        categories: data[0].data,
+        categories: data[0].data.map((_, index) => (2010 + index).toString()), // Assuming years are 2010 to 2028
         labels: {
           style: {
             colors: "#fff",
           },
         },
       },
-      dataLabels: {
-        enabled: true,
-        style: {
-          colors: ["#000"],
+      yaxis: {
+        labels: {
+          style: {
+            colors: "#fff",
+          },
         },
+        tickAmount: 11,
+        forceNiceScale: true,
+        min: customYValues[0],
+        max: customYValues[customYValues.length - 1],
+        tickValues: customYValues,
       },
+      //   dataLabels: {
+      //     enabled: true,
+      //     style: {
+      //       colors: ["#000"],
+      //     },
+      //   },
       legend: {
         labels: {
           colors: "#fff",
         },
       },
+      colors: lineColors,
     };
 
     return (
       <div id="line-chart">
         <Chart options={options} series={data} type="line" height={450} />
+        <style>
+          {`
+          .apexcharts-tooltip {
+            color: #000 !important;
+          }
+        `}
+        </style>
       </div>
     );
   };
@@ -205,7 +255,7 @@ export default function UnemploymentRateDetail() {
     <div className="home">
       <a className="home-nav" href="/" />
       <div className="global-title">
-        <a href="/Thailand">
+        <a href="/gdp-capita">
           <img className="left-arrow" src="/assets/left-arrow-blue.png" />
         </a>
         Thailand Economy

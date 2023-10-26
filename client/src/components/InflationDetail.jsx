@@ -262,7 +262,7 @@ export default function InflationDetail() {
     <div className="home">
       <a className="home-nav" href="/" />
       <div className="global-title">
-        <a href="/Thailand">
+        <a href="/gdp-capita">
           <img className="left-arrow" src="/assets/left-arrow-blue.png" />
         </a>
         Thailand Economy
