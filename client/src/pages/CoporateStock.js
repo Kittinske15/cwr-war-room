@@ -49,7 +49,7 @@ export default function CoporateStock() {
                     <CPAllChart />
                 </div>
                 <div>
-                    <h3 style={{ textAlign: 'center' }}>MAKRO</h3>
+                    <h3 style={{ textAlign: 'center' }}>CPAXT</h3>
                     <CPAxtraChart />
                 </div>
             </div>

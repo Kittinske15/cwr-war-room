@@ -265,7 +265,7 @@ export default function InflationDetail() {
         <a href="/gdp-capita">
           <img className="left-arrow" src="/assets/left-arrow-blue.png" />
         </a>
-        Thailand Economy
+        Global Economy
       </div>
       <div className="market-stock-title">
         <a href="/stock">Capital Market</a>
@@ -276,7 +276,7 @@ export default function InflationDetail() {
         ) : (
           <div className="thailand-graph-box">
             <div className="thailand-graph-box-title">
-              Inflation Year 2022 <br />
+              Inflation Year <br />
               (Annual % Change)
             </div>
             {CapitaChart()}

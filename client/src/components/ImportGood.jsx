@@ -258,7 +258,7 @@ export default function ImportGood() {
         <a href="/gdp-capita">
           <img className="left-arrow" src="/assets/left-arrow-blue.png" />
         </a>
-        Thailand Economy
+        Global Economy
       </div>
       <div className="market-stock-title">
         <a href="/stock">Capital Market</a>

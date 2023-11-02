@@ -14,10 +14,10 @@
 
 .home-body {
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 3fr 1fr;
   position: relative;
   height: calc(100vh - 180px);
-  top: 120px;
+  top: 160px;
   padding: 0 50px;
 }
 
@@ -127,7 +127,7 @@ h1 {
 }
 
 .country-list-scroll {
-  height: 480px;
+  height: 540px;
   overflow-y: auto;
 }
 

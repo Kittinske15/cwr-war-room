@@ -258,7 +258,7 @@ export default function GDPCapitaDetail() {
         <a href="/gdp-capita">
           <img className="left-arrow" src="/assets/left-arrow-blue.png" />
         </a>
-        Thailand Economy
+        Global Economy
       </div>
       <div className="market-stock-title">
         <a href="/stock">Capital Market</a>
@@ -269,7 +269,7 @@ export default function GDPCapitaDetail() {
         ) : (
           <div className="thailand-graph-box">
             <div className="thailand-graph-box-title">
-              GDP per Capital Year 2022 <br />
+              GDP per Capital Year <br />
               (US Dollar per Capita)
             </div>
             {CapitaChart()}
