@@ -51,133 +51,152 @@ export default function Home() {
             latitude: 30.7749,
             longitude: 100,
             gdp: 5.2,
-            profit: 'something'
+            profit: 'something',
+            RegisterdCapital: "6,258.33"
         },
         {
             name: "Thailand",
             latitude: 11.9,
             longitude: 105,
             gdp: 3.4,
-            profit: 'something'
+            profit: 'something',
+            RegisterdCapital: "67,424.55"
         },
         {
             name: "India",
             latitude: 15,
             longitude: 82,
             gdp: 5.9,
-            profit: 'something'
+            profit: 'something',
+            RegisterdCapital: "787.94"
         },
         {
             name: "Russia",
             latitude: 57,
             longitude: 110,
             gdp: 0.7,
-            profit: 'something'
+            profit: 'something',
+            RegisterdCapital: "5,277.29"
         },
         {
-            name: "United States",
+            name: "USA",
             latitude: 35.7749,
             longitude: -100.4194,
             gdp: 1.8,
-            profit: 'something'
+            profit: 'something',
+            RegisterdCapital: "294.45"
         },
         {
             name: "Belgium",
             latitude: 50.5039,
             longitude: 4.4699,
             gdp: 0.7,
-            profit: 'something'
+            profit: 'something',
+            RegisterdCapital: "1,0749.87"
         },
         {
             name: "Poland",
             latitude: 51.9194,
             longitude: 19.1451,
             gdp: 0.3,
-            profit: 'something'
+            profit: 'something',
+            RegisterdCapital: "91.03"
         },
         {
             name: "Turkey",
             latitude: 38.9637,
             longitude: 35.2433,
             gdp: 1.2,
-            profit: 'something'
+            profit: 'something',
+            RegisterdCapital: "272.36"
         },
         {
             name: "Malaysia",
             latitude: 4.2105,
             longitude: 101.9758,
             gdp: 4.5,
-            profit: 'something'
+            profit: 'something',
+            RegisterdCapital: "2,379.70"
         },
         {
             name: "United Kingdom",
             latitude: 55.3781,
             longitude: 3.4360,
             gdp: -0.3,
-            profit: 'something'
+            profit: 'something',
+            RegisterdCapital: "13.27"
         },
         {
             name: "Pakistan",
             latitude: 30.3753,
             longitude: 69.3451,
             gdp: 0.5,
-            profit: 'something'
+            profit: 'something',
+            RegisterdCapital: "0"
         },
         {
             name: "Vietnam",
             latitude: 14.0583,
             longitude: 108.2772,
             gdp: 5.8,
-            profit: 'something'
+            profit: 'something',
+            RegisterdCapital: "2,449.75"
         },
         {
             name: "Laos",
             latitude: 19.8563,
             longitude: 102.4955,
             gdp: 2.7,
-            profit: 'something'
+            profit: 'something',
+            RegisterdCapital: "150"
         },
         {
             name: "Myanmar",
             latitude: 21.9162,
             longitude: 95.9560,
             gdp: 2.6,
-            profit: 'something'
+            profit: 'something',
+            RegisterdCapital: "0"
         },
         {
             name: "Singapore",
             latitude: 1.3521,
             longitude: 103.8198,
             gdp: 1.5,
-            profit: 'something'
+            profit: 'something',
+            RegisterdCapital: "0.39"
         },
         {
             name: "Cambodia",
             latitude: 12.5657,
             longitude: 104.9910,
             gdp: 5.8,
-            profit: 'something'
+            profit: 'something',
+            RegisterdCapital: "674.07"
         },
         {
             name: "Sri Lanka",
             latitude: 7.8731,
             longitude: 80.7718,
             gdp: -3,
-            profit: 'something'
+            profit: 'something',
+            RegisterdCapital: "16.87"
         },
         {
             name: "Bangladesh",
             latitude: 23.6850,
             longitude: 90.3563,
             gdp: 5.5,
-            profit: 'something'
+            profit: 'something',
+            RegisterdCapital: "0"
         },
         {
             name: "Indonesia",
             latitude: 0.7893,
             longitude: 113.9213,
             gdp: 5,
-            profit: 'something'
+            profit: 'something',
+            RegisterdCapital: "0"
         },
     ]
 
@@ -235,10 +254,12 @@ export default function Home() {
     const svgRef = useRef();
 
     useEffect(() => {
-        const width = 1400;
+        const width = 1300;
         const height = 620;
         const colors = colorScale();
         const range = numberScale();
+        const initialScale = 1.3; // Adjust the scale factor as needed
+        const initialTransform = d3.zoomIdentity.scale(initialScale);
         const getGDP = (country) => estimateGDP[countries_data.findIndex((isCountry) => isCountry === country)];
 
         const scale = d3.scaleOrdinal()
@@ -246,20 +267,24 @@ export default function Home() {
             .range(colors);
         const svg = d3.select(svgRef.current).attr('width', width).attr('height', height);
 
-        const projection = geoNaturalEarth1().translate([width / 2, height / 2]);
+        const projection = geoNaturalEarth1().translate([width / 2.7, height / 2.5]);
         const pathGenerator = geoPath().projection(projection);
 
         const g = svg.append('g');
+        g.attr('transform', initialTransform);
 
         g.append('path')
             .attr('class', 'sphere')
             .attr('d', pathGenerator({ type: 'Sphere' }));
 
-        svg.call(d3.zoom()
-            .scaleExtent([1, 8])
+        const zoom = d3.zoom()
+            .scaleExtent([1.4, 8])
             .on('zoom', (event) => {
                 g.attr('transform', event.transform);
-            }));
+            });
+
+        svg.call(zoom)
+            .call(zoom.transform, d3.zoomIdentity.scale(1.3));
 
         // create a tooltip
         const tooltip = d3
@@ -392,15 +417,18 @@ export default function Home() {
     ));
 
     const displayCP = (companyLocations) => companyLocations.map((company, index) => (
-        <div className="list-country" key={index}>
+        <div className="list-country">
             <p>{company.name.replace(/^CP\s*/, '')}</p>
             <p>{company.gdp} % </p>
-            <p>{company.profit} </p>
+            <p>${company.RegisterdCapital} m</p>
         </div>
     ));
 
     return (
         <div className="home">
+            <video className="video-background" autoPlay muted loop>
+                <source src="/assets/BG-Blue-Ver-1.mp4" type="video/mp4" />
+            </video>
             <div className="home-header" />
             <div className="oversea-title">
                 <a href='/oversea'>
@@ -421,8 +449,6 @@ export default function Home() {
                 </div>
 
                 <div className="list">
-                    {/* <p className="list-header">List ( 2023 ) </p>
-                    <hr /> */}
                     <Stack direction="row" gap={2} className="list-button">
                         <Link to="/cp-map">
                             <ListButton
@@ -452,8 +478,9 @@ export default function Home() {
                         >
                             Country
                         </Button>
-                        <p>Value</p>
-                        <p>Profit & Loss</p>
+                        <p>GDP Value</p>
+                        <p>Registered Capital</p>
+                        <p></p>
                     </div>
                     {pinCompany ? (
                         <div className="country-list-scroll">

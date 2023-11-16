@@ -137,6 +137,9 @@ export default function Population() {
 
     return (
         <div className="home">
+            <video className="video-background" autoPlay muted loop>
+                <source src="/assets/BG-Blue-Ver-1.mp4" type="video/mp4" />
+            </video>
             <a className="home-nav" href='/' />
             <div className="global-title">
                 <a href='/Thailand'>
