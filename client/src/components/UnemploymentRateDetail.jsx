@@ -8,10 +8,10 @@ export default function UnemploymentRateDetail() {
 
   const CapitaChart = () => {
     const categories = [
-      "Africa (Region)",
-      "Southeast Asia",
+      "Africa",
+      "Asia Pacific",
       "Europe",
-      "Middle East (Region)",
+      "Middle East",
       "North America",
       "South America",
       "World",
@@ -254,7 +254,7 @@ export default function UnemploymentRateDetail() {
   return (
     <div className="home">
       <video className="video-background" autoPlay muted loop>
-        <source src="/assets/BG-Blue-Ver-1.mp4" type="video/mp4" />
+        <source src="/assets/BG-Blue.mp4" type="video/mp4" />
       </video>
       <a className="home-nav" href="/" />
       <div className="global-title">

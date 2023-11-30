@@ -427,7 +427,7 @@ export default function Home() {
     return (
         <div className="home">
             <video className="video-background" autoPlay muted loop>
-                <source src="/assets/BG-Blue-Ver-1.mp4" type="video/mp4" />
+                <source src="/assets/BG-Blue.mp4" type="video/mp4" />
             </video>
             <div className="home-header" />
             <div className="oversea-title">

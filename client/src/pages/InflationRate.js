@@ -15,7 +15,7 @@ export default function InflationRate() {
                 },
             },
             xaxis: {
-                categories: ["Africa (Region)", "Asia and Pacific", "Europe", "Middle East (Region)", "North America", "South America", "World"],
+                categories: ["Africa", "Asia Pacific", "Europe", "Middle East", "North America", "South America", "World"],
                 labels: {
                     style: {
                         colors: "#fff",
@@ -54,7 +54,7 @@ export default function InflationRate() {
                 },
             },
             xaxis: {
-                categories: ["Africa", "Asia and Pacific", "Europe", "Middle East", "North America", "South America", "World"],
+                categories: ["Africa", "Asia Pacific", "Europe", "Middle East", "North America", "South America", "World"],
                 labels: {
                     style: {
                         colors: "#fff",
@@ -93,7 +93,7 @@ export default function InflationRate() {
                 },
             },
             xaxis: {
-                categories: ["Africa (Region)", "Asia and Pacific", "Europe", "Middle East (Region)", "North America", "South America", "World"],
+                categories: ["Africa", "Asia Pacific", "Europe", "Middle East", "North America", "South America", "World"],
                 labels: {
                     style: {
                         colors: "#fff",
@@ -132,7 +132,7 @@ export default function InflationRate() {
                 },
             },
             xaxis: {
-                categories: ["Africa (Region)", "Asia and Pacific", "Europe", "Middle East (Region)", "North America", "South America", "World"],
+                categories: ["Africa", "Asia Pacific", "Europe", "Middle East", "North America", "South America", "World"],
                 labels: {
                     style: {
                         colors: "#fff",
@@ -166,7 +166,7 @@ export default function InflationRate() {
     return (
         <div className="home">
             <video className="video-background" autoPlay muted loop>
-                <source src="/assets/BG-Blue-Ver-1.mp4" type="video/mp4" />
+                <source src="/assets/BG-Blue.mp4" type="video/mp4" />
             </video>
             <a className="home-nav" href='/' />
             <div className="global-title">
