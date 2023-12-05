@@ -28,7 +28,7 @@ export default function OverseaStock() {
                 </div>
                 <div>
                     <h3 style={{ textAlign: 'center' }}>CTEI</h3>
-                    <CPAllChart />
+                    <ChaitaiChart />
                 </div>
                 <div>
                     <h3 style={{ textAlign: 'center' }}>CP Taiwan (CPT)</h3>
@@ -36,7 +36,7 @@ export default function OverseaStock() {
                 </div>
                 <div>
                     <h3 style={{ textAlign: 'center' }}>CHAITAI Investment</h3>
-                    <ChaitaiChart />
+                    <CPAllChart />
                 </div>
             </div>
         </div>
@@ -52,6 +52,9 @@ export default function OverseaStock() {
 
     return (
         <div className="home">
+            <video className="video-background" autoPlay muted loop>
+                <source src="/assets/BG-Blue.mp4" type="video/mp4" />
+            </video>
             <a className="home-nav" href='/' />
             <div className='oversea-body'>
                 <div className='oversea-box'>

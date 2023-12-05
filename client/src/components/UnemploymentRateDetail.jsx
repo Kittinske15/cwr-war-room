@@ -96,6 +96,9 @@ export default function UnemploymentRateDetail() {
           colors: "#fff",
         },
       },
+      grid: {
+        show: false,
+      },
       colors: lineColors,
     };
 

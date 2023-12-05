@@ -398,12 +398,12 @@ export default function Home() {
                 .text(d => countryName[d.id]);
 
             // colorLegend
-            svg.call(colorLegend, {
-                colorScale: scale,
-                colorLegendLabel: 'GDP (2023)',
-                colorLegendX: 35,
-                colorLegendY: 470,
-            });
+            // svg.call(colorLegend, {
+            //     colorScale: scale,
+            //     colorLegendLabel: 'GDP (2023)',
+            //     colorLegendX: 35,
+            //     colorLegendY: 470,
+            // });
         });
     }, [countries_data, estimateGDP, pinCompany, companyLocations]);
 
@@ -418,9 +418,9 @@ export default function Home() {
 
     const displayCP = (companyLocations) => companyLocations.map((company, index) => (
         <div className="list-country">
-            <p>{company.name.replace(/^CP\s*/, '')}</p>
-            <p>{company.gdp} % </p>
-            <p>${company.RegisterdCapital} m</p>
+            <p style={{ fontSize: '20px' }}>{company.name.replace(/^CP\s*/, '')}</p>
+            <p style={{ fontSize: '20px' }}>{company.gdp} % </p>
+            <p style={{ fontSize: '20px' }}>{company.RegisterdCapital}</p>
         </div>
     ));
 
@@ -429,13 +429,14 @@ export default function Home() {
             <video className="video-background" autoPlay muted loop>
                 <source src="/assets/BG-Blue.mp4" type="video/mp4" />
             </video>
+            <a className="home-nav" href='/' />
             <div className="home-header" />
             <div className="oversea-title">
                 <a href='/oversea'>
                     Oversea Market
                 </a>
             </div>
-            <div className="home-body">
+            <div className="cp-body">
                 <div className="map-container">
                     {/* <p className="map-header">GDP growth </p>
                     <hr /> */}
@@ -443,6 +444,29 @@ export default function Home() {
                     <div className="container">
                         <div className="content">
                             {showGlobe ? <img src="assets/rotate-globe.gif" /> : <svg className="map" ref={svgRef}></svg>}
+                        </div>
+                    </div>
+                    <div className="gdp-bar">
+                        <div>GDP (2023)</div>
+                        <div className="gdp-container">
+                            <div className="gdp-dgreen"></div>
+                            <div>6% or more</div>
+                        </div>
+                        <div className="gdp-container">
+                            <div className="gdp-green"></div>
+                            <div>3% - 6%</div>
+                        </div>
+                        <div className="gdp-container">
+                            <div className="gdp-lgreen"></div>
+                            <div>0% - 3%</div>
+                        </div>
+                        <div className="gdp-container">
+                            <div className="gdp-yellow"></div>
+                            <div>-3% - 0%</div>
+                        </div>
+                        <div className="gdp-container">
+                            <div className="gdp-red"></div>
+                            <div>less than -3%</div>
                         </div>
                     </div>
                     <div className="reference">* Reference: International Monetary Fund</div>
@@ -458,13 +482,13 @@ export default function Home() {
                                 //   setPinCompany(!pinCompany);
                                 //   toggleCPHighlight();
                                 // }}
-                                style={{ backgroundColor: highlightCP ? 'green' : 'transparent' }}
+                                style={{ backgroundColor: highlightCP ? 'green' : 'transparent', fontSize: '20px' }}
                             >
                                 CP
                             </ListButton>
                         </Link>
                         <Link to="/">
-                            <ListButton variant="outline" disableRipple>
+                            <ListButton variant="outline" disableRipple style={{ fontSize: '20px' }}>
                                 Country
                             </ListButton>
                         </Link>
@@ -474,12 +498,12 @@ export default function Home() {
                             endIcon={sortOrder === "asc" ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}
                             onClick={toggleSortOrder}
                             size="large"
-                            style={{ color: "white" }}
+                            style={{ color: "white", fontSize: '20px' }}
                         >
                             Country
                         </Button>
-                        <p>GDP Value</p>
-                        <p>Registered Capital</p>
+                        <p style={{ fontSize: '20px' }}>GDP Value</p>
+                        <p style={{ fontSize: '20px' }}>Registered Capital ($MM)</p>
                         <p></p>
                     </div>
                     {pinCompany ? (

@@ -18,12 +18,22 @@
 
 .home-body {
   display: grid;
+  grid-template-columns: 4fr 1fr;
+  position: relative;
+  height: calc(100vh - 180px);
+  top: 160px;
+  padding: 0 10px;
+}
+
+.cp-body {
+  display: grid;
   grid-template-columns: 3fr 1fr;
   position: relative;
   height: calc(100vh - 180px);
   top: 160px;
   padding: 0 50px;
 }
+
 
 .tooltip {
   color: #eeeeee;
@@ -133,7 +143,7 @@ h1 {
 }
 
 .country-list-scroll {
-  height: 540px;
+  height: 590px;
   overflow-y: auto;
 }
 
@@ -159,12 +169,14 @@ h1 {
 }
 
 .list-country p:first-child {
-  flex: 2; /* Adjust the width of the first column */
+  flex: 2;
+  /* Adjust the width of the first column */
 }
 
 .list-country p:last-child {
   text-align: end;
-  flex: 1.5; /* Adjust the width of the last column */
+  flex: 1.5;
+  /* Adjust the width of the last column */
 }
 
 .country {
@@ -207,9 +219,9 @@ h1 {
 
 .oversea-title {
   display: flex;
-  gap: 15px;
+  gap: 5px;
   position: absolute;
-  right: 60px;
+  right: 40px;
   top: 35px;
   color: #7abef3;
   font-size: 20px;
@@ -258,6 +270,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .content {
@@ -266,4 +279,67 @@ h1 {
   align-items: center;
   opacity: 1;
   transition: opacity 1s;
+}
+
+.gdp-container {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.gdp-dgreen {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(15, 114, 77);
+  border-radius: 50%;
+}
+
+.gdp-green {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(28, 147, 82);
+  border-radius: 50%;
+}
+
+.gdp-lgreen {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(126, 178, 91);
+  border-radius: 50%;
+}
+
+.gdp-yellow {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(223, 148, 15);
+  border-radius: 50%;
+}
+
+.gdp-red {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(177, 52, 52);
+  border-radius: 50%;
+}
+
+.gdp-bar {
+  font-size: 18px;
+  display: flex;
+  gap: 20px;
+  border-radius: 8px;
+  background-color: white;
+  padding: 12px 10px;
+  justify-content: space-around;
+}
+
+.menu-item-btn {
+  display: inline-block;
+  border-radius: 100% 42% 62% 38% / 100% 70% 45% 36%;
+  padding: 10px 20px;
+  background-color: rgba(171, 217, 255, 0.5);
+  border: none;
+}
+
+.menu-item-btn a {
+  color: white;
 }

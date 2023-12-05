@@ -24,7 +24,7 @@ export default function ChaitaiChart() {
     const candleSeries = chart.addCandlestickSeries();
 
     function fetchDataAndGenerateChart() {
-      fetch('https://www.ibsdo.com/api/CPALL.BK')
+      fetch('https://ibsdo.com/api/3839.HK')
         .then((res) => res.json())
         .then((data) => {
           const cdata = data.map((d) => ({

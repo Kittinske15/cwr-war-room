@@ -9,6 +9,7 @@ import CPFChart from '../components/CPFChart';
 import CPAllChart from '../components/CPAllChart';
 import CPAxtraChart from '../components/CPAxtraChart';
 import CiticChart from '../components/CiticChart';
+import CPTaiwanChart from '../components/CPTaiwan';
 
 export default function CoporateStock() {
     const CPFStockChart = () => {
@@ -66,6 +67,9 @@ export default function CoporateStock() {
 
     return (
         <div className="home">
+            <video className="video-background" autoPlay muted loop>
+                <source src="/assets/BG-Blue.mp4" type="video/mp4" />
+            </video>
             <a className="home-nav" href='/' />
             <div className='coporate-body'>
                 <div className='thailand-box'>

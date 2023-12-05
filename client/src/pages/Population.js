@@ -22,6 +22,16 @@ export default function Population() {
                     },
                 },
             },
+            yaxis: {
+                labels: {
+                    style: {
+                        colors: "#fff",
+                    },
+                }
+            },
+            grid: {
+                show: false,
+            },
         };
 
         const series = [
@@ -53,6 +63,16 @@ export default function Population() {
                         colors: "#fff",
                     },
                 },
+            },
+            yaxis: {
+                labels: {
+                    style: {
+                        colors: "#fff",
+                    },
+                }
+            },
+            grid: {
+                show: false,
             },
         };
 
@@ -86,6 +106,16 @@ export default function Population() {
                     },
                 },
             },
+            yaxis: {
+                labels: {
+                    style: {
+                        colors: "#fff",
+                    },
+                }
+            },
+            grid: {
+                show: false,
+            },
         };
 
         const series = [
@@ -117,6 +147,16 @@ export default function Population() {
                         colors: "#fff",
                     },
                 },
+            },
+            yaxis: {
+                labels: {
+                    style: {
+                        colors: "#fff",
+                    },
+                }
+            },
+            grid: {
+                show: false,
             },
         };
 
@@ -164,6 +204,7 @@ export default function Population() {
                                 (US Dollar per Capita)
                             </div>
                             {CapitaChart()}
+                            <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: https://data.worldbank.org/</div>
                         </a>
                         <div className='thailand-graph-box'>
                             <div className='thailand-graph-box-title'>
@@ -171,6 +212,7 @@ export default function Population() {
                                 (Annual % Change)
                             </div>
                             {InflationYearChart()}
+                            <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: https://data.worldbank.org/</div>
                         </div>
                         <div className='thailand-graph-box'>
                             <div className='thailand-graph-box-title'>
@@ -178,6 +220,7 @@ export default function Population() {
                                 Year 2022
                             </div>
                             {ImportChart()}
+                            <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: https://data.worldbank.org/</div>
                         </div>
                         <div className='thailand-graph-box'>
                             <div className='thailand-graph-box-title'>
@@ -185,6 +228,7 @@ export default function Population() {
                                 (Annual % Change)
                             </div>
                             {UnemploymentChart()}
+                            <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: https://data.worldbank.org/</div>
                         </div>
                     </div>
                 )}

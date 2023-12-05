@@ -28,7 +28,10 @@ export default function ImportGood() {
                         colors: "#fff",
                     },
                 },
-            }
+            },
+            grid: {
+                show: false,
+            },
         };
 
         const series = [
@@ -67,7 +70,10 @@ export default function ImportGood() {
                         colors: "#fff",
                     },
                 },
-            }
+            },
+            grid: {
+                show: false,
+            },
         };
 
         const series = [
@@ -106,7 +112,10 @@ export default function ImportGood() {
                         colors: "#fff",
                     },
                 },
-            }
+            },
+            grid: {
+                show: false,
+            },
         };
 
         const series = [
@@ -145,7 +154,10 @@ export default function ImportGood() {
                         colors: "#fff",
                     },
                 },
-            }
+            },
+            grid: {
+                show: false,
+            },
         };
 
         const series = [
@@ -192,6 +204,7 @@ export default function ImportGood() {
                                 (US Dollar per Capita)
                             </div>
                             {CapitaChart()}
+                            <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: https://data.worldbank.org/</div>
                         </a>
                         <a href="/inflation-rate-detail" className='thailand-graph-box'>
                             <div className='thailand-graph-box-title'>
@@ -199,6 +212,7 @@ export default function ImportGood() {
                                 (Annual % Change)
                             </div>
                             {InflationYearChart()}
+                            <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: https://data.worldbank.org/</div>
                         </a>
                         <a href="/import-good-detail" className='thailand-graph-box'>
                             <div className='thailand-graph-box-title'>
@@ -206,6 +220,7 @@ export default function ImportGood() {
                                 Year 2022
                             </div>
                             {ImportChart()}
+                            <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: https://data.worldbank.org/</div>
                         </a>
                         <a href="/unemployment-rate-detail" className='thailand-graph-box'>
                             <div className='thailand-graph-box-title'>
@@ -213,6 +228,7 @@ export default function ImportGood() {
                                 (Annual % Change)
                             </div>
                             {UnemploymentChart()}
+                            <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: https://data.worldbank.org/</div>
                         </a>
                     </div>
                 )}

@@ -161,6 +161,13 @@ export default function Thailand() {
           },
         },
       },
+      yaxis: {
+        labels: {
+          style: {
+            colors: "#fff",
+          },
+        }
+      },
       stroke: {
         curve: "smooth",
         width: [4, 2, 2],
@@ -189,6 +196,9 @@ export default function Thailand() {
         labels: {
           colors: "#fff",
         },
+      },
+      grid: {
+        show: false,
       },
     };
 
@@ -241,6 +251,13 @@ export default function Thailand() {
           },
         },
       },
+      yaxis: {
+        labels: {
+          style: {
+            colors: "#fff",
+          },
+        }
+      },
       stroke: {
         curve: "smooth",
         width: [4, 2, 2],
@@ -270,6 +287,9 @@ export default function Thailand() {
         labels: {
           colors: "#fff",
         },
+      },
+      grid: {
+        show: false,
       },
     };
 
@@ -315,6 +335,13 @@ export default function Thailand() {
           },
         },
       },
+      yaxis: {
+        labels: {
+          style: {
+            colors: "#fff",
+          },
+        }
+      },
       stroke: {
         curve: "smooth",
         width: [4, 2, 2],
@@ -344,6 +371,9 @@ export default function Thailand() {
         labels: {
           colors: "#fff",
         },
+      },
+      grid: {
+        show: false,
       },
     };
 
@@ -384,6 +414,13 @@ export default function Thailand() {
           },
         },
       },
+      yaxis: {
+        labels: {
+          style: {
+            colors: "#fff",
+          },
+        }
+      },
       dataLabels: {
         enabled: true,
         style: {
@@ -392,6 +429,9 @@ export default function Thailand() {
         formatter: function (val) {
           return val;
         },
+      },
+      grid: {
+        show: false,
       },
     };
 
@@ -435,6 +475,13 @@ export default function Thailand() {
           },
         },
       },
+      yaxis: {
+        labels: {
+          style: {
+            colors: "#fff",
+          },
+        }
+      },
       stroke: {
         curve: "smooth",
         width: [4, 2, 2],
@@ -464,6 +511,9 @@ export default function Thailand() {
         labels: {
           colors: "#fff",
         },
+      },
+      grid: {
+        show: false,
       },
     };
 
@@ -509,6 +559,13 @@ export default function Thailand() {
           },
         },
       },
+      yaxis: {
+        labels: {
+          style: {
+            colors: "#fff",
+          },
+        }
+      },
       stroke: {
         curve: "smooth",
         width: [4, 2, 2],
@@ -538,6 +595,9 @@ export default function Thailand() {
         labels: {
           colors: "#fff",
         },
+      },
+      grid: {
+        show: false,
       },
     };
 
@@ -569,7 +629,7 @@ export default function Thailand() {
         <a href='/'>
           <img className="left-arrow" src="/assets/left-arrow-blue.png" />
         </a>
-        Global Economy
+        {/* Global Economy */}
       </div>
       <div className="market-stock-title">
         <a href='/stock'>
@@ -610,6 +670,7 @@ export default function Thailand() {
               </div>
               <div className='thailand-graph-box-subtitle2'>Thousand</div>
               {GDPChart()}
+              <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: https://data.worldbank.org/</div>
             </a>
             <a href="/population" className='thailand-graph-box'>
               <div className='thailand-graph-box-title'>
@@ -621,6 +682,7 @@ export default function Thailand() {
               </div>
               <div className='thailand-graph-box-subtitle2'>Thousand</div>
               {PopulationChart()}
+              <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: https://data.worldbank.org/</div>
             </a>
             <a href='import-good' className='thailand-graph-box'>
               <div className='thailand-graph-box-title'>
@@ -631,6 +693,7 @@ export default function Thailand() {
                 5.6
               </div>
               {ImportChart()}
+              <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: https://tradingeconomics.com/</div>
             </a>
             <a href='inflation-rate' className='thailand-graph-box'>
               <div className='thailand-graph-box-title'>
@@ -641,17 +704,19 @@ export default function Thailand() {
                 1.5 %
               </div>
               {InflationRateChart()}
+              <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: https://data.worldbank.org/</div>
             </a>
             <a href='unemployment-rate' className='thailand-graph-box'>
-              <div className='thailand-graph-box-title'>
+              <div className='thailand-graph-box-title' style={{ marginBottom: '70px' }}>
                 Unemployment Rate <br />
                 April 2023
               </div>
-              <div className='thailand-graph-box-subtitle1' style={{ marginBottom: '60px' }}>
+              <div className='thailand-graph-box-subtitle1' style={{ fontSize: '60px', marginBottom: '70px' }}>
                 1.2
               </div>
               <div className='thailand-graph-box-subtitle2'>The People in Thailand
               </div>
+              <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: https://data.worldbank.org/</div>
             </a>
             <div className='thailand-graph-box'>
               <div className='thailand-graph-box-title'>
@@ -662,6 +727,7 @@ export default function Thailand() {
                 <div className='exchange-rate-img-grid'>
                   <img src="assets/usa-flag.png" className='exchange-rate-flag' />
                   {ExchangeRataUSAChart()}
+                  <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: https://www.exchangerates.org.uk/</div>
                 </div>
                 <div className='exchange-rate-img-grid'>
                   <img src="assets/china-flag.png" className='exchange-rate-flag' />

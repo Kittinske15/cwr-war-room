@@ -103,6 +103,9 @@ export default function InflationDetail() {
           colors: "#fff",
         },
       },
+      grid: {
+        show: false,
+      },
       colors: lineColors,
     };
 

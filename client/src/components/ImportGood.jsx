@@ -96,6 +96,9 @@ export default function ImportGood() {
           colors: "#fff",
         },
       },
+      grid: {
+        show: false,
+      },
       colors: lineColors,
     };
 

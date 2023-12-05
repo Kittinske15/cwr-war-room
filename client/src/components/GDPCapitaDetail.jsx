@@ -96,6 +96,9 @@ export default function GDPCapitaDetail() {
           colors: "#fff",
         },
       },
+      grid: {
+        show: false,
+      },
       colors: lineColors,
     };
 
