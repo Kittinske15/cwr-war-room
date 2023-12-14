@@ -15,7 +15,7 @@ export default function ImportGood() {
                 },
             },
             xaxis: {
-                categories: ["Africa", "Asia Pacific", "Europe", "Middle East", "North America", "South America", "World"],
+                categories: ["Africa", "APAC", "Europe", "Middle East", "N. America", "S. America", "World"],
                 labels: {
                     style: {
                         colors: "#fff",
@@ -23,9 +23,11 @@ export default function ImportGood() {
                 },
             },
             yaxis: {
+                show: false,
                 labels: {
                     style: {
                         colors: "#fff",
+                        display: "none",
                     },
                 },
             },
@@ -57,7 +59,7 @@ export default function ImportGood() {
                 },
             },
             xaxis: {
-                categories: ["Africa", "Asia Pacific", "Europe", "Middle East", "North America", "South America", "World"],
+                categories: ["Africa", "APAC", "Europe", "Middle East", "N. America", "S. America", "World"],
                 labels: {
                     style: {
                         colors: "#fff",
@@ -65,9 +67,11 @@ export default function ImportGood() {
                 },
             },
             yaxis: {
+                show: false,
                 labels: {
                     style: {
                         colors: "#fff",
+                        display: "none",
                     },
                 },
             },
@@ -99,7 +103,7 @@ export default function ImportGood() {
                 },
             },
             xaxis: {
-                categories: ["Africa", "Asia Pacific", "Europe", "Middle East", "North America", "South America", "World"],
+                categories: ["Africa", "APAC", "Europe", "Middle East", "N. America", "S. America", "World"],
                 labels: {
                     style: {
                         colors: "#fff",
@@ -107,9 +111,11 @@ export default function ImportGood() {
                 },
             },
             yaxis: {
+                show: false,
                 labels: {
                     style: {
                         colors: "#fff",
+                        display: "none",
                     },
                 },
             },
@@ -141,7 +147,7 @@ export default function ImportGood() {
                 },
             },
             xaxis: {
-                categories: ["Africa", "Asia Pacific", "Europe", "Middle East", "North America", "South America", "World"],
+                categories: ["Africa", "APAC", "Europe", "Middle East", "N. America", "S. America", "World"],
                 labels: {
                     style: {
                         colors: "#fff",
@@ -149,9 +155,11 @@ export default function ImportGood() {
                 },
             },
             yaxis: {
+                show: false,
                 labels: {
                     style: {
                         colors: "#fff",
+                        display: "none",
                     },
                 },
             },
@@ -185,7 +193,7 @@ export default function ImportGood() {
                 <a href='/Thailand'>
                     <img className="left-arrow" src="/assets/left-arrow-blue.png" />
                 </a>
-                Thailand Economy
+                {/* Thailand Economy */}
             </div>
             <div className="market-stock-title">
                 <a href='/stock'>
@@ -204,7 +212,7 @@ export default function ImportGood() {
                                 (US Dollar per Capita)
                             </div>
                             {CapitaChart()}
-                            <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: https://data.worldbank.org/</div>
+                            <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: worldbank</div>
                         </a>
                         <a href="/inflation-rate-detail" className='thailand-graph-box'>
                             <div className='thailand-graph-box-title'>
@@ -212,15 +220,15 @@ export default function ImportGood() {
                                 (Annual % Change)
                             </div>
                             {InflationYearChart()}
-                            <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: https://data.worldbank.org/</div>
+                            <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: worldbank</div>
                         </a>
                         <a href="/import-good-detail" className='thailand-graph-box'>
                             <div className='thailand-graph-box-title'>
                                 Import of Goods & Services <br />
-                                Year 2022
+                                Year 2022 (%)
                             </div>
                             {ImportChart()}
-                            <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: https://data.worldbank.org/</div>
+                            <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: worldbank</div>
                         </a>
                         <a href="/unemployment-rate-detail" className='thailand-graph-box'>
                             <div className='thailand-graph-box-title'>
@@ -228,7 +236,7 @@ export default function ImportGood() {
                                 (Annual % Change)
                             </div>
                             {UnemploymentChart()}
-                            <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: https://data.worldbank.org/</div>
+                            <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: worldbank</div>
                         </a>
                     </div>
                 )}

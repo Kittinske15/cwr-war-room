@@ -5,11 +5,11 @@ import Chart from 'react-apexcharts';
 import PingAnChart from '../components/PingAnChart';
 import ItochuChart from '../components/ItochuChart';
 import TrueChart from '../components/TrueChart';
-import CPFChart from '../components/CPFChart';
 import CPAllChart from '../components/CPAllChart';
 import CPAxtraChart from '../components/CPAxtraChart';
 import CiticChart from '../components/CiticChart';
 import ChaitaiChart from '../components/ChaitaiChart';
+import CPTaiwanChart from '../components/CPTaiwan';
 
 export default function OverseaStock() {
     const OverseaStock = (
@@ -20,11 +20,15 @@ export default function OverseaStock() {
             <div className='oversea-stock-grid'>
                 <div>
                     <h3 style={{ textAlign: 'center' }}>CP Lotus</h3>
-                    <CPFChart />
+                    <div className='no-data'>
+                        no data
+                    </div>
                 </div>
                 <div>
                     <h3 style={{ textAlign: 'center' }}>CPP</h3>
-                    <TrueChart />
+                    <div className='no-data'>
+                        no data
+                    </div>
                 </div>
                 <div>
                     <h3 style={{ textAlign: 'center' }}>CTEI</h3>
@@ -32,11 +36,13 @@ export default function OverseaStock() {
                 </div>
                 <div>
                     <h3 style={{ textAlign: 'center' }}>CP Taiwan (CPT)</h3>
-                    <CPAxtraChart />
+                    <CPTaiwanChart />
                 </div>
                 <div>
                     <h3 style={{ textAlign: 'center' }}>CHAITAI Investment</h3>
-                    <CPAllChart />
+                    <div className='no-data'>
+                        no data
+                    </div>
                 </div>
             </div>
         </div>

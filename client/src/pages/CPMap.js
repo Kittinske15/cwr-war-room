@@ -38,6 +38,11 @@ export default function Home() {
         }
     };
 
+    const roundUpToInteger = (formattedNumber) => {
+        const number = parseFloat(formattedNumber.replace(/,/g, ''));
+        const roundedNumber = Math.ceil(number);
+        return roundedNumber;
+    };
     const sortedCountriesData = sortData(countries_data, sortOrder);
     const sortedEstimateGDP = sortData(estimateGDP, sortOrder);
 
@@ -52,7 +57,7 @@ export default function Home() {
             longitude: 100,
             gdp: 5.2,
             profit: 'something',
-            RegisterdCapital: "6,258.33"
+            RegisterCapital: "6,258.33"
         },
         {
             name: "Thailand",
@@ -60,7 +65,7 @@ export default function Home() {
             longitude: 105,
             gdp: 3.4,
             profit: 'something',
-            RegisterdCapital: "67,424.55"
+            RegisterCapital: "67,424.55"
         },
         {
             name: "India",
@@ -68,7 +73,7 @@ export default function Home() {
             longitude: 82,
             gdp: 5.9,
             profit: 'something',
-            RegisterdCapital: "787.94"
+            RegisterCapital: "787.94"
         },
         {
             name: "Russia",
@@ -76,15 +81,15 @@ export default function Home() {
             longitude: 110,
             gdp: 0.7,
             profit: 'something',
-            RegisterdCapital: "5,277.29"
+            RegisterCapital: "5,277.29"
         },
         {
-            name: "USA",
+            name: "United States",
             latitude: 35.7749,
             longitude: -100.4194,
             gdp: 1.8,
             profit: 'something',
-            RegisterdCapital: "294.45"
+            RegisterCapital: "294.45"
         },
         {
             name: "Belgium",
@@ -92,7 +97,7 @@ export default function Home() {
             longitude: 4.4699,
             gdp: 0.7,
             profit: 'something',
-            RegisterdCapital: "1,0749.87"
+            RegisterCapital: "1,0749.87"
         },
         {
             name: "Poland",
@@ -100,7 +105,7 @@ export default function Home() {
             longitude: 19.1451,
             gdp: 0.3,
             profit: 'something',
-            RegisterdCapital: "91.03"
+            RegisterCapital: "91.03"
         },
         {
             name: "Turkey",
@@ -108,7 +113,7 @@ export default function Home() {
             longitude: 35.2433,
             gdp: 1.2,
             profit: 'something',
-            RegisterdCapital: "272.36"
+            RegisterCapital: "272.36"
         },
         {
             name: "Malaysia",
@@ -116,15 +121,15 @@ export default function Home() {
             longitude: 101.9758,
             gdp: 4.5,
             profit: 'something',
-            RegisterdCapital: "2,379.70"
+            RegisterCapital: "2,379.70"
         },
         {
-            name: "United Kingdom",
+            name: "UK",
             latitude: 55.3781,
             longitude: 3.4360,
             gdp: -0.3,
             profit: 'something',
-            RegisterdCapital: "13.27"
+            RegisterCapital: "13.27"
         },
         {
             name: "Pakistan",
@@ -132,7 +137,7 @@ export default function Home() {
             longitude: 69.3451,
             gdp: 0.5,
             profit: 'something',
-            RegisterdCapital: "0"
+            RegisterCapital: "0"
         },
         {
             name: "Vietnam",
@@ -140,7 +145,7 @@ export default function Home() {
             longitude: 108.2772,
             gdp: 5.8,
             profit: 'something',
-            RegisterdCapital: "2,449.75"
+            RegisterCapital: "2,449.75"
         },
         {
             name: "Laos",
@@ -148,7 +153,7 @@ export default function Home() {
             longitude: 102.4955,
             gdp: 2.7,
             profit: 'something',
-            RegisterdCapital: "150"
+            RegisterCapital: "150"
         },
         {
             name: "Myanmar",
@@ -156,7 +161,7 @@ export default function Home() {
             longitude: 95.9560,
             gdp: 2.6,
             profit: 'something',
-            RegisterdCapital: "0"
+            RegisterCapital: "0"
         },
         {
             name: "Singapore",
@@ -164,7 +169,7 @@ export default function Home() {
             longitude: 103.8198,
             gdp: 1.5,
             profit: 'something',
-            RegisterdCapital: "0.39"
+            RegisterCapital: "0.39"
         },
         {
             name: "Cambodia",
@@ -172,7 +177,7 @@ export default function Home() {
             longitude: 104.9910,
             gdp: 5.8,
             profit: 'something',
-            RegisterdCapital: "674.07"
+            RegisterCapital: "674.07"
         },
         {
             name: "Sri Lanka",
@@ -180,7 +185,7 @@ export default function Home() {
             longitude: 80.7718,
             gdp: -3,
             profit: 'something',
-            RegisterdCapital: "16.87"
+            RegisterCapital: "16.87"
         },
         {
             name: "Bangladesh",
@@ -188,7 +193,7 @@ export default function Home() {
             longitude: 90.3563,
             gdp: 5.5,
             profit: 'something',
-            RegisterdCapital: "0"
+            RegisterCapital: "0"
         },
         {
             name: "Indonesia",
@@ -196,7 +201,7 @@ export default function Home() {
             longitude: 113.9213,
             gdp: 5,
             profit: 'something',
-            RegisterdCapital: "0"
+            RegisterCapital: "0"
         },
     ]
 
@@ -254,7 +259,7 @@ export default function Home() {
     const svgRef = useRef();
 
     useEffect(() => {
-        const width = 1300;
+        const width = 1200;
         const height = 620;
         const colors = colorScale();
         const range = numberScale();
@@ -267,7 +272,7 @@ export default function Home() {
             .range(colors);
         const svg = d3.select(svgRef.current).attr('width', width).attr('height', height);
 
-        const projection = geoNaturalEarth1().translate([width / 2.7, height / 2.5]);
+        const projection = geoNaturalEarth1().translate([width / 3.2, height / 2.5]);
         const pathGenerator = geoPath().projection(projection);
 
         const g = svg.append('g');
@@ -284,7 +289,7 @@ export default function Home() {
             });
 
         svg.call(zoom)
-            .call(zoom.transform, d3.zoomIdentity.scale(1.3));
+            .call(zoom.transform, d3.zoomIdentity.scale(1.5));
 
         // create a tooltip
         const tooltip = d3
@@ -418,9 +423,10 @@ export default function Home() {
 
     const displayCP = (companyLocations) => companyLocations.map((company, index) => (
         <div className="list-country">
+            {console.log("company.RegisterCapital: ", company.RegisterCapital)}
             <p style={{ fontSize: '20px' }}>{company.name.replace(/^CP\s*/, '')}</p>
-            <p style={{ fontSize: '20px' }}>{company.gdp} % </p>
-            <p style={{ fontSize: '20px' }}>{company.RegisterdCapital}</p>
+            <p style={{ fontSize: '20px' }}>{company.gdp}</p>
+            <p style={{ fontSize: '20px' }}>{roundUpToInteger(company.RegisterCapital)}</p>
         </div>
     ));
 
@@ -432,6 +438,9 @@ export default function Home() {
             <a className="home-nav" href='/' />
             <div className="home-header" />
             <div className="oversea-title">
+                <a href='/Thailand'>
+                    Global Economy
+                </a>
                 <a href='/oversea'>
                     Oversea Market
                 </a>
@@ -441,7 +450,7 @@ export default function Home() {
                     {/* <p className="map-header">GDP growth </p>
                     <hr /> */}
 
-                    <div className="container">
+                    <div className="container" style={{ marginBottom: '60px' }}>
                         <div className="content">
                             {showGlobe ? <img src="assets/rotate-globe.gif" /> : <svg className="map" ref={svgRef}></svg>}
                         </div>
@@ -474,7 +483,7 @@ export default function Home() {
 
                 <div className="list">
                     <Stack direction="row" gap={2} className="list-button">
-                        <Link to="/cp-map">
+                        <Link className="country-btn" to="/cp-map">
                             <ListButton
                                 variant="outline"
                                 disableRipple
@@ -482,7 +491,7 @@ export default function Home() {
                                 //   setPinCompany(!pinCompany);
                                 //   toggleCPHighlight();
                                 // }}
-                                style={{ backgroundColor: highlightCP ? 'green' : 'transparent', fontSize: '20px' }}
+                                style={{ borderRadius: '8px', fontSize: '20px' }}
                             >
                                 CP
                             </ListButton>
@@ -493,7 +502,7 @@ export default function Home() {
                             </ListButton>
                         </Link>
                     </Stack>
-                    <div className="list-container">
+                    <div className="list-container" style={{ textAlign: 'center' }}>
                         <Button
                             endIcon={sortOrder === "asc" ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}
                             onClick={toggleSortOrder}
@@ -502,8 +511,8 @@ export default function Home() {
                         >
                             Country
                         </Button>
-                        <p style={{ fontSize: '20px' }}>GDP Value</p>
-                        <p style={{ fontSize: '20px' }}>Registered Capital ($MM)</p>
+                        <p style={{ fontSize: '20px', fontWeight: '400' }}>GDP (%)</p>
+                        <p style={{ fontSize: '20px', fontWeight: '400' }}>Registered Capital <br></br>($M)</p>
                         <p></p>
                     </div>
                     {pinCompany ? (

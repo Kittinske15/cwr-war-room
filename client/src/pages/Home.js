@@ -457,22 +457,18 @@ export default function Home() {
         Global Macro Econ
       </div> */}
       <div className="oversea-title">
-        <div className="menu-item-btn">
-          <a href='/Thailand'>
-            Global Economy
-          </a>
-        </div>
-        <div className="menu-item-btn">
-          <a href='/oversea'>
-            Oversea Market
-          </a>
-        </div>
+        <a href='/Thailand'>
+          Global Economy
+        </a>
+        <a href='/oversea'>
+          Oversea Market
+        </a>
       </div>
       <div className="home-body">
         <div className="map-container">
           {/* <p className="map-header">GDP growth </p>
           <hr /> */}
-          <div className="container">
+          <div className="container" style={{ marginBottom: '60px' }}>
             <div className="content">
               {showGlobe ? <img src="assets/rotate-globe.gif" /> : <svg className="map" ref={svgRef}></svg>}
             </div>
@@ -513,13 +509,13 @@ export default function Home() {
                 //   setPinCompany(!pinCompany);
                 //   toggleCPHighlight();
                 // }}
-                style={{ backgroundColor: highlightCP ? 'green' : 'transparent', fontSize: '20px' }}
+                style={{ fontSize: '20px' }}
               >
                 CP
               </ListButton>
             </Link>
-            <Link to="/">
-              <ListButton variant="outline" disableRipple style={{ fontSize: '20px' }}>
+            <Link className="country-btn" to="/">
+              <ListButton variant="outline" disableRipple style={{ borderRadius: '8px', fontSize: '20px' }}>
                 Country
               </ListButton>
             </Link>
@@ -541,7 +537,7 @@ export default function Home() {
               {displayCP(companyLocations)}
             </div>
           ) : (
-            <div className="country-list-scroll">
+            <div className="country-list-scroll-home">
               {displayList(countries_data, sortedEstimateGDP, RegisterdCapital)}
             </div>
           )}

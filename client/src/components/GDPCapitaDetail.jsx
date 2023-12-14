@@ -9,11 +9,11 @@ export default function GDPCapitaDetail() {
   const CapitaChart = () => {
     const categories = [
       "Africa",
-      "Asia Pacific",
+      "APAC",
       "Europe",
       "Middle East",
-      "North America",
-      "South America",
+      "N. America",
+      "S. America",
       "World",
     ];
 
@@ -53,7 +53,7 @@ export default function GDPCapitaDetail() {
       "#008000",
       "#0000FF",
       "#FFA500",
-      "#800080",
+      "#ff00a6",
       "#FFFF00",
       "#00FFFF",
     ];
@@ -74,9 +74,11 @@ export default function GDPCapitaDetail() {
         },
       },
       yaxis: {
+        show: false,
         labels: {
           style: {
             colors: "#fff",
+            display: "none",
           },
         },
         tickAmount: 11,
@@ -264,7 +266,7 @@ export default function GDPCapitaDetail() {
         <a href="/gdp-capita">
           <img className="left-arrow" src="/assets/left-arrow-blue.png" />
         </a>
-        Global Economy
+        {/* Global Economy */}
       </div>
       <div className="market-stock-title">
         <a href="/stock">Capital Market</a>

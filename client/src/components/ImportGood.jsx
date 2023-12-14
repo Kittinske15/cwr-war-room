@@ -9,39 +9,39 @@ export default function ImportGood() {
   const CapitaChart = () => {
     const categories = [
       "Africa",
-      "Asia Pacific",
+      "APAC",
       "Europe",
       "Middle East",
-      "North America",
-      "South America",
+      "N. America",
+      "S. America",
       "World",
     ];
 
     const realData = [
       [
-        24.62, 26.93, 28.44, 30.49, 30.49, 29.01, 27.70, 26.19, 27.06, 26.75, 23.20, 25.02, 31.46
+        24.62, 26.93, 28.44, 30.49, 30.49, 29.01, 27.7, 26.19, 27.06, 26.75,
+        23.2, 25.02, 31.46,
+      ],
+      [null],
+      [
+        29.75, 30.41, 30.04, 29.74, 30.17, 30.54, 31.08, 32.47, 33.75, 33.32,
+        32.55, 34.83, 34.66,
+      ],
+      [null],
+      [null],
+      [
+        20.45, 21.43, 22.39, 22.85, 23.12, 22.97, 22.34, 22.03, 24.7, 24.5,
+        23.95, 28.09, 29.9,
       ],
       [
-        null
-      ],
-      [
-        29.75, 30.41, 30.04, 29.74, 30.17, 30.54, 31.08, 32.47, 33.75, 33.32, 32.55, 34.83, 34.66
-      ],
-      [
-        null
-      ],
-      [
-        null
-      ],
-      [
-        20.45, 21.43, 22.39, 22.85, 23.12, 22.97, 22.34, 22.03, 24.70, 24.50, 23.95, 28.09, 29.90
-      ],
-      [
-        27.90, 29.68, 29.38, 29.34, 29.21, 27.59, 26.62, 27.56, 28.53, 27.77, 25.62, 27.94, 30.14
+        27.9, 29.68, 29.38, 29.34, 29.21, 27.59, 26.62, 27.56, 28.53, 27.77,
+        25.62, 27.94, 30.14,
       ],
     ];
 
-    const customYValues = [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35];
+    const customYValues = [
+      20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35,
+    ];
 
     const data = realData.map((dataPoints, index) => ({
       name: categories[index],
@@ -53,7 +53,7 @@ export default function ImportGood() {
       "#008000",
       "#0000FF",
       "#FFA500",
-      "#800080",
+      "#ff00a6",
       "#FFFF00",
       "#00FFFF",
     ];
@@ -264,7 +264,7 @@ export default function ImportGood() {
         <a href="/gdp-capita">
           <img className="left-arrow" src="/assets/left-arrow-blue.png" />
         </a>
-        Global Economy
+        {/* Global Economy */}
       </div>
       <div className="market-stock-title">
         <a href="/stock">Capital Market</a>

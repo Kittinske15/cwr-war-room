@@ -68,7 +68,7 @@ export default function Thailand() {
       .style('border-radius', '5px')
       .style('color', 'white');
 
-    d3.json('https://raw.githubusercontent.com/apisit/thailand.json/master/simplified/thailandWithName.json').then(function (jsondata) {
+    d3.json('raw.githubusercontent.com/apisit/thailand.json/master/simplified/thailandWithName.json').then(function (jsondata) {
       console.log('jsondata: ', jsondata.features);
       console.table('1: ' + jsondata.features.length);
       console.table('2: ' + jsondata.features[0].properties.CHA_NE);
@@ -163,6 +163,7 @@ export default function Thailand() {
       },
       yaxis: {
         labels: {
+          show: false,
           style: {
             colors: "#fff",
           },
@@ -252,9 +253,11 @@ export default function Thailand() {
         },
       },
       yaxis: {
+        show: false,
         labels: {
           style: {
             colors: "#fff",
+            display: "none",
           },
         }
       },
@@ -336,9 +339,11 @@ export default function Thailand() {
         },
       },
       yaxis: {
+        show: false,
         labels: {
           style: {
             colors: "#fff",
+            display: "none",
           },
         }
       },
@@ -415,9 +420,11 @@ export default function Thailand() {
         },
       },
       yaxis: {
+        show: false,
         labels: {
           style: {
             colors: "#fff",
+            display: "none",
           },
         }
       },
@@ -477,8 +484,10 @@ export default function Thailand() {
       },
       yaxis: {
         labels: {
+          show: false,
           style: {
             colors: "#fff",
+            display: "none",
           },
         }
       },
@@ -561,8 +570,10 @@ export default function Thailand() {
       },
       yaxis: {
         labels: {
+          show: false,
           style: {
             colors: "#fff",
+            display: "none",
           },
         }
       },
@@ -670,19 +681,18 @@ export default function Thailand() {
               </div>
               <div className='thailand-graph-box-subtitle2'>Thousand</div>
               {GDPChart()}
-              <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: https://data.worldbank.org/</div>
+              <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: worldbank</div>
             </a>
             <a href="/population" className='thailand-graph-box'>
               <div className='thailand-graph-box-title'>
                 Population
-                (Million of People)
               </div>
               <div className='thailand-graph-box-subtitle1'>
                 7.85
               </div>
-              <div className='thailand-graph-box-subtitle2'>Thousand</div>
+              <div className='thailand-graph-box-subtitle2'>Billion</div>
               {PopulationChart()}
-              <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: https://data.worldbank.org/</div>
+              <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: worldbank</div>
             </a>
             <a href='import-good' className='thailand-graph-box'>
               <div className='thailand-graph-box-title'>
@@ -690,10 +700,11 @@ export default function Thailand() {
                 Year 2022
               </div>
               <div className='thailand-graph-box-subtitle1'>
-                5.6
+                64 %
               </div>
+              <div className='thailand-graph-box-subtitle2'>%of GDP</div>
               {ImportChart()}
-              <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: https://tradingeconomics.com/</div>
+              <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: tradingeconomics</div>
             </a>
             <a href='inflation-rate' className='thailand-graph-box'>
               <div className='thailand-graph-box-title'>
@@ -704,7 +715,7 @@ export default function Thailand() {
                 1.5 %
               </div>
               {InflationRateChart()}
-              <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: https://data.worldbank.org/</div>
+              <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: worldbank</div>
             </a>
             <a href='unemployment-rate' className='thailand-graph-box'>
               <div className='thailand-graph-box-title' style={{ marginBottom: '70px' }}>
@@ -712,22 +723,22 @@ export default function Thailand() {
                 April 2023
               </div>
               <div className='thailand-graph-box-subtitle1' style={{ fontSize: '60px', marginBottom: '70px' }}>
-                1.2
+                1.2 %
               </div>
-              <div className='thailand-graph-box-subtitle2'>The People in Thailand
+              <div className='thailand-graph-box-subtitle2'>Thailand
               </div>
-              <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: https://data.worldbank.org/</div>
+              <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: worldbank</div>
             </a>
             <div className='thailand-graph-box'>
               <div className='thailand-graph-box-title'>
                 Exchange Rate <br />
-                Year 2022 (BTH)
+                (BTH)
               </div>
               <div className='exchange-rate-grid'>
                 <div className='exchange-rate-img-grid'>
                   <img src="assets/usa-flag.png" className='exchange-rate-flag' />
                   {ExchangeRataUSAChart()}
-                  <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: https://www.exchangerates.org.uk/</div>
+                  <div style={{ opacity: '0.5', fontSize: '14px', position: 'absolute', bottom: '10px' }}>*Reference: exchangerates</div>
                 </div>
                 <div className='exchange-rate-img-grid'>
                   <img src="assets/china-flag.png" className='exchange-rate-flag' />
