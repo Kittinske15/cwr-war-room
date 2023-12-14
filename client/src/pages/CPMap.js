@@ -21,6 +21,7 @@ export default function Home() {
     const [pinCompany, setPinCompany] = useState(true);
     const [sortOrder, setSortOrder] = useState("asc");
     const [highlightCP, setHighlightCP] = useState(false);
+    const specialCompanyNames = ['Netherlands', 'Norway', 'Hong Kong', 'Denmark', 'France', 'Japan', 'Taiwan', 'Brazil', 'British Virgin Islands', 'Cayman Islands'];
 
     const toggleCPHighlight = () => {
         setHighlightCP(!highlightCP);
@@ -69,15 +70,15 @@ export default function Home() {
         },
         {
             name: "India",
-            latitude: 15,
-            longitude: 82,
+            latitude: 17,
+            longitude: 76,
             gdp: 5.9,
             profit: 'something',
             RegisterCapital: "787.94"
         },
         {
             name: "Russia",
-            latitude: 57,
+            latitude: 60,
             longitude: 110,
             gdp: 0.7,
             profit: 'something',
@@ -124,17 +125,17 @@ export default function Home() {
             RegisterCapital: "2,379.70"
         },
         {
-            name: "UK",
-            latitude: 55.3781,
-            longitude: 3.4360,
+            name: "United Kingdom",
+            latitude: 53.3781,
+            longitude: -1.4360,
             gdp: -0.3,
             profit: 'something',
             RegisterCapital: "13.27"
         },
         {
             name: "Pakistan",
-            latitude: 30.3753,
-            longitude: 69.3451,
+            latitude: 28.3753,
+            longitude: 68.3451,
             gdp: 0.5,
             profit: 'something',
             RegisterCapital: "0"
@@ -165,8 +166,8 @@ export default function Home() {
         },
         {
             name: "Singapore",
-            latitude: 1.3521,
-            longitude: 103.8198,
+            latitude: -1.3521,
+            longitude: 102.8198,
             gdp: 1.5,
             profit: 'something',
             RegisterCapital: "0.39"
@@ -202,6 +203,86 @@ export default function Home() {
             gdp: 5,
             profit: 'something',
             RegisterCapital: "0"
+        },
+        {
+            name: "Japan",
+            latitude: 35.8893,
+            longitude: 137.9213,
+            gdp: 1.3,
+            profit: 'something',
+            RegisterCapital: "15.20"
+        },
+        {
+            name: "Taiwan",
+            latitude: 23.8893,
+            longitude: 121.9213,
+            gdp: 2.1,
+            profit: 'something',
+            RegisterCapital: "1,871.34"
+        },
+        {
+            name: "Brazil",
+            latitude: -5.7749,
+            longitude: -60.4194,
+            gdp: 0.9,
+            profit: 'something',
+            RegisterCapital: "2.27"
+        },
+        {
+            name: "British Virgin Islands",
+            latitude: 15.7749,
+            longitude: -60.4194,
+            gdp: 0,
+            profit: 'something',
+            RegisterCapital: "3.51"
+        },
+        {
+            name: "Cayman Islands",
+            latitude: 17.7749,
+            longitude: -78.4194,
+            gdp: 0,
+            profit: 'something',
+            RegisterCapital: "8,231.11"
+        },
+        {
+            name: "Denmark",
+            latitude: 55.5039,
+            longitude: 8.4699,
+            gdp: 0,
+            profit: 'something',
+            RegisterCapital: "6.20"
+        },
+        {
+            name: "France",
+            latitude: 45.5039,
+            longitude: 2.4699,
+            gdp: 0.7,
+            profit: 'something',
+            RegisterCapital: "0"
+        },
+        {
+            name: "Hong Kong",
+            latitude: 23.7749,
+            longitude: 113,
+            gdp: 3.5,
+            profit: 'something',
+            RegisterCapital: "14.67"
+        },
+        {
+            name: "Netherlands",
+            latitude: 52.5039,
+            longitude: 4.4699,
+            gdp: 1,
+            profit: 'something',
+            RegisterCapital: "12,500.39"
+        },
+        {
+            name: "Norway",
+            latitude: 62.5039,
+            longitude: 9.4699,
+            gdp: 2.1,
+            profit: 'something',
+            RegisterCapital: "656.53"
         },
     ]
 
@@ -381,7 +462,7 @@ export default function Home() {
                 .attr('cx', d => projection([d.longitude, d.latitude])[0])
                 .attr('cy', d => projection([d.longitude, d.latitude])[1])
                 .attr('r', 3)
-                .attr('fill', 'red')
+                .attr('fill', d => specialCompanyNames.includes(d.name) ? 'black' : 'red')
                 .attr('opacity', 0.7)
                 .on('click', (event, d) => {
                     console.log(`Company Name: ${d.name}`);
@@ -426,7 +507,7 @@ export default function Home() {
             {console.log("company.RegisterCapital: ", company.RegisterCapital)}
             <p style={{ fontSize: '20px' }}>{company.name.replace(/^CP\s*/, '')}</p>
             <p style={{ fontSize: '20px' }}>{company.gdp}</p>
-            <p style={{ fontSize: '20px' }}>{roundUpToInteger(company.RegisterCapital)}</p>
+            <p style={{ fontSize: '20px' }}>{roundUpToInteger(company.RegisterCapital).toLocaleString()}</p>
         </div>
     ));
 
@@ -476,6 +557,10 @@ export default function Home() {
                         <div className="gdp-container">
                             <div className="gdp-red"></div>
                             <div>less than -3%</div>
+                        </div>
+                        <div className="gdp-container">
+                            <div className="gdp-black"></div>
+                            <div>(sell office)</div>
                         </div>
                     </div>
                     <div className="reference">* Reference: International Monetary Fund</div>

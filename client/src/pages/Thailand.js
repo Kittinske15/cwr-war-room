@@ -299,11 +299,11 @@ export default function Thailand() {
     const series = [
       {
         name: "Value",
-        data: [7.68, 7.72, 7.78, 7.85],
+        data: [7.7, 7.7, 7.8, 7.9],
       },
       {
         name: "Forecast",
-        data: [7.68, 7.72, 7.78, 7.85, 7.93, 8, 8.08],
+        data: [7.7, 7.7, 7.8, 7.9, 7.9, 8, 8],
       },
     ];
 
@@ -529,11 +529,11 @@ export default function Thailand() {
     const series = [
       {
         name: "Value",
-        data: [4.32, 4.62, 5.22, 4.94],
+        data: [4.3, 4.6, 5.2, 5.0],
       },
       {
         name: "Forecast",
-        data: [4.32, 4.62, 5.22, 4.94, 4.55, 4.42, 4.75],
+        data: [4.3, 4.6, 5.2, 5.0, 4.6, 4.4, 4.8],
       },
     ];
 
@@ -615,11 +615,11 @@ export default function Thailand() {
     const series = [
       {
         name: "Value",
-        data: [30.08, 30.19, 33.18, 34.59],
+        data: [30.0, 30.2, 33.2, 34.6],
       },
       {
         name: "Forecast",
-        data: [30.08, 30.19, 33.18, 34.59, 35.12, 33.58, 33.85],
+        data: [30.0, 30.2, 33.2, 34.6, 35.1, 33.6, 33.9],
       },
     ];
 
@@ -723,7 +723,7 @@ export default function Thailand() {
                 April 2023
               </div>
               <div className='thailand-graph-box-subtitle1' style={{ fontSize: '60px', marginBottom: '70px' }}>
-                1.2 %
+                1.05 %
               </div>
               <div className='thailand-graph-box-subtitle2'>Thailand
               </div>

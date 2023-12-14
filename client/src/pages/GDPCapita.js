@@ -39,7 +39,7 @@ export default function GDPCapita() {
         const series = [
             {
                 name: "Data Series 1",
-                data: [2157.39, 5391.62, 32504.17, 13751.79, 57707.78, 8995.74, 12895.37],
+                data: [2157.4, 5391.6, 32504.2, 13751.8, 57707.8, 8995.7, 12895.4],
             },
         ];
 
@@ -127,7 +127,7 @@ export default function GDPCapita() {
         const series = [
             {
                 name: "Data Series 1",
-                data: [31.46, 28.54, 34.67, 24.54, 15.88, 29.90, 30.14],
+                data: [31.5, 28.5, 34.7, 24.5, 15.9, 29.9, 30.1],
             },
         ];
 
