@@ -13,6 +13,7 @@ export default function GDPCapita() {
                 toolbar: {
                     show: false,
                 },
+                colors: ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#00ff00'],
             },
             xaxis: {
                 categories: ["Africa", "APAC", "Europe", "Middle East", "N. America", "S. America", "World"],
@@ -39,13 +40,28 @@ export default function GDPCapita() {
         const series = [
             {
                 name: "Data Series 1",
-                data: [2157.4, 5391.6, 32504.2, 13751.8, 57707.8, 8995.7, 12895.4],
+                data: [
+                    { x: 'Africa', y: 2157.4 },
+                    { x: 'APAC', y: 5391.6 },
+                    { x: 'Europe', y: 32504.2 },
+                    { x: 'Middle East', y: 13751.8 },
+                    { x: 'N. America', y: 57707.8 },
+                    { x: 'S. America', y: 8995.7 },
+                    { x: 'World', y: 12895.4, fillColor: '#FFFF2B' },
+                ],
             },
         ];
 
         return (
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <Chart options={options} series={series} type="bar" width="500" />
+                <style>
+                    {`
+          .apexcharts-tooltip {
+            color: #000 !important;
+          }
+        `}
+                </style>
             </div>
         );
     };
@@ -83,13 +99,28 @@ export default function GDPCapita() {
         const series = [
             {
                 name: "Data Series 1",
-                data: [6.9, 5, 8.4, 14, 7.9, 14, 8.7],
+                data: [
+                    { x: 'Africa', y: 6.9 },
+                    { x: 'APAC', y: 5 },
+                    { x: 'Europe', y: 8.4 },
+                    { x: 'Middle East', y: 14 },
+                    { x: 'N. America', y: 7.9 },
+                    { x: 'S. America', y: 14 },
+                    { x: 'World', y: 8.7, fillColor: '#FFFF2B' },
+                ],
             },
         ];
 
         return (
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <Chart options={options} series={series} type="bar" width="500" />
+                <style>
+                    {`
+          .apexcharts-tooltip {
+            color: #000 !important;
+          }
+        `}
+                </style>
             </div>
         );
     };
@@ -127,13 +158,28 @@ export default function GDPCapita() {
         const series = [
             {
                 name: "Data Series 1",
-                data: [31.5, 28.5, 34.7, 24.5, 15.9, 29.9, 30.1],
+                data: [
+                    { x: 'Africa', y: 31.5 },
+                    { x: 'APAC', y: 28.5 },
+                    { x: 'Europe', y: 34.7 },
+                    { x: 'Middle East', y: 24.5 },
+                    { x: 'N. America', y: 15.9 },
+                    { x: 'S. America', y: 29.9 },
+                    { x: 'World', y: 30.1, fillColor: '#FFFF2B' },
+                ],
             },
         ];
 
         return (
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <Chart options={options} series={series} type="bar" width="500" />
+                <style>
+                    {`
+          .apexcharts-tooltip {
+            color: #000 !important;
+          }
+        `}
+                </style>
             </div>
         );
     };
@@ -171,13 +217,28 @@ export default function GDPCapita() {
         const series = [
             {
                 name: "Data Series 1",
-                data: [33.5, null, 6.7, null, null, null, null],
+                data: [
+                    { x: 'Africa', y: 33.5 },
+                    { x: 'APAC', y: null },
+                    { x: 'Europe', y: 6.7 },
+                    { x: 'Middle East', y: null },
+                    { x: 'N. America', y: null },
+                    { x: 'S. America', y: null },
+                    { x: 'World', y: null, fillColor: '#FFFF2B' },
+                ],
             },
         ];
 
         return (
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <Chart options={options} series={series} type="bar" width="500" />
+                <style>
+                    {`
+          .apexcharts-tooltip {
+            color: #000 !important;
+          }
+        `}
+                </style>
             </div>
         );
     };
@@ -195,9 +256,24 @@ export default function GDPCapita() {
                 </a>
                 {/* Thailand Economy */}
             </div>
-            <div className="market-stock-title">
-                <a href='/stock'>
-                    Capital Market
+            <div className="oversea-title">
+                <a href="/Thailand">
+                    <div class="banner">
+                        <img src="/assets/china-menu-item.png" alt="Global Economy" />
+                        <h2>Global Economy</h2>
+                    </div>
+                </a>
+                <a href="/stock">
+                    <div class="banner">
+                        <img src="/assets/china-menu-item.png" alt="Capital Market" />
+                        <h2>Capital Market</h2>
+                    </div>
+                </a>
+                <a href="/oversea">
+                    <div class="banner">
+                        <img src="/assets/china-menu-item.png" alt="Oversea Market" />
+                        <h2>Oversea Market</h2>
+                    </div>
                 </a>
             </div>
             <div className='thailand-body'>

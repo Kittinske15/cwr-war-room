@@ -223,7 +223,6 @@ h1 {
 
 .oversea-title {
   display: flex;
-  gap: 25px;
   position: absolute;
   right: 40px;
   top: 35px;
@@ -370,4 +369,43 @@ h1 {
 
 .country-btn button {
   color: black;
+}
+
+.menu-item-home {
+  height: 62px;
+  line-height: 62px;
+  background-image: url("https://cpwrth.cpgroup.cn/base-service/default/20211227/34b29ebcdb0f4020b13a81b8df05de0d.PNG");
+  border-width: 0px 10px;
+  border-color: transparent;
+  border-radius: 8px;
+}
+
+.banner-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  height: 44px !important;
+}
+
+.banner h2 {
+  top: -10px;
+  left: 15%;
+  position: absolute;
+  font-size: 18px;
+  font-weight: bold;
 }

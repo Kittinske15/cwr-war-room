@@ -519,11 +519,23 @@ export default function Home() {
             <a className="home-nav" href='/' />
             <div className="home-header" />
             <div className="oversea-title">
-                <a href='/Thailand'>
-                    Global Economy
+                <a href="/Thailand">
+                    <div class="banner">
+                        <img src="/assets/china-menu-item.png" alt="Global Economy" />
+                        <h2>Global Economy</h2>
+                    </div>
                 </a>
-                <a href='/oversea'>
-                    Oversea Market
+                <a href="/stock">
+                    <div class="banner">
+                        <img src="/assets/china-menu-item.png" alt="Capital Market" />
+                        <h2>Capital Market</h2>
+                    </div>
+                </a>
+                <a href="/oversea">
+                    <div class="banner">
+                        <img src="/assets/china-menu-item.png" alt="Oversea Market" />
+                        <h2>Oversea Market</h2>
+                    </div>
                 </a>
             </div>
             <div className="cp-body">
@@ -560,7 +572,7 @@ export default function Home() {
                         </div>
                         <div className="gdp-container">
                             <div className="gdp-black"></div>
-                            <div>(sell office)</div>
+                            <div>(sale office)</div>
                         </div>
                     </div>
                     <div className="reference">* Reference: International Monetary Fund</div>

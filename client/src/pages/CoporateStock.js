@@ -71,6 +71,26 @@ export default function CoporateStock() {
                 <source src="/assets/BG-Blue.mp4" type="video/mp4" />
             </video>
             <a className="home-nav" href='/' />
+            <div className="oversea-title">
+                <a href="/Thailand">
+                    <div class="banner">
+                        <img src="/assets/china-menu-item.png" alt="Global Economy" />
+                        <h2>Global Economy</h2>
+                    </div>
+                </a>
+                <a href="/stock">
+                    <div class="banner">
+                        <img src="/assets/china-menu-item.png" alt="Capital Market" />
+                        <h2>Capital Market</h2>
+                    </div>
+                </a>
+                <a href="/oversea">
+                    <div class="banner">
+                        <img src="/assets/china-menu-item.png" alt="Oversea Market" />
+                        <h2>Oversea Market</h2>
+                    </div>
+                </a>
+            </div>
             <div className='coporate-body'>
                 <div className='thailand-box'>
                     {CoporateStock}

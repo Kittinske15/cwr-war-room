@@ -453,21 +453,28 @@ export default function Home() {
       </video>
       <a className="home-nav" href='/' />
       <div className="home-header" />
-      {/* <div className="global-title">
-        Global Macro Econ
-      </div> */}
       <div className="oversea-title">
-        <a href='/Thailand'>
-          Global Economy
+        <a href="/Thailand">
+          <div class="banner">
+            <img src="/assets/china-menu-item.png" alt="Global Economy" />
+            <h2>Global Economy</h2>
+          </div>
         </a>
-        <a href='/oversea'>
-          Oversea Market
+        <a href="/stock">
+          <div class="banner">
+            <img src="/assets/china-menu-item.png" alt="Capital Market" />
+            <h2>Capital Market</h2>
+          </div>
+        </a>
+        <a href="/oversea">
+          <div class="banner">
+            <img src="/assets/china-menu-item.png" alt="Oversea Market" />
+            <h2>Oversea Market</h2>
+          </div>
         </a>
       </div>
       <div className="home-body">
         <div className="map-container">
-          {/* <p className="map-header">GDP growth </p>
-          <hr /> */}
           <div className="container" style={{ marginBottom: '60px' }}>
             <div className="content">
               {showGlobe ? <img src="assets/rotate-globe.gif" /> : <svg className="map" ref={svgRef}></svg>}
