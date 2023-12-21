@@ -39,7 +39,15 @@ export default function UnemploymentRate() {
         const series = [
             {
                 name: "Data Series 1",
-                data: [42, 78, 60, 91, 55, 72, 89],
+                data: [
+                    { x: 'Africa', y: 42 },
+                    { x: 'APAC', y: 78 },
+                    { x: 'Europe', y: 60 },
+                    { x: 'Middle East', y: 91 },
+                    { x: 'N. America', y: 55 },
+                    { x: 'S. America', y: 72 },
+                    { x: 'World', y: 89, fillColor: '#FFFF2B' },
+                ],
             },
         ];
 
@@ -83,7 +91,15 @@ export default function UnemploymentRate() {
         const series = [
             {
                 name: "Data Series 1",
-                data: [42, 78, 60, 91, 55, 72, 89],
+                data: [
+                    { x: 'Africa', y: 42 },
+                    { x: 'APAC', y: 78 },
+                    { x: 'Europe', y: 60 },
+                    { x: 'Middle East', y: 91 },
+                    { x: 'N. America', y: 55 },
+                    { x: 'S. America', y: 72 },
+                    { x: 'World', y: 89, fillColor: '#FFFF2B' },
+                ],
             },
         ];
 
@@ -127,10 +143,17 @@ export default function UnemploymentRate() {
         const series = [
             {
                 name: "Data Series 1",
-                data: [42, 78, 60, 91, 55, 72, 89],
+                data: [
+                    { x: 'Africa', y: 42 },
+                    { x: 'APAC', y: 78 },
+                    { x: 'Europe', y: 60 },
+                    { x: 'Middle East', y: 91 },
+                    { x: 'N. America', y: 55 },
+                    { x: 'S. America', y: 72 },
+                    { x: 'World', y: 89, fillColor: '#FFFF2B' },
+                ],
             },
         ];
-
         return (
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <Chart options={options} series={series} type="bar" width="500" />
@@ -171,7 +194,15 @@ export default function UnemploymentRate() {
         const series = [
             {
                 name: "Data Series 1",
-                data: [42, 78, 60, 91, 55, 72, 89],
+                data: [
+                    { x: 'Africa', y: 42 },
+                    { x: 'APAC', y: 78 },
+                    { x: 'Europe', y: 60 },
+                    { x: 'Middle East', y: 91 },
+                    { x: 'N. America', y: 55 },
+                    { x: 'S. America', y: 72 },
+                    { x: 'World', y: 89, fillColor: '#FFFF2B' },
+                ],
             },
         ];
 
