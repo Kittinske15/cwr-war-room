@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/cwr-war-room/static/css/main.0ac988e9.css",
+    "main.js": "/cwr-war-room/static/js/main.8504e18a.js",
+    "static/js/787.895675c1.chunk.js": "/cwr-war-room/static/js/787.895675c1.chunk.js",
+    "static/media/rotate-globe.gif": "/cwr-war-room/static/media/rotate-globe.31cadf36cc5f8a18b81b.gif",
+    "static/media/cp-logo2.png": "/cwr-war-room/static/media/cp-logo2.42242c58ab04dbfd2c65.png",
+    "index.html": "/cwr-war-room/index.html",
+    "main.0ac988e9.css.map": "/cwr-war-room/static/css/main.0ac988e9.css.map",
+    "main.8504e18a.js.map": "/cwr-war-room/static/js/main.8504e18a.js.map",
+    "787.895675c1.chunk.js.map": "/cwr-war-room/static/js/787.895675c1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ac988e9.css",
+    "static/js/main.8504e18a.js"
+  ]
+}
