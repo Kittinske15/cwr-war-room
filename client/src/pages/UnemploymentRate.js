@@ -15,7 +15,7 @@ export default function UnemploymentRate() {
                 },
             },
             xaxis: {
-                categories: ["Africa (Region)", "Asia and Pacific", "Europe", "Middle East (Region)", "North America", "South America", "World"],
+                categories: ["Africa", "APAC", "Europe", "Middle East", "N. America", "S. America", "World"],
                 labels: {
                     style: {
                         colors: "#fff",
@@ -53,7 +53,7 @@ export default function UnemploymentRate() {
 
         return (
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <Chart options={options} series={series} type="bar" width="500" />
+                <Chart options={options} series={series} type="bar" width="800" height="300" />
             </div>
         );
     };
@@ -67,7 +67,7 @@ export default function UnemploymentRate() {
                 },
             },
             xaxis: {
-                categories: ["Africa", "Asia and Pacific", "Europe", "Middle East", "North America", "South America", "World"],
+                categories: ["Africa", "APAC", "Europe", "Middle East", "N. America", "S. America", "World"],
                 labels: {
                     style: {
                         colors: "#fff",
@@ -105,7 +105,7 @@ export default function UnemploymentRate() {
 
         return (
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <Chart options={options} series={series} type="bar" width="500" />
+                <Chart options={options} series={series} type="bar" width="800" height="300" />
             </div>
         );
     };
@@ -119,7 +119,7 @@ export default function UnemploymentRate() {
                 },
             },
             xaxis: {
-                categories: ["Africa (Region)", "Asia and Pacific", "Europe", "Middle East (Region)", "North America", "South America", "World"],
+                categories: ["Africa", "APAC", "Europe", "Middle East", "N. America", "S. America", "World"],
                 labels: {
                     style: {
                         colors: "#fff",
@@ -156,7 +156,7 @@ export default function UnemploymentRate() {
         ];
         return (
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <Chart options={options} series={series} type="bar" width="500" />
+                <Chart options={options} series={series} type="bar" width="800" height="300" />
             </div>
         );
     };
@@ -170,7 +170,7 @@ export default function UnemploymentRate() {
                 },
             },
             xaxis: {
-                categories: ["Africa (Region)", "Asia and Pacific", "Europe", "Middle East (Region)", "North America", "South America", "World"],
+                categories: ["Africa", "APAC", "Europe", "Middle East", "N. America", "S. America", "World"],
                 labels: {
                     style: {
                         colors: "#fff",
@@ -208,7 +208,7 @@ export default function UnemploymentRate() {
 
         return (
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <Chart options={options} series={series} type="bar" width="500" />
+                <Chart options={options} series={series} type="bar" width="800" height="300" />
             </div>
         );
     };

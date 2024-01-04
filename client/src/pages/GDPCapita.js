@@ -54,7 +54,7 @@ export default function GDPCapita() {
 
         return (
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <Chart options={options} series={series} type="bar" width="500" />
+                <Chart options={options} series={series} type="bar" width="800" height="300" />
                 <style>
                     {`
           .apexcharts-tooltip {
@@ -75,7 +75,7 @@ export default function GDPCapita() {
                 },
             },
             xaxis: {
-                categories: ["Africa", "Southeast Asia", "Europe", "Middle East", "North America", "South America", "World"],
+                categories: ["Africa", "APAC", "Europe", "Middle East", "N. America", "S. America", "World"],
                 labels: {
                     style: {
                         colors: "#fff",
@@ -113,7 +113,7 @@ export default function GDPCapita() {
 
         return (
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <Chart options={options} series={series} type="bar" width="500" />
+                <Chart options={options} series={series} type="bar" width="800" height="300" />
                 <style>
                     {`
           .apexcharts-tooltip {
@@ -134,7 +134,7 @@ export default function GDPCapita() {
                 },
             },
             xaxis: {
-                categories: ["Africa (Region)", "Southeast Asia", "Europe", "Middle East (Region)", "North America", "South America", "World"],
+                categories: ["Africa", "APAC", "Europe", "Middle East", "N. America", "S. America", "World"],
                 labels: {
                     style: {
                         colors: "#fff",
@@ -172,7 +172,7 @@ export default function GDPCapita() {
 
         return (
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <Chart options={options} series={series} type="bar" width="500" />
+                <Chart options={options} series={series} type="bar" width="800" height="300" />
                 <style>
                     {`
           .apexcharts-tooltip {
@@ -231,7 +231,7 @@ export default function GDPCapita() {
 
         return (
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <Chart options={options} series={series} type="bar" width="500" />
+                <Chart options={options} series={series} type="bar" width="800" height="300" />
                 <style>
                     {`
           .apexcharts-tooltip {

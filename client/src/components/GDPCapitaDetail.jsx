@@ -73,12 +73,6 @@ export default function GDPCapitaDetail() {
         max: customYValues[customYValues.length - 1],
         tickValues: customYValues,
       },
-      //   dataLabels: {
-      //     enabled: true,
-      //     style: {
-      //       colors: ["#000"],
-      //     },
-      //   },
       legend: {
         labels: {
           colors: "#fff",
@@ -92,7 +86,7 @@ export default function GDPCapitaDetail() {
 
     return (
       <div id="line-chart">
-        <Chart options={options} series={data} type="line" height={450} />
+        <Chart options={options} series={data} type="line" height={700} />
         <style>
           {`
           .apexcharts-tooltip {
@@ -100,144 +94,6 @@ export default function GDPCapitaDetail() {
           }
         `}
         </style>
-      </div>
-    );
-  };
-
-  const InflationYearChart = () => {
-    const options = {
-      chart: {
-        id: "bar-chart",
-        toolbar: {
-          show: false,
-        },
-      },
-      xaxis: {
-        categories: [
-          "Africa",
-          "Asia and Pacific",
-          "Europe",
-          "Middle East",
-          "North America",
-          "South America",
-          "World",
-        ],
-        labels: {
-          style: {
-            colors: "#fff",
-          },
-        },
-      },
-    };
-
-    const series = [
-      {
-        name: "Data Series 1",
-        data: [42, 78, 60, 91, 55, 72, 89],
-      },
-    ];
-
-    return (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Chart options={options} series={series} type="bar" width="500" />
-      </div>
-    );
-  };
-
-  const ImportChart = () => {
-    const options = {
-      chart: {
-        id: "bar-chart",
-        toolbar: {
-          show: false,
-        },
-      },
-      xaxis: {
-        categories: [
-          "Africa (Region)",
-          "Asia and Pacific",
-          "Europe",
-          "Middle East (Region)",
-          "North America",
-          "South America",
-          "World",
-        ],
-        labels: {
-          style: {
-            colors: "#fff",
-          },
-        },
-      },
-    };
-
-    const series = [
-      {
-        name: "Data Series 1",
-        data: [42, 78, 60, 91, 55, 72, 89],
-      },
-    ];
-
-    return (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Chart options={options} series={series} type="bar" width="500" />
-      </div>
-    );
-  };
-
-  const UnemploymentChart = () => {
-    const options = {
-      chart: {
-        id: "bar-chart",
-        toolbar: {
-          show: false,
-        },
-      },
-      xaxis: {
-        categories: [
-          "Africa (Region)",
-          "Asia and Pacific",
-          "Europe",
-          "Middle East (Region)",
-          "North America",
-          "South America",
-          "World",
-        ],
-        labels: {
-          style: {
-            colors: "#fff",
-          },
-        },
-      },
-    };
-
-    const series = [
-      {
-        name: "Data Series 1",
-        data: [42, 78, 60, 91, 55, 72, 89],
-      },
-    ];
-
-    return (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Chart options={options} series={series} type="bar" width="500" />
       </div>
     );
   };

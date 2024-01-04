@@ -92,7 +92,7 @@ export default function ImportGood() {
 
     return (
       <div id="line-chart">
-        <Chart options={options} series={data} type="line" height={450} />
+        <Chart options={options} series={data} type="line" height={700} />
         <style>
           {`
           .apexcharts-tooltip {
@@ -115,11 +115,11 @@ export default function ImportGood() {
       xaxis: {
         categories: [
           "Africa",
-          "Asia and Pacific",
+          "APAC",
           "Europe",
           "Middle East",
-          "North America",
-          "South America",
+          "N. America",
+          "S. America",
           "World",
         ],
         labels: {
@@ -160,12 +160,12 @@ export default function ImportGood() {
       },
       xaxis: {
         categories: [
-          "Africa (Region)",
+          "Africa",
           "Asia and Pacific",
           "Europe",
-          "Middle East (Region)",
-          "North America",
-          "South America",
+          "Middle East",
+          "N. America",
+          "S. America",
           "World",
         ],
         labels: {
@@ -206,12 +206,12 @@ export default function ImportGood() {
       },
       xaxis: {
         categories: [
-          "Africa (Region)",
-          "Asia and Pacific",
+          "Africa",
+          "APAC",
           "Europe",
-          "Middle East (Region)",
-          "North America",
-          "South America",
+          "Middle East",
+          "N. America",
+          "S. America",
           "World",
         ],
         labels: {
